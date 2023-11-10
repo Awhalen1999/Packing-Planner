@@ -12,22 +12,41 @@
             <li><a href="index.html">Return to Main</a></li>
         </ul>
     </nav>
-        <div class="containter-p2">
-            <h1>Please select gender/packing requirements</h1>
-            <form id="gender">
-                <label for="male">Male<input name="gender" id="male" type="radio"></label>
-                <label for="female">Female<input name="gender" id="female" type="radio"></label>
-                <label for="other">Other<input name="gender" id="other" type="radio"></label>
-            </form>
-            <h1>Please select climate</h1>
-            <form id="Climate">
-                <label for="warm">Warm<input name="climate" id="warm" type="radio"></label>
-                <label for="mild">Mild<input name="climate" id="mild" type="radio"></label>
-                <label for="cold">Cold<input name="climate" id="cold" type="radio"></label>
-            </form>
-            <form>
-                <button id="create-my-list">Create my list</button>
-            </form>
-        </div>
+    <div class="options-container">
+        <h1>Choose Options:</h1>
+        <form id="options-Form">
+            <h2>Please select gender/packing requirements</h2>
+            <label>
+                Male
+                <input type="radio" name="gender" value="male">
+            </label>
+            <label>
+                Female
+                <input type="radio" name="gender" value="female">
+            </label>
+            <label>
+                Other
+                <input type="radio" name="gender" value="other">
+            </label>
+            <br>
+            <h2>Please select climate</h2>
+            <label>
+                Warm
+                <input type="radio" name="climate" value="warm">
+            </label>
+            <label>
+                Mild
+                <input type="radio" name="climate" value="mild">
+            </label>
+            <label>
+                Cold
+                <input type="radio" name="climate" value="cold">
+            </label>
+            <br>
+            <input type="button" value="Submit" onclick="processForm()">
+        </form>
+        <footer>foot</footer>
+    </div>
+    <script src="Script.js"></script>
 </body>
 </html>

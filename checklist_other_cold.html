@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Packing Planner</title>
+</head>
+<body>
+    <nav class="return-to-main-nav">
+        <ul>
+            <li><a href="index.html">Return to Main</a></li>
+        </ul>
+    </nav>
+    <div class="list-container">
+        <h1>Please check items you will be packing</h1>
+        <form id="other-cold-checklist">
+            <section id="other-cold-clothing">
+                <h3>Clothing</h3>
+                <ul id="other-cold-clothing">
+                    <li>
+                        <label for="underwear">Underwear</label>
+                        <input type="checkbox" id="underwear" name="underwear" value="underwear">
+                    </li>
+                    <li>
+                        <label for="base-layer">Base layer</label>
+                        <input type="checkbox" id="base-layer" name="base-layer" value="base-layer">
+                    </li>
+                    <li>
+                        <label for="socks">Socks</label>
+                        <input type="checkbox" id="socks" name="socks" value="socks">
+                    </li>
+                    <li>
+                        <label for="shirts">Shirts/tops</label>
+                        <input type="checkbox" id="shirts" name="shirts" value="shirts">
+                    </li>
+                    <li>
+                        <label for="pants">Pants</label>
+                        <input type="checkbox" id="pants" name="pants" value="pants">
+                    </li>
+                    <li>
+                        <label for="shorts">Shorts/bottoms</label>
+                        <input type="checkbox" id="shorts" name="shorts" value="shorts">
+                    </li>
+                    <li>
+                        <label for="hats">Hat/beanie</label>
+                        <input type="checkbox" id="hats" name="hats" value="hats">
+                    </li>
+                    <li>
+                        <label for="swimsuits">Swimsuits</label>
+                        <input type="checkbox" id="swimsuits" name="swimsuits" value="swimsuits">
+                    </li>
+                    <li>
+                        <label for="shoes">Shoes</label>
+                        <input type="checkbox" id="shoes" name="shoes" value="shoes">
+                    </li>
+                    <li>
+                        <label for="snowboots">Boots/snowboots</label>
+                        <input type="checkbox" id="boots" name="boots" value="boots">
+                    </li>
+                    <li>
+                        <label for="belt">Belt</label>
+                        <input type="checkbox" id="belt" name="belt" value="belt">
+                    </li>
+                    <li>
+                        <label for="pajamas">Pajamas</label>
+                        <input type="checkbox" id="pajamas" name="pajamas" value="pajamas">
+                    </li>
+                    <li>
+                        <label for="sweaters">Sweaters</label>
+                        <input type="checkbox" id="sweaters" name="sweaters" value="sweaters">
+                    </li>
+                    <li>
+                        <label for="jacket">Jacket</label>
+                        <input type="checkbox" id="jacket" name="jacket" value="jacket">
+                    </li>
+                    <li>
+                        <label for="snowsuit">Snowsuit/snowpants</label>
+                        <input type="checkbox" id="snowsuit" name="snowsuit" value="snowsuit">
+                    </li>
+                    <li>
+                        <label for="gloves">Gloves/mittens</label>
+                        <input type="checkbox" id="gloves" name="gloves" value="gloves">
+                    </li>
+                    <li>
+                        <label for="glasses">Glasses</label>
+                        <input type="checkbox" id="glasses" name="glasses" value="glasses">
+                    </li>
+                    <li>
+                        <label for="sun-glasses">Sun glasses</label>
+                        <input type="checkbox" id="sun-glasses" name="sun-glasses" value="sun-glasses">
+                    </li>
+                </ul>
+            </section>
+            <section id="other-cold-toiletries">
+                <h3>Toiletries</h3>
+                <ul id="other-warm-toiletries">
+                    <li>
+                        <label for="toothbrush">Toothbrush</label>
+                        <input type="checkbox" id="toothbrush" name="toothbrush" value="toothbrush">
+                    </li>
+                    <li>
+                        <label for="toothpaste">Toothpaste</label>
+                        <input type="checkbox" id="toothpaste" name="toothpaste" value="toothpaste">
+                    </li>
+                    <li>
+                        <label for="floss">Floss</label>
+                        <input type="checkbox" id="floss" name="floss" value="floss">
+                    </li>
+                    <li>
+                        <label for="mouthwash">Mouthwash</label>
+                        <input type="checkbox" id="mouthwash" name="mouthwash" value="mouthwash">
+                    </li>
+                    <li>
+                        <label for="razor-shaving-supplies">Razor/shaving supplies</label>
+                        <input type="checkbox" id="razor-shaving-supplies" name="razor-shaving-supplies" value="razor-shaving-supplies">
+                    </li>
+                    <li>
+                        <label for="shampoo">Shampoo</label>
+                        <input type="checkbox" id="shampoo" name="shampoo" value="shampoo">
+                    </li>
+                    <li>
+                        <label for="body-wash">Body wash</label>
+                        <input type="checkbox" id="body-wash" name="body-wash" value="body-wash">
+                    </li>
+                    <li>
+                        <label for="hair-brush">Hair brush/comb</label>
+                        <input type="checkbox" id="hair-brush" name="hair-brush" value="hair-brush">
+                    </li>
+                    <li>
+                        <label for="moisturizer">Moisturizer/skin care</label>
+                        <input type="checkbox" id="moisturizer" name="moisturizer" value="moisturizer">
+                    </li>
+                    <li>
+                        <label for="deodorant">Deodorant</label>
+                        <input type="checkbox" id="deodorant" name="deodorant" value="deodorant">
+                    </li>
+                    <li>
+                        <label for="fragrance">Fragrance</label>
+                        <input type="checkbox" id="fragrance" name="fragrance" value="fragrance">
+                    </li>
+                    <li>
+                        <label for="nail-clippers">Nail clippers/file</label>
+                        <input type="checkbox" id="nail-clippers" name="nail-clippers" value="nail-clippers">
+                    </li>
+                    <li>
+                        <label for="hairdryer">Hairdryer</label>
+                        <input type="checkbox" id="hairdryer" name="hairdryer" value="hairdryer">
+                    </li>
+                    <li>
+                        <label for="contacts">Contacts/case/solution</label>
+                        <input type="checkbox" id="contacts" name="contacts" value="contacts">
+                    </li>
+                    <li>
+                        <label for="makeup">Makeup</label>
+                        <input type="checkbox" id="makeup" name="makeup" value="makeup">
+                    </li>
+                    <li>
+                        <label for="hygiene-products">Hygiene products</label>
+                        <input type="checkbox" id="hygiene-products" name="hygiene-products" value="hygiene-products">
+                    </li>
+                </ul>
+            </section>
+            <section id="other-cold-personal-items">
+                <h3>Personal Items</h3>
+                <ul id="other-cold-personalitems">
+                    <li>
+                        <label for="medications">Medications</label>
+                        <input type="checkbox" id="medications" name="medications" value="medications">
+                    </li>
+                    <li>
+                        <label for="ear-plugs">Ear plugs</label>
+                        <input type="checkbox" id="ear-plugs" name="ear-plugs" value="ear-plugs">
+                    </li>
+                    <li>
+                        <label for="wallet-purse">Wallet/purse</label>
+                        <input type="checkbox" id="walle-purse" name="wallet-purse" value="wallet-purse">
+                    </li>
+                    <li>
+                        <label for="daypack-backpack">Daypack/backpack</label>
+                        <input type="checkbox" id="daypack-backpack" name="daypack-backpack" value="daypack-backpack">
+                    </li>
+                    <li>
+                        <label for="travel-pillow">Travel pillow</label>
+                        <input type="checkbox" id="travel-pillow" name="travel-pillow" value="travel-pillow">
+                    </li>
+                    <li>
+                        <label for="pen-pencil">Pen/pencil</label>
+                        <input type="checkbox" id="pen-pencil" name="pen-pencil" value="pen-pencil">
+                    </li>
+                    <li>
+                        <label for="book">Book</label>
+                        <input type="checkbox" id="book" name="book" value="book">
+                    </li>
+                    <li>
+                        <label for="journal">Journal</label>
+                        <input type="checkbox" id="journal" name="journal" value="journal">
+                    </li>
+                    <li>
+                        <label for="waterbottle">Reusable water bottle</label>
+                        <input type="checkbox" id="waterbottle" name="waterbottle" value="waterbottle">
+                    </li>
+                    <li>
+                        <label for="first-aid-supplies">First aid supplies</label>
+                        <input type="checkbox" id="first-aid-supplies" name="first-aid-supplies" value="first-aid-supplies">
+                    </li>
+                </ul>
+            </section>
+            <section id="other-cold-electronics">
+                <h3>Electronics</h3>
+                <ul id="other-cold-electronics">
+                    <li>
+                        <label for="computer-tablet">Computer/tablet</label>
+                        <input type="checkbox" id="computer-tablet" name="computer-tablet" value="computer-tablet">
+                    </li>
+                    <li>
+                        <label for="mouse-keyboard">Mouse/keyboard</label>
+                        <input type="checkbox" id="mouse-keyboard" name="mouse-keyboard" value="mouse-keyboard">
+                    </li>
+                    <li>
+                        <label for="phone">Phone</label>
+                        <input type="checkbox" id="phone" name="phone" value="phone">
+                    </li>
+                    <li>
+                        <label for="camera-sd-cards">Camera/SD-cards</label>
+                        <input type="checkbox" id="camera-sd-cards" name="camera-sd-cards" value="camera-sd-cards">
+                    </li>
+                    <li>
+                        <label for="headphones-earbuds">Headphones/earbuds</label>
+                        <input type="checkbox" id="headphones-earbuds" name="headphones-earbuds" value="headphones-earbuds">
+                    </li>
+                    <li>
+                        <label for="chargers">Chargers</label>
+                        <input type="checkbox" id="chargers" name="chargers" value="chargers">
+                    </li>
+                </ul>
+            </section>
+            <section id="other-cold-travel-documents">
+                <h3>Travel Documents</h3>
+                <ul id="other-cold-travel-documents">
+                    <li>
+                        <label for="passport">Passport</label>
+                        <input type="checkbox" id="passport" name="passport" value="passport">
+                    </li>
+                    <li>
+                        <label for="identification-card">Identification card</label>
+                        <input type="checkbox" id="identification-card" name="identification-card" value="identification-card">
+                    </li>
+                    <li>
+                        <label for="drivers-license">Driver's license</label>
+                        <input type="checkbox" id="drivers-license" name="drivers-license" value="drivers-license">
+                    </li>
+                    <li>
+                        <label for="credit-card">Credit card</label>
+                        <input type="checkbox" id="credit-card" name="credit-card" value="credit-card">
+                    </li>
+                    <li>
+                        <label for="airline-tickets">Airline tickets</label>
+                        <input type="checkbox" id="airline-tickets" name="airline-tickets" value="airline-tickets">
+                    </li>
+                    <li>
+                        <label for="travel-insurance">Travel insurance</label>
+                        <input type="checkbox" id="travel-insurance" name="travel-insurance" value="travel-insurance">
+                    </li>
+                    <li>
+                        <label for="car-rental-documents">Car rental documents</label>
+                        <input type="checkbox" id="car-rental-documents" name="car-rental-documents" value="car-rental-documents">
+                    </li>
+                    <li>
+                        <label for="hotel-rental-documents">Hotel/home rental documents</label>
+                        <input type="checkbox" id="hotel-rental-documents" name="hotel-rental-documents" value="hotel-rental-documents">
+                    </li>
+                    <li>
+                        <label for="money">Money/currency</label>
+                        <input type="checkbox" id="money" name="money" value="money">
+                    </li>
+                </ul>
+            </section>
+        </form>
+    </div>
+</body>
+</html>

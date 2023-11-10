@@ -1,19 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Packing Planner</title>
-</head>
-<body>
-    <nav class="return-to-main-nav">
-        <ul>
-            <li><a href="index.html">Return to Main</a></li>
-        </ul>
-    </nav>
-    <div class="list-container">
-        <h1>Please check items you will be packing</h1>
         <!--male && warm-->
         <form id="male-warm-checklist">
             <section id="male-warm-clothing">
@@ -2354,6 +2338,3 @@
                 </ul>
             </section>
         </form>
-    </div>
-</body>
-</html>
