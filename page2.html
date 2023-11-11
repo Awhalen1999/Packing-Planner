@@ -10,38 +10,46 @@
     <nav class="return-to-main-nav">
         <a href="index.html">Return to Main</a>
     </nav>
-    <div class="options-container">
+    <div id="options-container">
         <h1>Choose Options:</h1>
         <form id="options-Form">
             <h2>Please select gender/packing requirements</h2>
-            <label>
-                Male
+            <div class="radiowithimage">
                 <input type="radio" name="gender" value="male">
-            </label>
-            <label>
-                Female
+                <img src="images/optionmale.png" alt="Male Icon">
+                <label>Male</label>
+              </div>
+              <div class="radiowithimage">
                 <input type="radio" name="gender" value="female">
-            </label>
-            <label>
-                Other
+                <img src="images/optionfemale.png" alt="Female Icon">
+                <label>Female</label>
+              </div>
+              <div class="radiowithimage">
                 <input type="radio" name="gender" value="other">
-            </label>
+                <img src="images/optionother.png" alt="Other Icon">
+                <label>Other</label>
+              </div>
             <br>
             <h2>Please select climate</h2>
-            <label>
-                Warm
+            <div class="radiowithimage">
                 <input type="radio" name="climate" value="warm">
-            </label>
-            <label>
-                Mild
+                <img src="images/optionwarm.png" alt="Warm Icon">
+                <label>Warm</label>
+              </div>
+              
+              <div class="radiowithimage">
                 <input type="radio" name="climate" value="mild">
-            </label>
-            <label>
-                Cold
+                <img src="images/optionmild.png" alt="Mild Icon">
+                <label>Mild</label>
+              </div>
+              
+              <div class="radiowithimage">
                 <input type="radio" name="climate" value="cold">
-            </label>
+                <img src="images/optioncold.png" alt="Cold Icon">
+                <label>Cold</label>
+              </div>
             <br>
-            <input id="options-button" type="button" value="Submit" onclick="processForm()">
+            <input id="options-button" type="button" value="Generate list" onclick="processForm()">
         </form>
     </div>
     <script src="Script.js"></script>
