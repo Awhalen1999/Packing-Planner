@@ -41,6 +41,6 @@ function processForm() {
 
         window.location.href = url;
     } else {
-        alert("Please select options from both groups.");
+        alert("Please select an option from both groups.");
     }
 }
