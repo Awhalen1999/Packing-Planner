@@ -239,11 +239,6 @@ footer {
     border: 2px solid black;
 }
 
-.divider{
-    border-top: 3px solid grey;
-    border-radius: 5px;
-}
-
 .checklist-section{
   border: 1px solid black;  
   border-radius: 10px;
