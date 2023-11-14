@@ -245,7 +245,22 @@ footer {
 }
 /*reduce margintop on first*/
 .checklist-title{
-    border:1px solid black;
     margin-top:20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.checklist-section ul {
+    list-style-type: none;
+    padding: 5px; 
+}
+/*remove checkbox and make whole item selectable*/
+.checklist-section li{
+    margin: 0;
+      padding: 10px 10px 10px 30px;
+      border: 1px solid #ccc;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      border-radius: 10px;
+      display: flex;
+      align-items: left;
 }
