@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: baskerville, Arial, Helvetica, sans-serif;
-    background: url('images/backgroundimage1.jpg') center/cover no-repeat fixed;
+    background: url('images/backgroundimage.jpg') center/cover no-repeat fixed;
     color: black;
     min-height: 100vh;
     display: flex;
