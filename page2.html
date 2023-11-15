@@ -12,7 +12,7 @@
     </nav>
     <div id="options-container">
       <h1>Choose Options:</h1>
-      <form id="options-Form">
+      <form id="options-form" onsubmit="submitForm(event)">
         <h2>Please select gender/packing requirements</h2>
         <div class="radiowithimage">
           <input type="radio" name="gender" value="male" />
@@ -49,12 +49,8 @@
           <label>Cold</label>
         </div>
         <br />
-        <input
-          id="options-button"
-          type="button"
-          value="Generate list"
-          onclick="processForm()"
-        />
+        <input type="hidden" id="form-data" name="form-data" />
+        <input id="options-button" type="submit" value="Generate list" />
       </form>
     </div>
     <script src="Script.js"></script>

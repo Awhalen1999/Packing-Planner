@@ -1,7 +1,7 @@
 {
   "checklists": [
     {
-      "name": "female-warm-checklist",
+      "name": "femalewarm",
       "content": [
         {
           "title": "Clothing",
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "name": "female-mild-checklist",
+      "name": "femalemild",
       "content": [
         {
           "title": "Clothing",
@@ -180,7 +180,7 @@
       ]
     },
     {
-      "name": "female-warm-checklist",
+      "name": "femalewarm",
       "content": [
         {
           "title": "Clothing",
@@ -270,7 +270,7 @@
       ]
     },
     {
-      "name": "male-cold-checklist",
+      "name": "malecold",
       "content": [
         {
           "title": "Clothing",
@@ -357,7 +357,7 @@
       ]
     },
     {
-      "name": "male-mild-checklist",
+      "name": "malemild",
       "content": [
         {
           "title": "Clothing",
@@ -443,7 +443,7 @@
       ]
     },
     {
-      "name": "male-warm-checklist",
+      "name": "malewarm",
       "content": [
         {
           "title": "Clothing",
@@ -529,7 +529,7 @@
       ]
     },
     {
-      "name": "other-cold-checklist",
+      "name": "othercold",
       "content": [
         {
           "title": "Clothing",
@@ -618,7 +618,7 @@
       ]
     },
     {
-      "name": "other-mild-checklist",
+      "name": "othermild",
       "content": [
         {
           "title": "Clothing",
@@ -706,7 +706,7 @@
       ]
     },
     {
-      "name": "other-warm-checklist",
+      "name": "otherwarm",
       "content": [
         {
           "title": "Clothing",
