@@ -1,57 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Packing Planner</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="return-to-main-nav">
-        <a href="index.html">Return to Main</a>
+      <a href="index.html">Return to Main</a>
     </nav>
     <div id="options-container">
-        <h1>Choose Options:</h1>
-        <form id="options-Form">
-            <h2>Please select gender/packing requirements</h2>
-            <div class="radiowithimage">
-                <input type="radio" name="gender" value="male">
-                <img src="images/optionmale.png" alt="Male Icon">
-                <label>Male</label>
-              </div>
-              <div class="radiowithimage">
-                <input type="radio" name="gender" value="female">
-                <img src="images/optionfemale.png" alt="Female Icon">
-                <label>Female</label>
-              </div>
-              <div class="radiowithimage">
-                <input type="radio" name="gender" value="other">
-                <img src="images/optionother.png" alt="Other Icon">
-                <label>Other</label>
-              </div>
-            <br>
-            <h2>Please select climate</h2>
-            <div class="radiowithimage">
-                <input type="radio" name="climate" value="warm">
-                <img src="images/optionwarm.png" alt="Warm Icon">
-                <label>Warm</label>
-              </div>
-              
-              <div class="radiowithimage">
-                <input type="radio" name="climate" value="mild">
-                <img src="images/optionmild.png" alt="Mild Icon">
-                <label>Mild</label>
-              </div>
-              
-              <div class="radiowithimage">
-                <input type="radio" name="climate" value="cold">
-                <img src="images/optioncold.png" alt="Cold Icon">
-                <label>Cold</label>
-              </div>
-            <br>
-            <input id="options-button" type="button" value="Generate list" onclick="processForm()">
-        </form>
+      <h1>Choose Options:</h1>
+      <form id="options-Form">
+        <h2>Please select gender/packing requirements</h2>
+        <div class="radiowithimage">
+          <input type="radio" name="gender" value="male" />
+          <img src="images/optionmale.png" alt="Male Icon" />
+          <label>Male</label>
+        </div>
+        <div class="radiowithimage">
+          <input type="radio" name="gender" value="female" />
+          <img src="images/optionfemale.png" alt="Female Icon" />
+          <label>Female</label>
+        </div>
+        <div class="radiowithimage">
+          <input type="radio" name="gender" value="other" />
+          <img src="images/optionother.png" alt="Other Icon" />
+          <label>Other</label>
+        </div>
+        <br />
+        <h2>Please select climate</h2>
+        <div class="radiowithimage">
+          <input type="radio" name="climate" value="warm" />
+          <img src="images/optionwarm.png" alt="Warm Icon" />
+          <label>Warm</label>
+        </div>
+
+        <div class="radiowithimage">
+          <input type="radio" name="climate" value="mild" />
+          <img src="images/optionmild.png" alt="Mild Icon" />
+          <label>Mild</label>
+        </div>
+
+        <div class="radiowithimage">
+          <input type="radio" name="climate" value="cold" />
+          <img src="images/optioncold.png" alt="Cold Icon" />
+          <label>Cold</label>
+        </div>
+        <br />
+        <input
+          id="options-button"
+          type="button"
+          value="Generate list"
+          onclick="processForm()"
+        />
+      </form>
     </div>
     <script src="Script.js"></script>
-</body>
+  </body>
 </html>
