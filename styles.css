@@ -9,7 +9,7 @@ eggshell: #FFF9E3 */
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #f69b43;
+  background-color: #090B0Dff;
 }
 
 #index-page {
@@ -110,15 +110,15 @@ footer {
 #options-container {
   width: 80%;
   margin: auto;
-  padding: 20px;
   background-color: #fff9e3;
-  border: 2px solid #090b0dff; /*temp*/
+  border: 4px solid #E66434ff; /*temp*/
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 
 .options-radio {
@@ -127,18 +127,18 @@ footer {
   align-items: center;
   text-align: center;
   margin-bottom: 10px;
-  width: 80%;
+  width: 100%;
   border: 1px solid black;
 }
 
 .options-radio img {
   width: 50px;
   height: 50px;
-  margin-right: 10px;
+  padding: 10px;
 }
 
 #options-button {
-  background-color: #008cba; /* Blue */
+  background-color: green;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -146,6 +146,20 @@ footer {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin-bottom: 30px;
   cursor: pointer;
+}
+
+.options-var {
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#optionsheader{
+  font-size: 30px;
+  color: #333;
+  text-align: center;
+  margin-top:30px;
 }
