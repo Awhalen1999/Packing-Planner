@@ -7,43 +7,47 @@
     <title>Packing Planner</title>
   </head>
   <body>
-    <nav class="return-to-main-nav">
-      <a href="index.html">Return to Main</a>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="mailto:awhalen1999@gmail.com">Contact Me</a></li>
+      </ul>
     </nav>
     <div id="options-container">
       <h1>Choose Options:</h1>
       <form id="options-form" onsubmit="submitForm(event)">
         <h2>Please select gender/packing requirements</h2>
-        <div class="radiowithimage">
+        <div class="options-radio">
           <input type="radio" name="gender" value="male" />
           <img src="images/optionmale.png" alt="Male Icon" />
           <label>Male</label>
         </div>
-        <div class="radiowithimage">
+        <div class="options-radio">
           <input type="radio" name="gender" value="female" />
           <img src="images/optionfemale.png" alt="Female Icon" />
           <label>Female</label>
         </div>
-        <div class="radiowithimage">
+        <div class="options-radio">
           <input type="radio" name="gender" value="other" />
           <img src="images/optionother.png" alt="Other Icon" />
           <label>Other</label>
         </div>
         <br />
         <h2>Please select climate</h2>
-        <div class="radiowithimage">
+        <div class="options-radio">
           <input type="radio" name="climate" value="warm" />
           <img src="images/optionwarm.png" alt="Warm Icon" />
           <label>Warm</label>
         </div>
 
-        <div class="radiowithimage">
+        <div class="options-radio">
           <input type="radio" name="climate" value="mild" />
           <img src="images/optionmild.png" alt="Mild Icon" />
           <label>Mild</label>
         </div>
 
-        <div class="radiowithimage">
+        <div class="options-radio">
           <input type="radio" name="climate" value="cold" />
           <img src="images/optioncold.png" alt="Cold Icon" />
           <label>Cold</label>
