@@ -256,14 +256,28 @@ footer {
   list-style-type: none;
   padding: 5px;
 }
-/*remove checkbox and make whole item selectable*/
-.checklist-section li {
-  margin: 0;
-  padding: 10px 10px 10px 30px;
+
+.item-label {
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
-  margin-bottom: 5px;
-  margin-top: 5px;
-  border-radius: 10px;
-  display: flex;
-  align-items: left;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.item-label:hover {
+  background-color: #f0f0f0;
+}
+
+.check-item {
+  margin-right: 10px;
+}
+
+.item-label.selected {
+  background-color: #ccc;
+}
+
+#checkedItemsList li {
+  list-style-type: none;
 }
