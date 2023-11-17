@@ -9,7 +9,7 @@ eggshell: #FFF9E3 */
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #090B0Dff;
+  background: linear-gradient(to bottom, #E66434ff, #F69B43ff, #FEECACff, #FFF9E3, #FEECACff, #F69B43ff, #E66434ff);
 }
 
 #index-page {
@@ -111,7 +111,7 @@ footer {
   width: 80%;
   margin: auto;
   background-color: #fff9e3;
-  border: 4px solid #E66434ff; /*temp*/
+  border: 2px solid #090B0Dff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   display: flex;
