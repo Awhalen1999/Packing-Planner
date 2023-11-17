@@ -285,3 +285,26 @@ footer {
 #logo {
   height: 80%;
 }
+
+/* output.innerHTML = content;
+          var button = document.createElement("button");
+          button.textContent = "Submit";
+          button.addEventListener("click", function () {
+            var checkboxes = document.querySelectorAll(".check-item");
+            var checkedItems = [];
+            checkboxes.forEach(function (checkbox) {
+              if (checkbox.checked) {
+                checkedItems.push(checkbox.nextSibling.nodeValue.trim());
+              }
+            });
+            localStorage.setItem("checkedItems", JSON.stringify(checkedItems));
+            window.location.href = "checkeditems.html";
+          });
+          output.appendChild(button);
+        } else {
+          console.log("Checklist not found");
+        }
+      })
+      .catch((error) => console.error("Error:", error));
+  }
+}; */

@@ -20,8 +20,7 @@ window.onload = function () {
             })
             .join("");
           output.innerHTML = content;
-          var button = document.createElement("button");
-          button.textContent = "Submit";
+          var button = document.getElementById("submit-button");
           button.addEventListener("click", function () {
             var checkboxes = document.querySelectorAll(".check-item");
             var checkedItems = [];
@@ -33,7 +32,6 @@ window.onload = function () {
             localStorage.setItem("checkedItems", JSON.stringify(checkedItems));
             window.location.href = "checkeditems.html";
           });
-          output.appendChild(button);
         } else {
           console.log("Checklist not found");
         }
