@@ -10,6 +10,7 @@ eggshell: #FFF9E3 */
 body {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(to bottom, #E66434ff, #F69B43ff, #FEECACff, #FFF9E3, #FEECACff, #F69B43ff, #E66434ff);
+  color: black;
 }
 
 #index-page {
@@ -129,6 +130,8 @@ footer {
   margin-bottom: 10px;
   width: 100%;
   border: 1px solid black;
+  border-radius: 5px;
+  padding:10px;
 }
 
 .options-radio img {
@@ -162,4 +165,8 @@ footer {
   color: #333;
   text-align: center;
   margin-top:30px;
+}
+
+input[type='radio'] {
+  transform: scale(1.2);
 }
