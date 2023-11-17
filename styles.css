@@ -156,7 +156,7 @@ footer {
 .options-var {
   font-size: 20px;
   color: #333;
-  text-align: center;
+  text-align: center; /*not centering for both*/
   margin-bottom: 10px;
 }
 
@@ -164,9 +164,19 @@ footer {
   font-size: 30px;
   color: #333;
   text-align: center;
-  margin-top:30px;
+  margin-top:50px;
 }
 
 input[type='radio'] {
   transform: scale(1.2);
+}
+
+.divider{
+  width: 90%;
+  height: 2px;
+  background-color: #090B0Dff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 2px;
 }
