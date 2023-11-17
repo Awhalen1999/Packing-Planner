@@ -180,3 +180,23 @@ input[type='radio'] {
   border: none;
   border-radius: 2px;
 }
+
+.checklist-container {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #090B0Dff;
+  margin: auto;
+  padding: 10px;
+  background-color:#FFF9E3;
+}
+
+.checklist-output {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #090B0Dff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+}
