@@ -180,8 +180,7 @@ input[type='radio'] {
   width: 90%;
   height: 2px;
   background-color: #090B0Dff;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px auto;
   border: none;
   border-radius: 2px;
 }
@@ -198,7 +197,6 @@ input[type='radio'] {
 .checklist-output {
   width: 80%;
   margin: 0 auto;
-  border: 1px solid #090B0Dff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -221,13 +219,37 @@ input[type='radio'] {
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   font-size: 16px;
-  margin-bottom: 30px;
+  margin: 20px auto;
   cursor: pointer;
+
 }
 
 #submit-button:hover {
   background-color: #04aa6d;
   color: black; /*change colors */
+}
+
+.checklist-header {
+  font-size: 30px;
+  color: #333;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.checkedItems-List ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkedItems-List li {
+  border: 1px solid #000;
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
+  text-align: center;
 }
