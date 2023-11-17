@@ -9,8 +9,17 @@ eggshell: #FFF9E3 */
 
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(to bottom, #E66434ff, #F69B43ff, #FEECACff, #FFF9E3, #FEECACff, #F69B43ff, #E66434ff);
-  color: black;
+  background: linear-gradient(
+    to bottom,
+    #e66434ff,
+    #f69b43ff,
+    #feecacff,
+    #fff9e3,
+    #feecacff,
+    #f69b43ff,
+    #e66434ff
+  );
+  color: #090b0dff;
 }
 
 #index-page {
@@ -43,7 +52,7 @@ nav li a {
   text-decoration: none;
   font-weight: bold;
   background-color: #333330ff;
-  border-radius: 15px;
+  border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -54,11 +63,8 @@ nav li a:hover {
 }
 
 nav li {
-  margin-right: 50px;
-}
-
-nav li:last-child {
-  margin-right: 0;
+  margin-right: 25px;
+  margin-left: 25px;
 }
 
 #page-1-container {
@@ -83,12 +89,12 @@ nav li:last-child {
   padding: 15px 100px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 18px;
+  font-size: 20px;
   margin: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-weight: bold;
+  font-family: "Poppins", sans-serif; 
   border-radius: 30px;
 }
 
@@ -104,15 +110,22 @@ footer {
   background-color: #333;
   color: #fff9e3;
   text-align: center;
-  padding: 4px;
-  background-color: transparent;
+  padding: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.footerimage {
+  height: 24px;
+  width: 24px; 
+  margin: 10px;
+  vertical-align: middle;
 }
 
 #options-container {
   width: 80%;
   margin: auto;
   background-color: #fff9e3;
-  border: 2px solid #090B0Dff;
+  border: 2px solid #090b0dff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   display: flex;
@@ -124,62 +137,61 @@ footer {
 
 .options-radio {
   display: flex;
-  justify-content: center;
+  justify-content: center; /*remove if decide to display content on side*/
   align-items: center;
-  text-align: center;
   margin-bottom: 10px;
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid #090b0dff;
   border-radius: 5px;
-  padding:10px;
+  padding: 10px;
 }
 
 .options-radio img {
   width: 50px;
   height: 50px;
-  padding: 10px;
+  padding: 15px;
 }
 
 #options-button {
-  background-color: green;
+  background-color: #41c147;
   border: none;
-  color: white;
+  color: #fff9e3;
   padding: 15px 32px;
-  text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 30px;
   cursor: pointer;
+  font-family: "Poppins", sans-serif; 
+  border-radius: 5px;
 }
 
 #options-button:hover {
-  background-color: #04aa6d;
-  color: black; /*change colors */
+  background-color: #39a53e;
+  color: #fff9e3; 
 }
 
 .options-var {
   font-size: 20px;
-  color: #333;
+  color: #090b0dff;
   text-align: center; /*not centering for both*/
   margin-bottom: 10px;
 }
 
-#optionsheader{
+#optionsheader {
   font-size: 30px;
-  color: #333;
+  color: #090b0dff;
   text-align: center;
-  margin-top:50px;
+  margin-top: 50px;
 }
 
-input[type='radio'] {
-  transform: scale(1.2);
+input[type="radio"] {
+  transform: scale(1.3);
 }
 
-.divider{
+.divider {
   width: 90%;
   height: 2px;
-  background-color: #090B0Dff;
+  background-color: #090b0dff;
   margin: 20px auto;
   border: none;
   border-radius: 2px;
@@ -188,10 +200,10 @@ input[type='radio'] {
 .checklist-container {
   width: 80%;
   margin: 0 auto;
-  border: 1px solid #090B0Dff;
+  border: 1px solid #090b0dff;
   margin: auto;
   padding: 10px;
-  background-color:#FFF9E3;
+  background-color: #fff9e3;
 }
 
 .checklist-output {
@@ -201,12 +213,12 @@ input[type='radio'] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center; 
+  text-align: center;
 }
 
 .checklist-output li {
   list-style-type: none;
-  border: 1px solid #090B0Dff;
+  border: 1px solid #090b0dff;
   padding: 5px 100px 5px 100px;
   margin: 5px;
   border-radius: 5px;
@@ -215,7 +227,7 @@ input[type='radio'] {
 #submit-button {
   background-color: green;
   border: none;
-  color: white;
+  color: #fff9e3;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -223,12 +235,10 @@ input[type='radio'] {
   font-size: 16px;
   margin: 20px auto;
   cursor: pointer;
-
 }
 
 #submit-button:hover {
   background-color: #04aa6d;
-  color: black; /*change colors */
 }
 
 .checklist-header {
