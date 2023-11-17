@@ -22,6 +22,17 @@ body {
   color: #090b0dff;
 }
 
+.divider {
+  width: 90%;
+  height: 2px;
+  background-color: #090b0dff;
+  margin: 20px auto;
+  border: none;
+  border-radius: 2px;
+}
+
+/*page 1*/
+
 #index-page {
   background-image: url("images/landingpage.jpg");
   background-size: cover;
@@ -121,6 +132,8 @@ footer {
   vertical-align: middle;
 }
 
+/*page 2*/
+
 #options-container {
   width: 80%;
   margin: auto;
@@ -188,22 +201,20 @@ input[type="radio"] {
   transform: scale(1.3);
 }
 
-.divider {
-  width: 90%;
-  height: 2px;
-  background-color: #090b0dff;
-  margin: 20px auto;
-  border: none;
-  border-radius: 2px;
-}
+/*page 3*/
 
 .checklist-container {
   width: 80%;
-  margin: 0 auto;
-  border: 1px solid #090b0dff;
   margin: auto;
-  padding: 10px;
   background-color: #fff9e3;
+  border: 2px solid #090b0dff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .checklist-output {
@@ -212,41 +223,52 @@ input[type="radio"] {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   text-align: center;
 }
 
 .checklist-output li {
   list-style-type: none;
   border: 1px solid #090b0dff;
-  padding: 5px 100px 5px 100px;
-  margin: 5px;
+  padding: 5px 10px;
+  margin: 5px auto;
   border-radius: 5px;
+  text-align: left;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+  margin: 15px;
+
 }
 
 #submit-button {
-  background-color: green;
+  background-color: #41c147;
   border: none;
   color: #fff9e3;
   padding: 15px 32px;
-  text-align: center;
   text-decoration: none;
-  display: block;
-  font-size: 16px;
-  margin: 20px auto;
+  font-size: 18px;
+  margin-top:10px;
+  margin-bottom: 30px;
   cursor: pointer;
+  font-family: "Poppins", sans-serif; 
+  border-radius: 5px;
 }
 
 #submit-button:hover {
-  background-color: #04aa6d;
+  background-color: #39a53e;
+  color: #fff9e3; 
 }
 
 .checklist-header {
   font-size: 30px;
-  color: #333;
+  color: #090b0dff;
   text-align: center;
   margin-top: 50px;
 }
+
+/*page 4*/
 
 .checkedItems-List ul {
   list-style-type: none;
