@@ -9,6 +9,12 @@ window.onload = function () {
 
       var gender = formData.get("gender");
       var climate = formData.get("climate");
+
+      if (!gender || !climate) {
+        alert("Please select an option from the gender and climate forms.");
+        return;
+      }
+
       var combination = gender + climate;
 
       localStorage.setItem("combination", combination);
