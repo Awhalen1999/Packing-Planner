@@ -1,31 +1,31 @@
-/* reseda-green: #807A62ff;
-sandy-brown: #F69B43ff;
-night: #090B0Dff;
-vanilla: #FEECACff;
-jet: #333330ff;
-flame: #E66434ff;
-vermilion: #F5352Cff;
+/* reseda-green: #807A62;
+sandy-brown: #F69B43;
+night: #090B0D;
+vanilla: #FEECAC;
+jet: #333330;
+flame: #E66434;
+vermilion: #F5352C;
 eggshell: #FFF9E3 */
 
 body {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(
     to bottom,
-    #e66434ff,
-    #f69b43ff,
-    #feecacff,
+    #e66434,
+    #f69b43,
+    #feecac,
     #fff9e3,
-    #feecacff,
-    #f69b43ff,
-    #e66434ff
+    #feecac,
+    #f69b43,
+    #e66434
   );
-  color: #090b0dff;
+  color: #090b0d;
 }
 
 .divider {
   width: 90%;
   height: 2px;
-  background-color: #090b0dff;
+  background-color: #090b0d;
   margin: 20px auto;
   border: none;
   border-radius: 2px;
@@ -62,7 +62,7 @@ nav li a {
   padding: 5px 30px;
   text-decoration: none;
   font-weight: bold;
-  background-color: #333330ff;
+  background-color: #333330;
   border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -70,7 +70,7 @@ nav li a {
 
 nav li a:hover {
   background-color: #fff9e3;
-  color: #333330ff;
+  color: #333330;
 }
 
 nav li {
@@ -86,7 +86,7 @@ nav li {
 }
 
 #welcome {
-  color: #333330ff;
+  color: #333330;
   font-size: 50px;
   margin-top: 30px;
   text-align: center;
@@ -94,7 +94,7 @@ nav li {
 }
 
 #get-started {
-  background-color: #333330ff;
+  background-color: #333330;
   border: none;
   color: #fff9e3;
   padding: 15px 100px;
@@ -105,20 +105,19 @@ nav li {
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-weight: bold;
-  font-family: "Poppins", sans-serif; 
+  font-family: "Poppins", sans-serif;
   border-radius: 30px;
 }
 
 #get-started:hover {
   background-color: #41c147;
-  color: #333330ff;
+  color: #333330;
 }
 
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #333;
   color: #fff9e3;
   text-align: center;
   padding: 2px;
@@ -127,7 +126,7 @@ footer {
 
 .footerimage {
   height: 24px;
-  width: 24px; 
+  width: 24px;
   margin: 10px;
   vertical-align: middle;
 }
@@ -138,7 +137,7 @@ footer {
   width: 80%;
   margin: auto;
   background-color: #fff9e3;
-  border: 2px solid #090b0dff;
+  border: 2px solid #090b0d;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   display: flex;
@@ -154,7 +153,7 @@ footer {
   align-items: center;
   margin-bottom: 10px;
   width: 100%;
-  border: 1px solid #090b0dff;
+  border: 1px solid #090b0d;
   border-radius: 5px;
   padding: 10px;
 }
@@ -174,27 +173,32 @@ footer {
   font-size: 18px;
   margin-bottom: 30px;
   cursor: pointer;
-  font-family: "Poppins", sans-serif; 
+  font-family: "Poppins", sans-serif;
   border-radius: 5px;
 }
 
 #options-button:hover {
   background-color: #39a53e;
-  color: #fff9e3; 
+  color: #fff9e3;
 }
 
 .options-var {
   font-size: 20px;
-  color: #090b0dff;
-  text-align: center; /*not centering for both*/
+  color: #090b0d;
   margin-bottom: 10px;
 }
 
 #optionsheader {
   font-size: 30px;
-  color: #090b0dff;
-  text-align: center;
+  color: #090b0d;
   margin-top: 50px;
+}
+
+.instructions {
+  font-size: 12px;
+  color: #333330;
+  margin-top: 10px;
+  padding: 10px;
 }
 
 input[type="radio"] {
@@ -207,7 +211,7 @@ input[type="radio"] {
   width: 80%;
   margin: auto;
   background-color: #fff9e3;
-  border: 2px solid #090b0dff;
+  border: 2px solid #090b0d;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   display: flex;
@@ -229,7 +233,7 @@ input[type="radio"] {
 
 .checklist-output li {
   list-style-type: none;
-  border: 1px solid #090b0dff;
+  border: 1px solid #090b0d;
   padding: 5px 10px;
   margin: 5px auto;
   border-radius: 5px;
@@ -239,7 +243,6 @@ input[type="radio"] {
 input[type="checkbox"] {
   transform: scale(1.2);
   margin: 15px;
-
 }
 
 #submit-button {
@@ -249,39 +252,72 @@ input[type="checkbox"] {
   padding: 15px 32px;
   text-decoration: none;
   font-size: 18px;
-  margin-top:10px;
+  margin-top: 10px;
   margin-bottom: 30px;
   cursor: pointer;
-  font-family: "Poppins", sans-serif; 
+  font-family: "Poppins", sans-serif;
   border-radius: 5px;
 }
 
 #submit-button:hover {
   background-color: #39a53e;
-  color: #fff9e3; 
+  color: #fff9e3;
 }
 
 .checklist-header {
   font-size: 30px;
-  color: #090b0dff;
+  color: #090b0d;
   text-align: center;
   margin-top: 50px;
 }
 
 /*page 4*/
 
+.checkedItems-List {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .checkedItems-List ul {
-  list-style-type: none;
-  padding: 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  list-style-type: none;
 }
 
 .checkedItems-List li {
-  border: 1px solid #000;
-  padding: 10px;
-  margin: 10px;
-  width: 80%;
-  text-align: center;
+  width: 100%;
+  border: 1px solid #090b0d;
+  padding: 5px 10px;
+  margin: 5px auto;
+  border-radius: 5px;
+  text-align: left;
+}
+
+#donebutton {
+  background-color: #41c147;
+  border: none;
+  color: #fff9e3;
+  padding: 15px 32px;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+#donebutton:hover {
+  background-color: #39a53e;
+  color: #fff9e3;
+  text-decoration: none;
+}
+
+#donebutton a {
+  text-decoration: none;
+  color: #fff9e3;
 }
