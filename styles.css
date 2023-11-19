@@ -321,3 +321,16 @@ input[type="checkbox"] {
   text-decoration: none;
   color: #fff9e3;
 }
+
+/* about page */
+
+#about, #how-it-works {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  background-color: #fff9e3;
+  border: 2px solid #090b0d;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
