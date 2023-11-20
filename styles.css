@@ -98,7 +98,6 @@ nav li {
 
 #get-started:hover {
   background-color: #41c147;
-  color: #333330;
 }
 /* not in center */
 footer {
@@ -250,7 +249,6 @@ input[type="checkbox"] {
 
  #submit-button:hover {
   background-color: #39a53e;
-  color: #fff9e3;
 }
 
 .checklist-header {
@@ -302,8 +300,6 @@ input[type="checkbox"] {
 
 #donebutton:hover {
   background-color: #39a53e;
-  color: #fff9e3;
-  text-decoration: none;
 }
 
 #donebutton a {
