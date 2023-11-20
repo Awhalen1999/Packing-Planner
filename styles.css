@@ -179,7 +179,7 @@ footer {
   margin-top: 50px;
 }
 
-#options-instructions {
+.instructions {
   font-size: 12px;
   color: #fff9e3;
   margin-top: 10px;
@@ -199,7 +199,6 @@ input[type="radio"] {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 1px solid #141414;
   padding: 10px;
 }
 
@@ -249,24 +248,17 @@ input[type="checkbox"] {
   border-radius: 5px;
 } */
 
-/* #submit-button:hover {
+ #submit-button:hover {
   background-color: #39a53e;
   color: #fff9e3;
 }
 
-/* .checklist-header {
+.checklist-header {
   font-size: 30px;
-  color: #090b0d;
+  color: #fff9e3;
   text-align: center;
-  margin-top: 50px;
-} */
-
-/* .instructions {
-  font-size: 12px;
-  color: #141414;
-  margin-top: 10px;
-  padding: 10px;
-} */
+  margin-top: 40px;
+}
 
 /*page 4*/
 
