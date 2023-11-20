@@ -5,10 +5,6 @@ vanilla: #feecac
 night: #141414
 harvest-gold: #e1a21b */
 
-
-
-
-
 body {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(180deg, #2a2a2a, #3f3f3f, #545454, #696969);
@@ -137,7 +133,7 @@ footer {
 
 .options-radio {
   display: flex;
-  justify-content: center; /*remove if decide to display content on side*/
+  justify-content: center; /*remove if decide to display content on side */
   align-items: center;
   margin-bottom: 2%;
   width: 100%;
@@ -199,14 +195,12 @@ input[type="radio"] {
 .checklist-container {
   width: 80%;
   margin: auto;
-  background-color: #fff9e3;
-  border: 1px solid #141414;
-  border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: center;
+  border: 1px solid #141414;
+  padding: 10px;
 }
 
 .checklist-output {
@@ -214,9 +208,6 @@ input[type="radio"] {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: left;
-  text-align: center;
 }
 
 .checklist-output li {
@@ -229,9 +220,19 @@ input[type="radio"] {
   text-align: left;
 }
 
+.output-title {
+  color: #fff9e3;
+  text-align: center;
+}
+
+.output-item {
+  color: #141414;
+  border: 1px solid #141414;
+}
+
 input[type="checkbox"] {
   transform: scale(1.2);
-  margin: 15px;
+  margin: 5px 15px;
 }
 
 #submit-button {
@@ -246,26 +247,26 @@ input[type="checkbox"] {
   cursor: pointer;
   font-family: "Poppins", sans-serif;
   border-radius: 5px;
-}
+} */
 
-#submit-button:hover {
+/* #submit-button:hover {
   background-color: #39a53e;
   color: #fff9e3;
 }
 
-.checklist-header {
+/* .checklist-header {
   font-size: 30px;
   color: #090b0d;
   text-align: center;
   margin-top: 50px;
-}
+} */
 
-.instructions {
+/* .instructions {
   font-size: 12px;
   color: #141414;
   margin-top: 10px;
   padding: 10px;
-}
+} */
 
 /*page 4*/
 

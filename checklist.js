@@ -11,10 +11,12 @@ window.onload = function () {
           var output = document.getElementById("output");
           var content = checklist.content
             .map((section) => {
-              return `<h2>${section.title}</h2><ul>${section.items
+              return `<h2 class="output-title">${
+                section.title
+              }</h2><ul class="output-items">${section.items
                 .map(
                   (item) =>
-                    `<li><input type="checkbox" class="check-item">${item}</li>`
+                    `<li class="output-item"><input type="checkbox" class="check-item">${item}</li>`
                 )
                 .join("")}</ul>`;
             })
