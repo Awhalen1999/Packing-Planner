@@ -1,16 +1,16 @@
 window.onload = function () {
-  var checkedItems = JSON.parse(localStorage.getItem("checkedItems")) || [];
-  var list = document.getElementById("checkedItemsList");
+  const checkedItems = JSON.parse(localStorage.getItem("checkedItems")) || [];
+  const list = document.getElementById("checkedItemsList");
   checkedItems.forEach(function (item) {
-    var listItem = document.createElement("li");
-    var label = document.createElement("label");
+    const listItem = document.createElement("li");
+    const label = document.createElement("label");
     label.innerHTML = `<input type="checkbox" class="check-item">${item}`;
     label.classList.add("item-label");
     listItem.appendChild(label);
     list.appendChild(listItem);
   });
 
-  var labels = document.querySelectorAll(".item-label");
+  const labels = document.querySelectorAll(".item-label");
   labels.forEach(function (label) {
     label.addEventListener("click", function () {
       this.classList.add("selected");
