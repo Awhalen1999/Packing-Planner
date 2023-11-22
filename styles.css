@@ -1,5 +1,5 @@
 /* jet: #2a2a2a
-cinnabar: #da4b2e
+cinnabar: #d24928
 rust: #bf3411
 vanilla: #feecac
 night: #141414
@@ -11,7 +11,8 @@ harvest-gold: #e1a21b */
 
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(
+  background-image: url("images/mainbackgroundblur.jpg");
+  /* background: linear-gradient(
     180deg,
     #2a2a2a,
     #3f3f3f,
@@ -20,7 +21,7 @@ body {
     #7e7e7e,
     #939393,
     #a8a8a8
-  );
+  ); */
   color: #141414;
   height: 100vh;
   margin: 0;
@@ -32,7 +33,7 @@ body {
 .divider {
   width: 75vw;
   height: 2px;
-  background-color: #da4b2e;
+  background-color: #d24928;
   margin: 2vh 10vw;
   border: none;
   border-radius: 2px;
@@ -60,7 +61,7 @@ nav li a {
   padding: 5px 30px;
   text-decoration: none;
   font-weight: bold;
-  background-color: #da4b2e;
+  background-color: #d24928;
   border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -114,7 +115,7 @@ footer a {
 }
 
 #welcome {
-  color: #bf3411;
+  color: #d24928;
   font-size: 50px;
   margin-top: 8vh;
   text-align: center;
@@ -122,7 +123,7 @@ footer a {
 }
 
 #get-started {
-  background-color: #da4b2e;
+  background-color: #d24928;
   border: none;
   color: #fff9e3;
   padding: 0.5em 3em;
@@ -181,7 +182,7 @@ footer a {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: #da4b2e;
+  background-color: #d24928;
   border: none;
   color: #fff9e3;
   padding: 1em 2em;
@@ -251,7 +252,7 @@ input[type="checkbox"] {
 }
 
 #submit-button {
-  background-color: #da4b2e;
+  background-color: #d24928;
   border: none;
   color: #fff9e3;
   padding: 1em 2em;
@@ -293,7 +294,7 @@ input[type="checkbox"] {
 }
 
 #donebutton {
-  background-color: #da4b2e;
+  background-color: #d24928;
   border: none;
   color: #fff9e3;
   padding: 1em 2em;
@@ -334,11 +335,18 @@ input[type="checkbox"] {
 
 /* weatherpage */
 
+/* height and spacing changes
+number/text linup with img in wind/humidity 
+add weather app button on landing page */
+
 .card {
   width: 90%;
   max-width: 470px;
-  background-color: blue;
-  border: 1px solid #da4b2e;
+  background: linear-gradient(
+    180deg,
+    #141414,
+    #292929);
+  border: 1px solid #d24928;
   color: #fff9e3;
   margin: 100px auto 0;
   border-radius: 20px;
@@ -356,7 +364,7 @@ input[type="checkbox"] {
 .search input {
   border: 0;
   outline: 0;
-  background: #ebebeb;
+  background: #fff9e3;
   color: #555;
   padding: 10px 25px;
   height: 60px;
@@ -369,7 +377,7 @@ input[type="checkbox"] {
 .search button {
   border: 0;
   outline: 0;
-  background: #ebebeb;
+  background: #fff9e3;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -418,18 +426,18 @@ input[type="checkbox"] {
 .humidity,
 .wind {
   font-size: 28px;
-  margin-top:-6px;
+  margin-top: -6px;
+  margin-bottom: -5px;
 }
 
-.weather{
+.weather {
   display: none;
 }
 
-.error{
+.error {
   text-align: left;
   margin-left: 10px;
   font-size: 14px;
   margin-top: 10px;
   display: none;
 }
-
