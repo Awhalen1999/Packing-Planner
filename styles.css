@@ -1,9 +1,8 @@
 /* jet: #2a2a2a
 cinnabar: #d24928
-rust: #bf3411
 vanilla: #feecac
 night: #141414
-harvest-gold: #e1a21b */
+bone: #EADDC8 */
 
 /* to do: 
 -remove buttons from container and add footer to each page
@@ -43,7 +42,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 2vh 0;
+  padding: 2vh;
   background-color: transparent;
 }
 
@@ -56,20 +55,19 @@ nav ul {
 
 nav li a {
   display: block;
-  color: #fff9e3;
+  color: #eaddc8;
   text-align: center;
-  padding: 5px 30px;
+  padding: 0.25em 1em;
   text-decoration: none;
   font-weight: bold;
-  background-color: #d24928;
   border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 nav li a:hover {
-  background-color: #fff9e3;
-  color: #2a2a2a;
+  background-color: #eaddc8;
+  color: #141414;
 }
 
 nav li {
@@ -81,7 +79,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  color: #fff9e3;
+  color: #eaddc8;
   text-align: center;
   padding: 1px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -100,7 +98,7 @@ footer a {
 
 .instructions {
   font-size: 12px;
-  color: #fff9e3;
+  color: #eaddc8;
   margin-top: 10px;
   padding: 10px;
 }
@@ -108,37 +106,41 @@ footer a {
 /*page 1*/
 
 #page-1-container {
+  margin-top: 4vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 4vh;
 }
 
 #welcome {
-  color: #d24928;
+  color: #feecac;
   font-size: 50px;
-  margin-top: 8vh;
+  font-family: "Playfair Display", sans-serif;
+  width: 95vw;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
   text-align: center;
-  font-family: "Agbalumo", sans-serif;
+  margin-top: 10vh;
 }
 
-#get-started {
+#get-started-button {
   background-color: #d24928;
   border: none;
-  color: #fff9e3;
-  padding: 0.5em 3em;
-  text-align: center;
+  color: #eaddc8;
   text-decoration: none;
   font-size: 20px;
-  margin: 25vh 0;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-weight: bold;
   font-family: "Poppins", sans-serif;
-  border-radius: 30px;
+  padding: 0.75em 3em;
+  border-radius: 15px;
+  margin-top: 10vh;
 }
 
-#get-started:hover {
+#get-started-button:hover {
   background-color: #41c147;
 }
 
@@ -155,7 +157,7 @@ footer a {
 
 #optionsheader {
   font-size: 30px;
-  color: #fff9e3;
+  color: #eaddc8;
   margin-top: 7vh;
 }
 
@@ -167,7 +169,7 @@ footer a {
   margin-top: 1vh;
   width: 50vw;
   border: 1px solid #141414;
-  background-color: #fff9e3;
+  background-color: #eaddc8;
   border-radius: 5px;
   padding: 1em;
 }
@@ -184,9 +186,10 @@ footer a {
   margin-right: auto;
   background-color: #d24928;
   border: none;
-  color: #fff9e3;
+  color: #eaddc8;
   padding: 1em 2em;
   text-decoration: none;
+  font-weight: bold;
   font-size: 18px;
   margin-bottom: 5vh;
   margin-top: 1vh;
@@ -197,7 +200,6 @@ footer a {
 
 #options-button:hover {
   background-color: #39a53e;
-  color: #fff9e3;
 }
 
 .options-var {
@@ -230,7 +232,7 @@ input[type="radio"] {
 .checklist-output li {
   list-style-type: none;
   border: 1px solid #141414;
-  background-color: #fff9e3;
+  background-color: #eaddc8;
   padding: 0.5em;
   margin: 0.5vh auto;
   border-radius: 5px;
@@ -238,7 +240,7 @@ input[type="radio"] {
 }
 
 .output-title {
-  color: #fff9e3;
+  color: #eaddc8;
   text-align: center;
 }
 
@@ -254,7 +256,7 @@ input[type="checkbox"] {
 #submit-button {
   background-color: #d24928;
   border: none;
-  color: #fff9e3;
+  color: #eaddc8;
   padding: 1em 2em;
   text-decoration: none;
   font-size: 18px;
@@ -271,7 +273,7 @@ input[type="checkbox"] {
 
 .checklist-header {
   font-size: 30px;
-  color: #fff9e3;
+  color: #eaddc8;
   text-align: center;
   margin-top: 7vh;
 }
@@ -342,10 +344,7 @@ add weather app button on landing page */
 .card {
   width: 90%;
   max-width: 470px;
-  background: linear-gradient(
-    180deg,
-    #141414,
-    #292929);
+  background: linear-gradient(180deg, #141414, #292929);
   border: 1px solid #d24928;
   color: #fff9e3;
   margin: 100px auto 0;
