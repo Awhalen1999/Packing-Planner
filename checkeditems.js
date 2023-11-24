@@ -11,13 +11,8 @@ window.onload = function () {
   });
 
   list.addEventListener("click", function (event) {
-    // Check if a checkbox was clicked
     if (event.target.classList.contains("check-item")) {
-      // Get the parent 'li' element
       const listItem = event.target.parentElement.parentElement;
-
-      // If the checkbox is checked, add 'selected' class to the 'li'
-      // If it's not checked, remove 'selected' class
       if (event.target.checked) {
         listItem.classList.add("selected");
       } else {

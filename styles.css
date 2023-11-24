@@ -295,6 +295,11 @@ input[type="checkbox"] {
   text-align: left;
 }
 
+li.selected {
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: grey;
+}
+
 #donebutton {
   background-color: #d24928;
   border: none;
@@ -439,14 +444,4 @@ add weather app button on landing page */
   font-size: 14px;
   margin-top: 10px;
   display: none;
-}
-
-li.selected {
-  background-color: green; /* change to the color you want */
-  color: white;
-}
-
-.options-radio.selected {
-  background-color: #d24928; /* change to the color you want */
-  color: white;
 }
