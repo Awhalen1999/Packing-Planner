@@ -115,7 +115,7 @@ footer a {
 #welcome {
   color: #feecac;
   font-size: 50px;
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Kanit", sans-serif;
   width: 95vw;
   padding: 20px;
   display: flex;
@@ -439,4 +439,14 @@ add weather app button on landing page */
   font-size: 14px;
   margin-top: 10px;
   display: none;
+}
+
+li.selected {
+  background-color: green; /* change to the color you want */
+  color: white;
+}
+
+.options-radio.selected {
+  background-color: #d24928; /* change to the color you want */
+  color: white;
 }
