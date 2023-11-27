@@ -15,6 +15,6 @@ window.onload = function () {
 
       const combination = gender + climate;
       localStorage.setItem("combination", combination);
-      window.location.href = "checklist.html";
+      window.location.href = "./checklist.html";
     });
 };
