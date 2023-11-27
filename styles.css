@@ -209,7 +209,7 @@ footer a {
 }
 
 input[type="radio"] {
-  transform: scale(1.5);
+  transform: scale(1.8);
   margin: 0 1.5em;
 }
 
@@ -249,7 +249,7 @@ input[type="radio"] {
 }
 
 input[type="checkbox"] {
-  transform: scale(1.5);
+  transform: scale(1.8);
   margin: 0 1.5em;
 }
 
