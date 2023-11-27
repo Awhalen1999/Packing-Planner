@@ -5,13 +5,15 @@ window.onload = function () {
       event.preventDefault();
 
       const formData = new FormData(event.target);
-      const combination = formData.get("gender") + formData.get("climate");
+      const gender = formData.get("gender");
+      const climate = formData.get("climate");
 
-      if (!combination) {
+      if (!gender || !climate) {
         alert("Please select an option from the gender and climate forms.");
         return;
       }
 
+      const combination = gender + climate;
       localStorage.setItem("combination", combination);
       window.location.href = "checklist.html";
     });
