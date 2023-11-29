@@ -1,14 +1,34 @@
-window.onload = function () {
-  const checkedItems = JSON.parse(localStorage.getItem("checkedItems")) || [];
-  const list = document.getElementById("checkedItemsList");
-  checkedItems.forEach(function (item) {
-    const listItem = document.createElement("li");
-    const label = document.createElement("label");
-    label.innerHTML = `<input type="checkbox" class="check-item">${item}`;
-    label.classList.add("item-label");
-    listItem.appendChild(label);
-    list.appendChild(listItem);
-  });
+window.onload = function() {
+  // Get the checked items from local storage
+  const checkedItems = JSON.parse(localStorage.getItem('checkedItems'));
+
+  // Get the output div
+  const outputDiv = document.getElementById('output');
+
+  // Check if there are any checked items
+  if (checkedItems && checkedItems.length > 0) {
+    // Create a header
+    const header = document.createElement('h2');
+    header.textContent = 'Checked Items';
+    outputDiv.appendChild(header);
+
+    // Create a ul for the items
+    const ul = document.createElement('ul');
+    outputDiv.appendChild(ul);
+
+    // Loop through each item
+    checkedItems.forEach(item => {
+      // Create a li
+      const li = document.createElement('li');
+      li.textContent = item;
+
+      // Add the li to the ul
+      ul.appendChild(li);
+    });
+  } else {
+    outputDiv.textContent = 'No items have been checked';
+  }
+}
 
   list.addEventListener("click", function (event) {
     if (event.target.classList.contains("check-item")) {
