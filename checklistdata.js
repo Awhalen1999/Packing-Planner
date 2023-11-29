@@ -4,9 +4,8 @@ function getChecklistId() {
 
   switch (gender + "-" + climate) {
     case "male-warm":
-      return {
-        id: "malewarm",
-        section: "Clothing",
+      return [
+        {section: "Clothing",
         items: [
           "Underwear",
           "Socks",
@@ -24,8 +23,8 @@ function getChecklistId() {
           "Jacket",
           "Glasses",
           "Sun glasses",
-        ],
-        section: "Toiletries",
+        ]},
+        {section: "Toiletries",
         items: [
           "Toothbrush",
           "Toothpaste",
@@ -42,8 +41,8 @@ function getChecklistId() {
           "Nail clippers/file",
           "Hairdryer",
           "Contacts/case/solution",
-        ],
-        section: "Personal Items",
+        ]},
+        {section: "Personal Items",
         items: [
           "Medications",
           "Ear plugs",
@@ -55,8 +54,8 @@ function getChecklistId() {
           "Journal",
           "Reusable water bottle",
           "First aid supplies",
-        ],
-        section: "Electronics",
+        ]},
+        {section: "Electronics",
         items: [
           "Computer/tablet",
           "Mouse/keyboard",
@@ -64,8 +63,8 @@ function getChecklistId() {
           "Camera/SD-cards",
           "Headphones/earbuds",
           "Chargers",
-        ],
-        section: "Travel Documents",
+        ]},
+        {section: "Travel Documents",
         items: [
           "Passport",
           "Identification card",
@@ -76,12 +75,11 @@ function getChecklistId() {
           "Car rental documents",
           "Hotel/home rental documents",
           "Money/currency",
-        ],
-      };
+        ]},
+      ];
     case "male-mild":
-      return {
-        id: "malemild",
-        section: "Clothing",
+      return [
+        {section: "Clothing",
         items: [
           "Underwear",
           "Socks",
@@ -99,8 +97,8 @@ function getChecklistId() {
           "Jacket",
           "Glasses",
           "Sun glasses",
-        ],
-        section: "Toiletries",
+        ]},
+        {section: "Toiletries",
         items: [
           "Toothbrush",
           "Toothpaste",
@@ -117,8 +115,8 @@ function getChecklistId() {
           "Nail clippers/file",
           "Hairdryer",
           "Contacts/case/solution",
-        ],
-        section: "Personal Items",
+        ]},
+        {section: "Personal Items",
         items: [
           "Medications",
           "Ear plugs",
@@ -130,8 +128,8 @@ function getChecklistId() {
           "Journal",
           "Reusable water bottle",
           "First aid supplies",
-        ],
-        section: "Electronics",
+        ]},
+        {section: "Electronics",
         items: [
           "Computer/tablet",
           "Mouse/keyboard",
@@ -139,8 +137,8 @@ function getChecklistId() {
           "Camera/SD-cards",
           "Headphones/earbuds",
           "Chargers",
-        ],
-        section: "Travel Documents",
+        ]},
+        {section: "Travel Documents",
         items: [
           "Passport",
           "Identification card",
@@ -151,12 +149,11 @@ function getChecklistId() {
           "Car rental documents",
           "Hotel/home rental documents",
           "Money/currency",
-        ],
-      };
+        ]},
+      ];
     case "male-cold":
-      return {
-        id: "malecold",
-        section: "Clothing",
+      return [
+        {section: "Clothing",
         items: [
           "Underwear",
           "Base layer",
@@ -176,8 +173,8 @@ function getChecklistId() {
           "Gloves/mittens",
           "Glasses",
           "Sun glasses",
-        ],
-        section: "Toiletries",
+        ]},
+        {section: "Toiletries",
         items: [
           "Toothbrush",
           "Toothpaste",
@@ -193,8 +190,8 @@ function getChecklistId() {
           "Nail clippers/file",
           "Hairdryer",
           "Contacts/case/solution",
-        ],
-        section: "Personal Items",
+        ]},
+        {section: "Personal Items",
         items: [
           "Medications",
           "Ear plugs",
@@ -206,8 +203,8 @@ function getChecklistId() {
           "Journal",
           "Reusable water bottle",
           "First aid supplies",
-        ],
-        section: "Electronics",
+        ]},
+        {section: "Electronics",
         items: [
           "Computer/tablet",
           "Mouse/keyboard",
@@ -215,8 +212,8 @@ function getChecklistId() {
           "Camera/SD-cards",
           "Headphones/earbuds",
           "Chargers",
-        ],
-        section: "Travel Documents",
+        ]},
+        {section: "Travel Documents",
         items: [
           "Passport",
           "Identification card",
@@ -227,12 +224,11 @@ function getChecklistId() {
           "Car rental documents",
           "Hotel/home rental documents",
           "Money/currency",
-        ],
-      };
+        ]},
+      ];
     case "female-warm":
-      return {
-        id: "femalewarm",
-        section: "Clothing",
+      return [
+        {section: "Clothing",
         items: [
           "Underwear",
           "Socks",
@@ -252,8 +248,8 @@ function getChecklistId() {
           "Gloves/mittens",
           "Glasses",
           "Sun glasses",
-        ],
-        section: "Toiletries",
+        ]},
+        {section: "Toiletries",
         items: [
           "Toothbrush",
           "Toothpaste",
@@ -272,8 +268,8 @@ function getChecklistId() {
           "Contacts/case/solution",
           "Makeup",
           "Hygiene products",
-        ],
-        section: "Personal Items",
+        ]},
+        {section: "Personal Items",
         items: [
           "Medications",
           "Ear plugs",
@@ -285,8 +281,8 @@ function getChecklistId() {
           "Journal",
           "Reusable water bottle",
           "First aid supplies",
-        ],
-        section: "Electronics",
+        ]},
+        {section: "Electronics",
         items: [
           "Computer/tablet",
           "Mouse/keyboard",
@@ -294,8 +290,8 @@ function getChecklistId() {
           "Camera/SD-cards",
           "Headphones/earbuds",
           "Chargers",
-        ],
-        section: "Travel Documents",
+        ]},
+        {section: "Travel Documents",
         items: [
           "Passport",
           "Identification card",
@@ -306,12 +302,11 @@ function getChecklistId() {
           "Car rental documents",
           "Hotel/home rental documents",
           "Money/currency",
-        ],
-      };
+        ]},
+      ];
     case "female-mild":
-      return {
-        id: "femalemild",
-        section: "Clothing",
+      return [
+        {section: "Clothing",
         items: [
           "Underwear",
           "Socks",
@@ -331,8 +326,8 @@ function getChecklistId() {
           "Gloves/mittens",
           "Glasses",
           "Sun glasses",
-        ],
-        section: "Toiletries",
+        ]},
+        {section: "Toiletries",
         items: [
           "Toothbrush",
           "Toothpaste",
@@ -351,8 +346,8 @@ function getChecklistId() {
           "Contacts/case/solution",
           "Makeup",
           "Hygiene products",
-        ],
-        section: "Personal Items",
+        ]},
+        {section: "Personal Items",
         items: [
           "Medications",
           "Ear plugs",
@@ -364,8 +359,8 @@ function getChecklistId() {
           "Journal",
           "Reusable water bottle",
           "First aid supplies",
-        ],
-        section: "Electronics",
+        ]},
+        {section: "Electronics",
         items: [
           "Computer/tablet",
           "Mouse/keyboard",
@@ -373,8 +368,8 @@ function getChecklistId() {
           "Camera/SD-cards",
           "Headphones/earbuds",
           "Chargers",
-        ],
-        section: "Travel Documents",
+        ]},
+        {section: "Travel Documents",
         items: [
           "Passport",
           "Identification card",
@@ -385,12 +380,11 @@ function getChecklistId() {
           "Car rental documents",
           "Hotel/home rental documents",
           "Money/currency",
-        ],
-      };
+        ]},
+      ];
     case "female-cold":
-      return {
-        id: "femalecold",
-        section: "Clothing",
+      return [
+        {section: "Clothing",
         items: [
           "Underwear",
           "Socks",
@@ -410,8 +404,8 @@ function getChecklistId() {
           "Gloves/mittens",
           "Glasses",
           "Sun glasses",
-        ],
-        section: "Toiletries",
+        ]},
+        {section: "Toiletries",
         items: [
           "Toothbrush",
           "Toothpaste",
@@ -430,8 +424,8 @@ function getChecklistId() {
           "Contacts/case/solution",
           "Makeup",
           "Hygiene products",
-        ],
-        section: "Personal Items",
+        ]},
+        {section: "Personal Items",
         items: [
           "Medications",
           "Ear plugs",
@@ -443,8 +437,8 @@ function getChecklistId() {
           "Journal",
           "Reusable water bottle",
           "First aid supplies",
-        ],
-        section: "Electronics",
+        ]},
+        {section: "Electronics",
         items: [
           "Computer/tablet",
           "Mouse/keyboard",
@@ -452,8 +446,8 @@ function getChecklistId() {
           "Camera/SD-cards",
           "Headphones/earbuds",
           "Chargers",
-        ],
-        section: "Travel Documents",
+        ]},
+        {section: "Travel Documents",
         items: [
           "Passport",
           "Identification card",
@@ -464,12 +458,11 @@ function getChecklistId() {
           "Car rental documents",
           "Hotel/home rental documents",
           "Money/currency",
-        ],
-      };
+        ]},
+      ];
     case "other-warm":
-      return {
-        id: "otherwarm",
-        section: "Clothing",
+      return [
+        {section: "Clothing",
         items: [
           "Underwear",
           "Socks",
@@ -486,8 +479,8 @@ function getChecklistId() {
           "Jacket",
           "Glasses",
           "Sun glasses",
-        ],
-        section: "Toiletries",
+        ]},
+        {section: "Toiletries",
         items: [
           "Toothbrush",
           "Toothpaste",
@@ -506,8 +499,8 @@ function getChecklistId() {
           "Contacts/case/solution",
           "Makeup",
           "Hygiene products",
-        ],
-        section: "Personal Items",
+        ]},
+        {section: "Personal Items",
         items: [
           "Medications",
           "Ear plugs",
@@ -519,8 +512,8 @@ function getChecklistId() {
           "Journal",
           "Reusable water bottle",
           "First aid supplies",
-        ],
-        section: "Electronics",
+        ]},
+        {section: "Electronics",
         items: [
           "Computer/tablet",
           "Mouse/keyboard",
@@ -528,8 +521,8 @@ function getChecklistId() {
           "Camera/SD-cards",
           "Headphones/earbuds",
           "Chargers",
-        ],
-        section: "Travel Documents",
+        ]},
+        {section: "Travel Documents",
         items: [
           "Passport",
           "Identification card",
@@ -540,12 +533,11 @@ function getChecklistId() {
           "Car rental documents",
           "Hotel/home rental documents",
           "Money/currency",
-        ],
-      };
+        ]},
+      ];
     case "other-mild":
-      return {
-        id: "othermild",
-        section: "Clothing",
+      return [
+        {section: "Clothing",
         items: [
           "Underwear",
           "Socks",
@@ -563,8 +555,8 @@ function getChecklistId() {
           "Jacket",
           "Glasses",
           "Sun glasses",
-        ],
-        section: "Toiletries",
+        ]},
+        {section: "Toiletries",
         items: [
           "Toothbrush",
           "Toothpaste",
@@ -583,8 +575,8 @@ function getChecklistId() {
           "Contacts/case/solution",
           "Makeup",
           "Hygiene products",
-        ],
-        section: "Personal Items",
+        ]},
+        {section: "Personal Items",
         items: [
           "Medications",
           "Ear plugs",
@@ -596,8 +588,8 @@ function getChecklistId() {
           "Journal",
           "Reusable water bottle",
           "First aid supplies",
-        ],
-        section: "Electronics",
+        ]},
+        {section: "Electronics",
         items: [
           "Computer/tablet",
           "Mouse/keyboard",
@@ -605,8 +597,8 @@ function getChecklistId() {
           "Camera/SD-cards",
           "Headphones/earbuds",
           "Chargers",
-        ],
-        section: "Travel Documents",
+        ]},
+        {section: "Travel Documents",
         items: [
           "Passport",
           "Identification card",
@@ -617,12 +609,11 @@ function getChecklistId() {
           "Car rental documents",
           "Hotel/home rental documents",
           "Money/currency",
-        ],
-      };
+        ]},
+      ];
     case "other-cold":
-      return {
-        id: "othercold",
-        section: "Clothing",
+      return [
+        {section: "Clothing",
         items: [
           "Underwear",
           "Base layer",
@@ -642,8 +633,8 @@ function getChecklistId() {
           "Gloves/mittens",
           "Glasses",
           "Sun glasses",
-        ],
-        section: "Toiletries",
+        ]},
+        {section: "Toiletries",
         items: [
           "Toothbrush",
           "Toothpaste",
@@ -661,8 +652,8 @@ function getChecklistId() {
           "Contacts/case/solution",
           "Makeup",
           "Hygiene products",
-        ],
-        section: "Personal Items",
+        ]},
+        {section: "Personal Items",
         items: [
           "Medications",
           "Ear plugs",
@@ -674,8 +665,8 @@ function getChecklistId() {
           "Journal",
           "Reusable water bottle",
           "First aid supplies",
-        ],
-        section: "Electronics",
+        ]},
+        {section: "Electronics",
         items: [
           "Computer/tablet",
           "Mouse/keyboard",
@@ -683,8 +674,8 @@ function getChecklistId() {
           "Camera/SD-cards",
           "Headphones/earbuds",
           "Chargers",
-        ],
-        section: "Travel Documents",
+        ]},
+        {section: "Travel Documents",
         items: [
           "Passport",
           "Identification card",
@@ -695,8 +686,8 @@ function getChecklistId() {
           "Car rental documents",
           "Hotel/home rental documents",
           "Money/currency",
-        ],
-      };
+        ]},
+      ];
     default:
       return "unknown";
   }
