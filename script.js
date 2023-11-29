@@ -13,8 +13,8 @@ window.onload = function () {
         return;
       }
 
-      const combination = gender + climate;
-      localStorage.setItem("combination", combination);
+      localStorage.setItem("gender", gender);
+      localStorage.setItem("climate", climate);
       window.location.href = "./checklist.html";
     });
 };
