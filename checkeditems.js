@@ -12,18 +12,27 @@ window.onload = function() {
 
   checkedItems.forEach(item => {
     const li = document.createElement('li');
-    li.textContent = item;
+
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.classList.add('check-item');
+
+    const label = document.createElement('label');
+    label.textContent = item;
+
+    li.appendChild(checkbox);
+    li.appendChild(label);
     ul.appendChild(li);
   });
 
   ul.addEventListener("click", function (event) {
     if (event.target.classList.contains("check-item")) {
-      const listItem = event.target.parentElement.parentElement;
+      const listItem = event.target.parentElement;
       if (event.target.checked) {
-        listItem.classList.add("selected");
+        listItem.classList.add("checkeditemsselected");
       } else {
-        listItem.classList.remove("selected");
+        listItem.classList.remove("checkeditemsselected");
       }
     }
   });
-}
+};

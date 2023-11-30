@@ -11,16 +11,6 @@ bone: #EADDC8 */
 body {
   font-family: "Poppins", sans-serif;
   background-image: url("images/mainbackgroundblur.jpg");
-  /* background: linear-gradient(
-    180deg,
-    #2a2a2a,
-    #3f3f3f,
-    #545454,
-    #696969,
-    #7e7e7e,
-    #939393,
-    #a8a8a8
-  ); */
   color: #141414;
   height: 100vh;
   margin: 0;
@@ -167,7 +157,7 @@ footer a {
   align-items: center;
   margin-bottom: 1vh;
   margin-top: 1vh;
-  width: 50vw;
+  width: 35vw;
   border: 1px solid #141414;
   background-color: #eaddc8;
   border-radius: 5px;
@@ -239,13 +229,11 @@ input[type="radio"] {
   text-align: left;
 }
 
-.output-title {
-  color: #eaddc8;
+.checklist-output h2 {
+  color: #EADDC8;
   text-align: center;
-}
+  font-size: 30px;
 
-.output-item {
-  color: #141414;
 }
 
 input[type="checkbox"] {
@@ -254,6 +242,9 @@ input[type="checkbox"] {
 }
 
 #submit-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #d24928;
   border: none;
   color: #EADDC8;
@@ -278,24 +269,30 @@ input[type="checkbox"] {
   margin-top: 7vh;
 }
 
+#output li.checklistselected {
+  background-color: #39a53e; /* Change this to the color you want */
+}
+
 /*page 4*/
 
-.checkedItems-List {
-  width: 50vw;
-  margin: 0 auto;
+#output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.checkedItems-List li {
-  list-style-type: none;
-  border: 1px solid #141414;
-  background-color: #fff9e3;
-  padding: 0.5em;
+#output li {
+  background-color: #eaddc8;
   margin: 0.5vh auto;
   border-radius: 5px;
-  text-align: left;
+  padding: 0.5em;
+  width: 50vw;
+  align-items: center;
+  border: 1px solid #141414;
+  list-style-type: none;
 }
 
-li.selected {
+#output li.checkeditemsselected {
   background-color: rgba(0, 0, 0, 0.5); 
   color: grey;
 }

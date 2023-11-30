@@ -725,6 +725,14 @@ function createItemsList(items) {
     checkbox.type = 'checkbox';
     checkbox.value = item;
 
+    checkbox.addEventListener('change', function() {
+      if (this.checked) {
+        li.classList.add('checklistselected');
+      } else {
+        li.classList.remove('checklistselected');
+      }
+    });
+
     li.appendChild(checkbox);
     li.appendChild(document.createTextNode(item));
     ul.appendChild(li);
