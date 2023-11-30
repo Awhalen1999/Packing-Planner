@@ -719,10 +719,11 @@ function createSectionHeader(sectionTitle) {
 function createItemsList(items) {
   const ul = document.createElement('ul');
 
-  items.forEach(item => {
+  items.forEach((item, index) => {
     const li = document.createElement('li');
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
+    checkbox.value = item; // Add this line
 
     li.appendChild(checkbox);
     li.appendChild(document.createTextNode(item));
@@ -732,26 +733,20 @@ function createItemsList(items) {
   return ul;
 }
 
-{
+function storeCheckedItems() {
+  const checkboxes = document.querySelectorAll('input[type=checkbox]');
+  const checkedItems = Array.from(checkboxes)
+    .filter(checkbox => checkbox.checked)
+    .map(checkbox => checkbox.value);
+
+  localStorage.setItem('checkedItems', JSON.stringify(checkedItems));
+}
+document.addEventListener('DOMContentLoaded', function() {
   const submitButton = document.getElementById('submit-button');
 
-  // Add an event listener to the submit button
   submitButton.addEventListener('click', function(event) {
-    // Prevent the form from being submitted
     event.preventDefault();
-
-    // Get all checkboxes
-    const checkboxes = document.querySelectorAll('input[type=checkbox]');
-
-    // Get all checked items
-    const checkedItems = Array.from(checkboxes)
-      .filter(checkbox => checkbox.checked)
-      .map(checkbox => checkbox.nextSibling.nodeValue.trim());
-
-    // Store the checked items in local storage
-    localStorage.setItem('checkedItems', JSON.stringify(checkedItems));
-
-    // Redirect to the checkeditems.html page
+    storeCheckedItems();
     window.location.href = 'checkeditems.html';
   });
-}
+});
