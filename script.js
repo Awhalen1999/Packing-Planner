@@ -1,10 +1,18 @@
-document.querySelector('form').addEventListener('submit', function(event) {
+document.querySelector("form").addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const gender = document.querySelector('input[name="gender"]:checked').value;
-  const climate = document.querySelector('input[name="climate"]:checked').value;
-  localStorage.setItem('gender', gender);
-  localStorage.setItem('climate', climate);
+  const genderInput = document.querySelector('input[name="gender"]:checked');
+  const climateInput = document.querySelector('input[name="climate"]:checked');
 
-  window.location.href = 'checklist.html';
+  if (!genderInput || !climateInput) {
+    alert("Please select an option from both gender and climate forms");
+    return;
+  }
+
+  const gender = genderInput.value;
+  const climate = climateInput.value;
+  localStorage.setItem("gender", gender);
+  localStorage.setItem("climate", climate);
+
+  window.location.href = "checklist.html";
 });

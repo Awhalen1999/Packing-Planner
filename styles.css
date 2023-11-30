@@ -270,7 +270,7 @@ input[type="checkbox"] {
 }
 
 #output li.checklistselected {
-  background-color: #39a53e; /* Change this to the color you want */
+  background-color: #8f8980; 
 }
 
 /*page 4*/
@@ -442,4 +442,45 @@ add weather app button on landing page */
   font-size: 14px;
   margin-top: 10px;
   display: none;
+}
+
+/* contact me page */
+
+#contactcontainer {
+  width: 50vw;
+  margin: 0 auto;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7vh;
+}
+
+#contactForm {
+  width: 100%;
+}
+
+#contactForm input[type="text"], #contactForm input[type="email"], #contactForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px auto;
+  box-sizing: border-box;
+  background-color: #EADDC8;
+  border-radius: 10px;
+}
+
+#contactForm input[type="submit"] {
+  background-color: #d24928;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 10px auto; 
+  display: block;
+}
+
+#contactForm input[type="submit"]:hover {
+  background-color: #39a53e;
 }
