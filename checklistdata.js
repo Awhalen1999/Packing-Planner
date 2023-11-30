@@ -723,7 +723,7 @@ function createItemsList(items) {
     const li = document.createElement('li');
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
-    checkbox.value = item; // Add this line
+    checkbox.value = item;
 
     li.appendChild(checkbox);
     li.appendChild(document.createTextNode(item));
