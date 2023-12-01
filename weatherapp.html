@@ -1,54 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins"
-      rel="stylesheet"
-    />
+    <meta charset="utf-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="weatherapp2.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
   </head>
   <body>
     <nav>
       <ul>
         <li><a href="./index.html">Home</a></li>
-        <li><a href="./weatherapp.html">Check the weather</a></li>
+        <li><a href="./weatherapp2.html">Check the weather</a></li>
         <li><a href="./about.html">About</a></li>
         <li><a href="/contact.html">Contact Me</a></li>
       </ul>
     </nav>
-    <div class="card">
-      <div class="search">
-        <input type="text" placeholder="enter city name" spellcheck="false" />
-        <button><img src="images/search.png" /></button>
+    <div class="container">
+      <div class="weather-input">
+        <h3>Enter a City Name</h3>
+        <input type="text" class="city-input" placeholder="Enter city name">
+        <button class="search-btn">Search</button>
+        <div class="separator"></div>
+        <button class="location-btn">Use Current Location</button>
       </div>
-      <div class="error">
-        <p>Invalid city name. Please double-check the spelling of the city name or enter a nearby city.</p>
-      </div>
-      <div class="weather">
-        <img src="images/clouds.png" class="weather-icon" />
-        <h1 class="temp">0°c</h1>
-        <h2 class="city">Boston</h2>
-        <div class="details">
-          <div class="col">
-            <img src="images/humidity.png" />
-            <div>
-              <p class="humidity">0%</p>
-              <p>Humidity</p>
-            </div>
+      <div class="weather-data">
+        <div class="current-weather">
+          <div class="details">
+            <h2>_______ ( ______ )</h2>
+            <h6>Temperature: __°C</h6>
+            <h6>Wind: __ M/S</h6>
+            <h6>Humidity: __%</h6>
           </div>
-          <div class="col">
-            <img src="images/wind.png" />
-            <div>
-              <p class="wind">0 km/h</p>
-              <p>Wind Speed</p>
-            </div>
-          </div>
+        </div>
+        <div class="days-forecast">
+          <h2>5-Day Forecast</h2>
+          <ul class="weather-cards">
+            <li class="card">
+              <h3>( ______ )</h3>
+              <h6>Temp: __C</h6>
+              <h6>Wind: __ M/S</h6>
+              <h6>Humidity: __%</h6>
+            </li>
+            <li class="card">
+              <h3>( ______ )</h3>
+              <h6>Temp: __C</h6>
+              <h6>Wind: __ M/S</h6>
+              <h6>Humidity: __%</h6>
+            </li>
+            <li class="card">
+              <h3>( ______ )</h3>
+              <h6>Temp: __C</h6>
+              <h6>Wind: __ M/S</h6>
+              <h6>Humidity: __%</h6>
+            </li>
+            <li class="card">
+              <h3>( ______ )</h3>
+              <h6>Temp: __C</h6>
+              <h6>Wind: __ M/S</h6>
+              <h6>Humidity: __%</h6>
+            </li>
+            <li class="card">
+              <h3>( ______ )</h3>
+              <h6>Temp: __C</h6>
+              <h6>Wind: __ M/S</h6>
+              <h6>Humidity: __%</h6>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-    <script src="weatherapp.js"></script>
+    
   </body>
 </html>

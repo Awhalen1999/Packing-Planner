@@ -6,7 +6,8 @@ bone: #EADDC8 */
 
 /* to do: 
 -remove buttons from container and add footer to each page
--button class */
+-button class 
+-remove font family from all buttons added univeral button selector*/
 
 body {
   font-family: "Poppins", sans-serif;
@@ -91,6 +92,10 @@ footer a {
   color: #eaddc8;
   margin-top: 10px;
   padding: 10px;
+}
+
+button {
+  font-family: poppins;
 }
 
 /*page 1*/
@@ -194,7 +199,7 @@ footer a {
 
 .options-var {
   font-size: 20px;
-  color: #EADDC8;
+  color: #eaddc8;
   text-align: center;
 }
 
@@ -230,10 +235,9 @@ input[type="radio"] {
 }
 
 .checklist-output h2 {
-  color: #EADDC8;
+  color: #eaddc8;
   text-align: center;
   font-size: 30px;
-
 }
 
 input[type="checkbox"] {
@@ -247,7 +251,7 @@ input[type="checkbox"] {
   margin-right: auto;
   background-color: #d24928;
   border: none;
-  color: #EADDC8;
+  color: #eaddc8;
   padding: 1em 2em;
   text-decoration: none;
   font-size: 18px;
@@ -270,7 +274,7 @@ input[type="checkbox"] {
 }
 
 #output li.checklistselected {
-  background-color: #8f8980; 
+  background-color: #8f8980;
 }
 
 /*page 4*/
@@ -293,14 +297,14 @@ input[type="checkbox"] {
 }
 
 #output li.checkeditemsselected {
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.5);
   color: grey;
 }
 
 #donebutton {
   background-color: #d24928;
   border: none;
-  color: #EADDC8;
+  color: #eaddc8;
   padding: 1em 2em;
   font-size: 18px;
   margin-top: 2vh;
@@ -317,7 +321,7 @@ input[type="checkbox"] {
 
 #donebutton a {
   text-decoration: none;
-  color: #EADDC8;
+  color: #eaddc8;
 }
 
 /* about page */
@@ -331,117 +335,10 @@ input[type="checkbox"] {
 .about-section {
   font-size: 18px;
   margin: 1.5em;
-  background-color: #EADDC8;
+  background-color: #eaddc8;
   padding: 1em 3em;
   border: 1px solid #141414;
   border-radius: 10px;
-}
-
-/* weatherpage */
-
-/* height and spacing changes
-number/text linup with img in wind/humidity 
-add weather app button on landing page */
-
-.card {
-  width: 90%;
-  max-width: 470px;
-  background: linear-gradient(180deg, #141414, #292929);
-  border: 1px solid #d24928;
-  color: #EADDC8;
-  margin: 7vh auto 0;
-  border-radius: 20px;
-  padding: 40px 35px;
-  text-align: center;
-}
-
-.search {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.search input {
-  border: 0;
-  outline: 0;
-  background: #EADDC8;
-  color: #555;
-  padding: 10px 25px;
-  height: 50px;
-  border-radius: 30px;
-  flex: 1;
-  margin-right: 16px;
-  font-size: 18px;
-}
-
-.search button {
-  border: 0;
-  outline: 0;
-  background: #EADDC8;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-}
-
-.search button img {
-  width: 25px;
-}
-
-.weather-icon {
-  width: 170px;
-  margin-top: 25px;
-}
-
-.weather h1 {
-  font-size: 60px;
-  font-weight: 500;
-  margin-top: -10px;
-}
-
-.weather h2 {
-  font-size: 40px;
-  font-weight: 400;
-  margin-top: -20px;
-}
-
-.details {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  margin-top: 50px;
-}
-
-.col {
-  display: flex;
-  align-items: center;
-  text-align: left;
-  font-size: 1.2rem;
-}
-
-.col img {
-  width: 50px;
-  margin-right: 15px;
-}
-
-.humidity,
-.wind {
-  font-size: 1.2rem;
-  margin-bottom: -10px;
-}
-
-.weather {
-  display: none;
-}
-
-.error {
-  text-align: left;
-  margin-left: 10px;
-  font-size: 14px;
-  margin-top: 10px;
-  display: none;
 }
 
 /* contact me page */
@@ -458,31 +355,33 @@ add weather app button on landing page */
 
 #contactForm {
   width: 100%;
-  color: #EADDC8;
+  color: #eaddc8;
 }
 
 .contactlabel {
   font-size: 20px;
 }
 
-#contactForm input[type="text"], #contactForm input[type="email"], #contactForm textarea {
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
   width: 100%;
   padding: 10px;
   margin: 5px auto;
   box-sizing: border-box;
-  background-color: #EADDC8;
+  background-color: #eaddc8;
   border-radius: 10px;
   font-size: 16px;
 }
 
 #contactForm input[type="submit"] {
   background-color: #d24928;
-  color: #EADDC8;
+  color: #eaddc8;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
   border-radius: 10px;
-  margin: 10px auto; 
+  margin: 10px auto;
   display: block;
   font-size: 16px;
   font-family: poppins;
@@ -492,77 +391,72 @@ add weather app button on landing page */
   background-color: #39a53e;
 }
 
-/* weather app2 */
+/* weather app */
 
 .container {
   display: flex;
-  gap: 35px;
-  padding: 30px;
-}
-.weather-input {
-  width: 550px;
+  padding: 7vh 3vw;
 }
 
-.weather-input input {
-  height: 46px;
-  width: 100%;
-  outline: none;
-  font-size: 1.07rem;
-  padding: 0 17px;
-  margin: 10px 0 20px 0;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+.weather-input h3 {
+  color: #eaddc8;
+  font-weight: bold;
+  font-size: 20px;
 }
-.weather-input input:focus {
-  padding: 0 16px;
-  border: 2px solid #5372f0;
+
+.days-forecast h2 {
+  color: #eaddc8;
+  font-weight: bold;
 }
-.weather-input .separator {
-  height: 1px;
-  width: 100%;
-  margin: 25px 0;
-  background: #bbbbbb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.weather-input {
+  width: 500px;
 }
-.weather-input .separator::before {
-  content: "or";
-  color: #6c757d;
-  font-size: 1.18rem;
-  padding: 0 15px;
-  margin-top: -4px;
-  background: #e3f2fd;
-}
+
+.weather-input input,
 .weather-input button {
-  width: 100%;
-  padding: 10px 0;
-  cursor: pointer;
-  outline: none;
+  height: 50px;
+  width: 90%; /* Changed from 90% to 100% */
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 8px;
+  box-sizing: border-box; /* Added this line */
+  text-align: center;
   border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  color: #fff;
-  background: #5372f0;
-  transition: 0.2s ease;
 }
-.weather-input .search-btn:hover {
-  background: #2c52ed;
+
+.separator {
+  height: 1px;
+  width: 90%;
+  margin: 25px 0;
+  background: #eaddc8;
 }
-.weather-input .location-btn {
-  background: #6c757d;
+
+.search-btn {
+  background: #d24928;
+  color: #eaddc8;
 }
-.weather-input .location-btn:hover {
+
+.location-btn {
   background: #5c636a;
+  color: #eaddc8;
 }
+
+.location-btn:hover, .search-btn:hover {
+  background: #39a53e;
+  cursor: pointer;
+}
+
 .weather-data {
   width: 100%;
 }
 .weather-data .current-weather {
-  color: #fff;
-  background: #5372f0;
+  color: #eaddc8;
+  background: linear-gradient(180deg, #141414, #292929);
   border-radius: 5px;
-  padding: 20px 70px 20px 20px;
+  border: 1px solid #d24928;
+  padding: 20px 70px 20px 50px;
   display: flex;
   justify-content: space-between;
 }
@@ -577,10 +471,13 @@ add weather app button on landing page */
 }
 .current-weather .icon {
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .current-weather .icon img {
   max-width: 120px;
-  margin-top: -15px;
 }
 .current-weather .icon h6 {
   margin-top: -10px;
@@ -592,14 +489,15 @@ add weather app button on landing page */
 }
 .days-forecast .weather-cards {
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 .weather-cards .card {
-  color: #fff;
-  padding: 18px 16px;
+  color: #eaddc8;
+  padding: 16px;
   list-style: none;
   width: calc(100% / 5);
-  background: #6c757d;
+  background: linear-gradient(180deg, #141414, #292929);
+  border: 1px solid #d24928;
   border-radius: 5px;
 }
 .weather-cards .card h3 {
