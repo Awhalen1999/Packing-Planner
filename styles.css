@@ -9,6 +9,67 @@ bone: #EADDC8 */
 -button class 
 -remove font family from all buttons added univeral button selector*/
 
+/* For mobile devices */
+@media (max-width: 600px){
+  body {
+    font-size: 14px;
+  }
+  nav {
+    flex-direction: column;
+    padding: 1vh;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin-right: 2vw;
+    margin-left: 2vw;
+  }
+}
+
+/* For tablet devices */
+@media (min-width: 601px) and (max-width: 1024px){
+  body {
+    font-size: 16px;
+  }
+  nav {
+    flex-direction: row;
+    padding: 1.5vh;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  nav li {
+    margin-right: 3vw;
+    margin-left: 3vw;
+  }
+}
+
+/* For desktop devices */
+@media (min-width: 1025px) {
+  body {
+    font-size: 18px;
+  }
+  nav {
+    flex-direction: row;
+    padding: 2vh;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  nav li {
+    margin-right: 5vw;
+    margin-left: 5vw;
+  }
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-image: url("images/mainbackgroundblur.jpg");
@@ -64,27 +125,6 @@ nav li a:hover {
 nav li {
   margin-right: 5vw;
   margin-left: 5vw;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  color: #eaddc8;
-  text-align: center;
-  padding: 1px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.footerimage {
-  height: 24px;
-  width: 24px;
-  margin: 10px;
-  vertical-align: middle;
-}
-
-footer a {
-  text-decoration: none;
 }
 
 .instructions {
