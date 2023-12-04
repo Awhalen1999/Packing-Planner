@@ -28,6 +28,55 @@ bone: #EADDC8 */
     margin-right: 2vw;
     margin-left: 2vw;
   }
+  .instructions {
+    font-size: 12px;
+    padding: 5px;
+  }
+  #welcome {
+    font-size: 30px;
+    padding: 10px;
+    width: 80vw;
+  }
+
+  #get-started-button {
+    font-size: 16px;
+    padding: 0.5em 1.5em;
+  }
+  #options-header {
+    font-size: 20px;
+    margin-top: 5vh;
+  }
+  .options-var {
+    font-size: 16px;
+  }
+  #options-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  .checklist-header {
+    font-size: 24px;
+    margin-top: 5vh;
+  }
+  .checklist-output h2 {
+    font-size: 20px;
+  }
+  #submit-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  #output li {
+    font-size: 14px;
+    padding: 10px 20px;
+    width: 80vw;
+  }
+  #donebutton {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  .about-section {
+    font-size: 16px;
+    padding: 1em;
+  }
 }
 
 /* For tablet devices */
@@ -48,6 +97,55 @@ bone: #EADDC8 */
     margin-right: 3vw;
     margin-left: 3vw;
   }
+  .instructions {
+    font-size: 12px;
+    padding: 5px;
+  }
+  #welcome {
+    font-size: 40px;
+    padding: 15px;
+    width: 85vw;
+  }
+
+  #get-started-button {
+    font-size: 18px;
+    padding: 0.65em 2.5em;
+  }
+  #options-header {
+    font-size: 25px;
+    margin-top: 6vh;
+  }
+  .options-var {
+    font-size: 18px;
+  }
+  #options-button {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+  .checklist-header {
+    font-size: 28px;
+    margin-top: 6vh;
+  }
+  .checklist-output h2 {
+    font-size: 25px;
+  }
+  #submit-button {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+  #output li {
+    font-size: 16px;
+    padding: 12px 24px;
+    width: 60vw;
+  }
+  #donebutton {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+  .about-section {
+    font-size: 18px;
+    padding: 1em 2em;
+  }
 }
 
 /* For desktop devices */
@@ -67,6 +165,55 @@ bone: #EADDC8 */
   nav li {
     margin-right: 5vw;
     margin-left: 5vw;
+  }
+  .instructions {
+    font-size: 14px;
+    padding: 15px;
+  }
+  #welcome {
+    font-size: 50px;
+    padding: 20px;
+    width: 90vw;
+  }
+
+  #get-started-button {
+    font-size: 20px;
+    padding: 0.75em 3em;
+  }
+  #options-header {
+    font-size: 30px;
+    margin-top: 7vh;
+  }
+  .options-var {
+    font-size: 20px;
+  }
+  #options-button {
+    font-size: 20px;
+    padding: 14px 28px;
+  }
+  .checklist-header {
+    font-size: 34px;
+    margin-top: 7vh;
+  }
+  .checklist-output h2 {
+    font-size: 30px;
+  }
+  #submit-button {
+    font-size: 18px;
+    padding: 14px 28px;
+  }
+  #output li {
+    font-size: 18px;
+    padding: 14px 28px;
+    width: 50vw;
+  }
+  #donebutton {
+    font-size: 18px;
+    padding: 14px 28px;
+  }
+  .about-section {
+    font-size: 20px;
+    padding: 1em 3em;
   }
 }
 
@@ -94,7 +241,6 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 2vh;
   background-color: transparent;
 }
 
@@ -128,10 +274,8 @@ nav li {
 }
 
 .instructions {
-  font-size: 12px;
   color: #eaddc8;
   margin-top: 10px;
-  padding: 10px;
 }
 
 button {
@@ -149,10 +293,7 @@ button {
 
 #welcome {
   color: #feecac;
-  font-size: 50px;
   font-family: "Kanit", sans-serif;
-  width: 95vw;
-  padding: 20px;
   display: flex;
   justify-content: center;
   font-weight: bold;
@@ -165,12 +306,10 @@ button {
   border: none;
   color: #eaddc8;
   text-decoration: none;
-  font-size: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-weight: bold;
   font-family: "Poppins", sans-serif;
-  padding: 0.75em 3em;
   border-radius: 15px;
   margin-top: 10vh;
 }
@@ -190,19 +329,17 @@ button {
   flex-direction: column;
 }
 
-#optionsheader {
-  font-size: 30px;
+#options-header {
   color: #eaddc8;
-  margin-top: 7vh;
 }
 
 .options-radio {
   display: flex;
-  justify-content: center; /*remove if decide to display content on side */
+  /* justify-content: center; remove if decide to display content on side */
   align-items: center;
   margin-bottom: 1vh;
   margin-top: 1vh;
-  width: 35vw;
+  width: 50vw;
   border: 1px solid #141414;
   background-color: #eaddc8;
   border-radius: 5px;
@@ -222,10 +359,8 @@ button {
   background-color: #d24928;
   border: none;
   color: #eaddc8;
-  padding: 1em 2em;
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;
   margin-bottom: 5vh;
   margin-top: 1vh;
   cursor: pointer;
@@ -238,7 +373,6 @@ button {
 }
 
 .options-var {
-  font-size: 20px;
   color: #eaddc8;
   text-align: center;
 }
@@ -259,25 +393,14 @@ input[type="radio"] {
   flex-direction: column;
 }
 
-.checklist-output {
-  width: 50vw;
-  margin: 0 auto;
-}
-
-.checklist-output li {
-  list-style-type: none;
-  border: 1px solid #141414;
-  background-color: #eaddc8;
-  padding: 0.5em;
-  margin: 0.5vh auto;
-  border-radius: 5px;
-  text-align: left;
+.checklist-header {
+  color: #eaddc8;
+  text-align: center;
 }
 
 .checklist-output h2 {
   color: #eaddc8;
   text-align: center;
-  font-size: 30px;
 }
 
 input[type="checkbox"] {
@@ -292,9 +415,7 @@ input[type="checkbox"] {
   background-color: #d24928;
   border: none;
   color: #eaddc8;
-  padding: 1em 2em;
   text-decoration: none;
-  font-size: 18px;
   margin-top: 2vh;
   margin-bottom: 5vh;
   cursor: pointer;
@@ -304,13 +425,6 @@ input[type="checkbox"] {
 
 #submit-button:hover {
   background-color: #39a53e;
-}
-
-.checklist-header {
-  font-size: 30px;
-  color: #eaddc8;
-  text-align: center;
-  margin-top: 7vh;
 }
 
 #output li.checklistselected {
@@ -329,8 +443,6 @@ input[type="checkbox"] {
   background-color: #eaddc8;
   margin: 0.5vh auto;
   border-radius: 5px;
-  padding: 0.5em;
-  width: 50vw;
   align-items: center;
   border: 1px solid #141414;
   list-style-type: none;
@@ -345,8 +457,6 @@ input[type="checkbox"] {
   background-color: #d24928;
   border: none;
   color: #eaddc8;
-  padding: 1em 2em;
-  font-size: 18px;
   margin-top: 2vh;
   margin-bottom: 5vh;
   cursor: pointer;
@@ -367,16 +477,14 @@ input[type="checkbox"] {
 /* about page */
 
 #about-container {
-  width: 70vw;
+  width: 80vw;
   margin: auto;
   margin: 7vh auto;
 }
 
 .about-section {
-  font-size: 18px;
   margin: 1.5em;
   background-color: #eaddc8;
-  padding: 1em 3em;
   border: 1px solid #141414;
   border-radius: 10px;
 }
@@ -548,6 +656,9 @@ input[type="checkbox"] {
   max-width: 70px;
   margin: 5px 0 -12px 0;
 }
+
+/* Media Queries for weather app (temp)*/
+
 @media (max-width: 1400px) {
   .weather-data .current-weather {
     padding: 20px;
