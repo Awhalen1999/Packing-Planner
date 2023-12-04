@@ -1,5 +1,5 @@
 window.onload = function() {
-  const checkedItems = JSON.parse(localStorage.getItem('checkedItems')) || [];
+  const checkedItems = JSON.parse(localStorage.getItem('checkedItems'));
   const outputDiv = document.getElementById('output');
 
   if (!outputDiv) {
