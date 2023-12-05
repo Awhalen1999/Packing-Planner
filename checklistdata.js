@@ -718,12 +718,17 @@ function createSectionHeader(sectionTitle) {
 
 function createItemsList(items) {
   const ul = document.createElement('ul');
+  const checkedItems = JSON.parse(localStorage.getItem('checkedItems'));
 
   items.forEach((item, index) => {
     const li = document.createElement('li');
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.value = item;
+    if (checkedItems.includes(item)) {
+      checkbox.checked = true;
+      li.classList.add('checklistselected');
+    }
 
     checkbox.addEventListener('change', function() {
       if (this.checked) {
