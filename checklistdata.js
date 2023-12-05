@@ -718,7 +718,12 @@ function createSectionHeader(sectionTitle) {
 
 function createItemsList(items) {
   const ul = document.createElement('ul');
-  const checkedItems = JSON.parse(localStorage.getItem('checkedItems'));
+  let checkedItems = localStorage.getItem('checkedItems');
+if (checkedItems) {
+  checkedItems = JSON.parse(checkedItems);
+} else {
+  checkedItems = [];
+}
 
   items.forEach((item, index) => {
     const li = document.createElement('li');
@@ -762,4 +767,23 @@ document.addEventListener('DOMContentLoaded', function() {
     storeCheckedItems();
     window.location.href = 'checkeditems.html';
   });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const submitButton = document.getElementById('submit-button');
+
+  submitButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    storeCheckedItems();
+    window.location.href = 'checkeditems.html';
+  });
+
+  const clearButton = document.getElementById('clear-button');
+
+  if (clearButton) {
+    clearButton.addEventListener('click', function() {
+      localStorage.setItem('checkedItems', JSON.stringify([]));
+      window.location.reload();
+    });
+  }
 });

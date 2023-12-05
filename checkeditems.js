@@ -36,3 +36,14 @@ window.onload = function() {
     }
   });
 };
+
+document.addEventListener('DOMContentLoaded', function() {
+  const doneButton = document.getElementById('done-button');
+
+  if (doneButton) {
+    doneButton.addEventListener('click', function() {
+      localStorage.setItem('checkedItems', JSON.stringify([]));
+      window.location.reload();
+    });
+  }
+});
