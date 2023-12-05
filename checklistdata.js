@@ -767,16 +767,6 @@ document.addEventListener('DOMContentLoaded', function() {
     storeCheckedItems();
     window.location.href = 'checkeditems.html';
   });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  const submitButton = document.getElementById('submit-button');
-
-  submitButton.addEventListener('click', function(event) {
-    event.preventDefault();
-    storeCheckedItems();
-    window.location.href = 'checkeditems.html';
-  });
 
   const clearButton = document.getElementById('clear-button');
 

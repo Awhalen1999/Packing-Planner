@@ -38,7 +38,7 @@ window.onload = function() {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
-  const doneButton = document.getElementById('done-button');
+  const doneButton = document.getElementById('donebutton');
 
   if (doneButton) {
     doneButton.addEventListener('click', function() {
