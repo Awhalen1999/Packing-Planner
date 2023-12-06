@@ -258,7 +258,7 @@ nav li a {
   padding: 0.25em 1em;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 30px;
+  border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -281,6 +281,44 @@ nav li {
 
 button {
   font-family: poppins;
+}
+
+.checklist-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+  margin-top: 1vh;
+  margin-bottom: 0.75vh;
+}
+
+.checklist-nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.checklist-nav li {
+  margin-right: 5vw;
+  margin-left: 5vw;
+}
+
+.checklist-nav button {
+  background-color: #eaddc8;
+  color: #141414;
+  border: none;
+  font-size: 16px;
+  padding: 0.3em 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  border-radius: 15px;
+}
+
+.checklist-nav button:hover {
+  background-color: #beb7ab;
+  color: #141414;
 }
 
 /*page 1*/

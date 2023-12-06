@@ -23,12 +23,15 @@
     <div class="checklist-container">
       <h1 class="checklist-header">Your Checklist</h1>
       <h3 class="instructions">
-        Please select the items you intend to pack for your trip and click submit, these items will be incorporated into your final packing list.
+        Please select the items you intend to pack for your trip and click
+        submit, these items will be incorporated into your final packing list.
       </h3>
-      <div class="alt-nav">
-        <a href="./checkeditems.html">Back to checked items</a>
-        <button id="clear-button">Clear checklist</button>
-        <button id="check-all-button">Check All</button>
+      <div class="checklist-nav">
+        <ul>
+          <li><button onclick="window.location.href='./checkeditems.html'">Back to Checked Items</button></li>
+          <li><button id="clear-button">Reset Checklist</button></li>
+          <li><button id="check-all-button">Check All</button></li>
+        </ul>
       </div>
       <div class="divider"></div>
       <div class="checklist-output">
