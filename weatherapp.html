@@ -17,16 +17,16 @@
         <li><a href="./contact.html">Contact Me</a></li>
       </ul>
     </nav>
-    <div class="container">
+    <div class="weather-container">
       <div class="weather-input">
-        <h3>Enter a City Name</h3>
+        <h2>Enter a City Name</h2>
         <input type="text" class="city-input" placeholder="Enter city name">
         <button class="search-btn">Search</button>
         <h3>Or</h3>
         <button class="location-btn">Use Current Location</button>
         <div class="separator"></div>
-        <button onclick="history.back()">Return to Previous</button>
-        <a href="./index.html">Return to Home</a>
+        <button id="weather-app-previous" onclick="history.back()">Return to Previous</button>
+        <a id="weather-app-home" href="./index.html">Return to Home</a>
       </div>
       <div class="weather-data">
         <div class="current-weather">

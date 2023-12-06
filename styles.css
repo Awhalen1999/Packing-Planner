@@ -10,7 +10,7 @@ bone: #EADDC8 */
 -remove font family from all buttons added univeral button selector*/
 
 /* For mobile devices */
-@media (max-width: 600px){
+@media (max-width: 600px) {
   body {
     font-size: 14px;
   }
@@ -80,7 +80,7 @@ bone: #EADDC8 */
 }
 
 /* For tablet devices */
-@media (min-width: 601px) and (max-width: 1024px){
+@media (min-width: 601px) and (max-width: 1024px) {
   body {
     font-size: 16px;
   }
@@ -381,6 +381,7 @@ button {
 input[type="radio"] {
   transform: scale(1.8);
   margin: 0 1.5em;
+  accent-color: #d24928;
 }
 
 /*page 3*/
@@ -407,6 +408,7 @@ input[type="radio"] {
 input[type="checkbox"] {
   transform: scale(1.8);
   margin: 0 1.5em;
+  accent-color: #d24928;
 }
 
 #submit-button {
@@ -429,7 +431,7 @@ input[type="checkbox"] {
 }
 
 #output li.checklistselected {
-  background-color: #8f8980;
+  background-color: rgba(234, 221, 200, 0.45);
 }
 
 /*page 4*/
@@ -450,8 +452,7 @@ input[type="checkbox"] {
 }
 
 #output li.checkeditemsselected {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: grey;
+  background-color: rgba(234, 221, 200, 0.45);
 }
 
 #donebutton {
@@ -542,15 +543,50 @@ input[type="checkbox"] {
 
 /* weather app */
 
-.container {
+.weather-container {
   display: flex;
   padding: 7vh 3vw;
+}
+
+.weather-input h2 {
+  color: #eaddc8;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
 }
 
 .weather-input h3 {
   color: #eaddc8;
   font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+#weather-app-previous {
+  background-color: #eaddc8;
+}
+
+#weather-app-previous:hover {
+  background-color: #39a53e;
+  cursor: pointer;
+}
+
+#weather-app-home {
+  background-color: #eaddc8;
+  height: 50px;
+  width: 100%; /* Changed from 90% to 100% */
   font-size: 20px;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 8px;
+  box-sizing: border-box; /* Added this line */
+  text-align: center;
+  border: none;
+}
+
+#weather-app-home a {
+  text-decoration: none;
+  color: #141414;
 }
 
 .days-forecast h2 {
@@ -560,12 +596,13 @@ input[type="checkbox"] {
 
 .weather-input {
   width: 500px;
+  margin-right: 3vw;
 }
 
 .weather-input input,
 .weather-input button {
   height: 50px;
-  width: 90%; /* Changed from 90% to 100% */
+  width: 100%; /* Changed from 90% to 100% */
   font-size: 20px;
   padding: 10px;
   margin: 10px auto;
@@ -577,7 +614,7 @@ input[type="checkbox"] {
 
 .separator {
   height: 1px;
-  width: 90%;
+  width: 100%;
   margin: 25px 0;
   background: #eaddc8;
 }
@@ -592,7 +629,8 @@ input[type="checkbox"] {
   color: #eaddc8;
 }
 
-.location-btn:hover, .search-btn:hover {
+.location-btn:hover,
+.search-btn:hover {
   background: #39a53e;
   cursor: pointer;
 }
