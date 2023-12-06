@@ -562,31 +562,13 @@ input[type="checkbox"] {
   text-align: center;
 }
 
-#weather-app-previous {
+#weather-app-previous, #weather-app-home {
   background-color: #eaddc8;
 }
 
-#weather-app-previous:hover {
+#weather-app-previous:hover, #weather-app-home:hover {
   background-color: #39a53e;
   cursor: pointer;
-}
-
-#weather-app-home {
-  background-color: #eaddc8;
-  height: 50px;
-  width: 100%; /* Changed from 90% to 100% */
-  font-size: 20px;
-  padding: 10px;
-  margin: 10px auto;
-  border-radius: 8px;
-  box-sizing: border-box; /* Added this line */
-  text-align: center;
-  border: none;
-}
-
-#weather-app-home a {
-  text-decoration: none;
-  color: #141414;
 }
 
 .days-forecast h2 {
