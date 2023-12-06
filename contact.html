@@ -29,8 +29,16 @@
       <textarea id="message" name="message" rows="4" placeholder="message" required></textarea><br>
       <input type="submit" value="Submit" id="submitButton">
     </form>
-    <button onclick="history.back()">Return to Previous</button>
-        <a href="./index.html">Return to Home</a>
+    <div class="contact-nav">
+      <ul>
+        <li><button onclick="history.back()">Return to Previous</button></li>
+        <li>
+          <button onclick="window.location.href='./index.html'">
+            Return to Home
+          </button>
+        </li>
+      </ul>
+    </div>
   </div>
   <!-- <footer>
     Packing Planner 2023 Alex Whalen

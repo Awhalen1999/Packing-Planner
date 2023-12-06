@@ -529,6 +529,38 @@ input[type="checkbox"] {
   border-radius: 10px;
 }
 
+.about-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+  margin-top: 3vh;
+}
+
+.about-nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about-nav li {
+  margin-right: 1vw;
+  margin-left: 1vw;
+}
+
+.about-nav button {
+  background-color: #eaddc8;
+  color: #141414;
+  border: none;
+  font-size: 16px;
+  padding: 0.3em 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  border-radius: 15px;
+}
+
 /* contact me page */
 
 #contactcontainer {
@@ -569,7 +601,7 @@ input[type="checkbox"] {
   border: none;
   cursor: pointer;
   border-radius: 10px;
-  margin: 10px auto;
+  margin: 2vh auto;
   display: block;
   font-size: 16px;
   font-family: poppins;
@@ -577,6 +609,38 @@ input[type="checkbox"] {
 
 #contactForm input[type="submit"]:hover {
   background-color: #39a53e;
+}
+
+.contact-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+  margin-top: 3vh;
+}
+
+.contact-nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-nav li {
+  margin-right: 1vw;
+  margin-left: 1vw;
+}
+
+.contact-nav button {
+  background-color: #eaddc8;
+  color: #141414;
+  border: none;
+  font-size: 16px;
+  padding: 0.3em 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  border-radius: 15px;
 }
 
 /* weather app */
@@ -600,11 +664,13 @@ input[type="checkbox"] {
   text-align: center;
 }
 
-#weather-app-previous, #weather-app-home {
+#weather-app-previous,
+#weather-app-home {
   background-color: #eaddc8;
 }
 
-#weather-app-previous:hover, #weather-app-home:hover {
+#weather-app-previous:hover,
+#weather-app-home:hover {
   background-color: #39a53e;
   cursor: pointer;
 }
