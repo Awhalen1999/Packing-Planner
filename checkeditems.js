@@ -47,3 +47,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+document.getElementById('uncheck-all-button').addEventListener('click', function() {
+  const checkedItems = document.querySelectorAll('.check-item');
+
+  checkedItems.forEach(item => {
+    item.checked = false;
+    const listItem = item.parentElement;
+    listItem.classList.remove("checkeditemsselected");
+  });
+});
