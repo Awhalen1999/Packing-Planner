@@ -777,3 +777,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const checkAllButton = document.getElementById('check-all-button');
+
+  if (checkAllButton) {
+    checkAllButton.addEventListener('click', function() {
+      const checkItems = document.querySelectorAll('input[type=checkbox]');
+
+      checkItems.forEach(item => {
+        item.checked = true;
+        const listItem = item.parentElement;
+        listItem.classList.add("checklistselected");
+      });
+    });
+  }
+});
