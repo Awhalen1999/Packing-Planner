@@ -721,7 +721,6 @@ document.getElementById('add-item-button').addEventListener('click', function(ev
   const newItem = document.getElementById('new-item').value;
   if (newItem) {
     otherItems.push(newItem);
-    displayChecklist();
     document.getElementById('new-item').value = '';
   }
 });
