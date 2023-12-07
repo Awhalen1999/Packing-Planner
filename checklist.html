@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checklist</title>
-    <script src="checklistdata.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
@@ -36,8 +35,14 @@
       <div class="divider"></div>
       <div class="checklist-output">
         <div id="output"></div>
+      </div>
+      <form id="other-items-form">
+        <input type="text" id="new-item" name="new-item">
+        <button type="button" id="add-item-button">Add Item</button>
+      </form>
         <button id="submit-button">Submit</button>
       </div>
     </div>
+    <script src="checklistdata.js"></script>
   </body>
 </html>

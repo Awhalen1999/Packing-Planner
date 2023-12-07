@@ -3,6 +3,7 @@ window.onload = function() {
   const climate = localStorage.getItem('climate');
   const checklist = getChecklist(gender, climate);
   const outputDiv = document.getElementById('output');
+  let otherItems = [];
 
   function getChecklist(gender, climate) {
     switch (gender + "-" + climate) {
@@ -708,7 +709,23 @@ window.onload = function() {
     outputDiv.appendChild(sectionHeader);
     outputDiv.appendChild(itemsList);
   });
-}
+  const otherSectionHeader = createSectionHeader("Other");
+  const otherItemsList = createItemsList(otherItems);
+  outputDiv.appendChild(otherSectionHeader);
+  outputDiv.appendChild(otherItemsList);
+  
+  console.log(otherItems); //remove later
+};
+
+document.getElementById('add-item-button').addEventListener('click', function(event) {
+  const newItem = document.getElementById('new-item').value;
+  if (newItem) {
+    otherItems.push(newItem);
+    displayChecklist();
+    document.getElementById('new-item').value = '';
+  }
+});
+
 
 function createSectionHeader(sectionTitle) {
   const header = document.createElement('h2');
@@ -724,6 +741,8 @@ if (checkedItems) {
 } else {
   checkedItems = [];
 }
+
+  
 
   items.forEach((item, index) => {
     const li = document.createElement('li');
@@ -750,6 +769,8 @@ if (checkedItems) {
 
   return ul;
 }
+
+//
 
 function storeCheckedItems() {
   const checkboxes = document.querySelectorAll('input[type=checkbox]');
