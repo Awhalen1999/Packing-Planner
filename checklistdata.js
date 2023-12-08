@@ -3,7 +3,6 @@ window.onload = function() {
   const climate = localStorage.getItem('climate');
   const checklist = getChecklist(gender, climate);
   const outputDiv = document.getElementById('output');
-  let otherItems = [];
 
   function getChecklist(gender, climate) {
     switch (gender + "-" + climate) {
@@ -709,21 +708,7 @@ window.onload = function() {
     outputDiv.appendChild(sectionHeader);
     outputDiv.appendChild(itemsList);
   });
-  const otherSectionHeader = createSectionHeader("Other");
-  const otherItemsList = createItemsList(otherItems);
-  outputDiv.appendChild(otherSectionHeader);
-  outputDiv.appendChild(otherItemsList);
-  
-  console.log(otherItems); //remove later
 };
-
-document.getElementById('add-item-button').addEventListener('click', function(event) {
-  const newItem = document.getElementById('new-item').value;
-  if (newItem) {
-    otherItems.push(newItem);
-    document.getElementById('new-item').value = '';
-  }
-});
 
 
 function createSectionHeader(sectionTitle) {
