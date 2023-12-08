@@ -743,7 +743,6 @@ document.getElementById('add-item-button').addEventListener('click', function(ev
 });
 
 
-
 function createSectionHeader(sectionTitle) {
   const header = document.createElement('h2');
   header.textContent = sectionTitle;
@@ -814,7 +813,6 @@ function storeCheckedItems() {
       window.location.reload();
     });
   }
-};
 
 document.addEventListener('DOMContentLoaded', function() {
   const checkAllButton = document.getElementById('check-all-button');
@@ -831,3 +829,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+};
