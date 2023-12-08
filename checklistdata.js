@@ -3,6 +3,7 @@ window.onload = function() {
   const climate = localStorage.getItem('climate');
   const checklist = getChecklist(gender, climate);
   const outputDiv = document.getElementById('output');
+  let otherItems = [];
 
   function getChecklist(gender, climate) {
     switch (gender + "-" + climate) {
@@ -708,7 +709,39 @@ window.onload = function() {
     outputDiv.appendChild(sectionHeader);
     outputDiv.appendChild(itemsList);
   });
-};
+
+
+
+function displayChecklist() {
+  const outputDiv = document.getElementById('output');
+  outputDiv.innerHTML = ''; 
+
+  // Loop through the checklist array and create a section for each item
+  checklist.forEach(section => {
+    const sectionHeader = createSectionHeader(section.section);
+    const itemsList = createItemsList(section.items);
+
+    outputDiv.appendChild(sectionHeader);
+    outputDiv.appendChild(itemsList);
+  });
+
+  // Create a section for otherItems
+  const otherSectionHeader = createSectionHeader('Other');
+  const otherItemsList = createItemsList(otherItems);
+
+  outputDiv.appendChild(otherSectionHeader);
+  outputDiv.appendChild(otherItemsList);
+}
+
+document.getElementById('add-item-button').addEventListener('click', function(event) {
+  const newItem = document.getElementById('new-item').value;
+  if (newItem) {
+    otherItems.push(newItem); // Add the new item to the otherItems array
+    document.getElementById('new-item').value = '';
+  }
+  displayChecklist(); // Update the checklist
+});
+
 
 
 function createSectionHeader(sectionTitle) {
@@ -764,14 +797,14 @@ function storeCheckedItems() {
 
   localStorage.setItem('checkedItems', JSON.stringify(checkedItems));
 }
-document.addEventListener('DOMContentLoaded', function() {
+
   const submitButton = document.getElementById('submit-button');
 
   submitButton.addEventListener('click', function(event) {
     event.preventDefault();
     storeCheckedItems();
     window.location.href = 'checkeditems.html';
-  });
+});
 
   const clearButton = document.getElementById('clear-button');
 
@@ -781,7 +814,7 @@ document.addEventListener('DOMContentLoaded', function() {
       window.location.reload();
     });
   }
-});
+};
 
 document.addEventListener('DOMContentLoaded', function() {
   const checkAllButton = document.getElementById('check-all-button');
