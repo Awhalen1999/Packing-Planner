@@ -77,6 +77,9 @@ bone: #EADDC8 */
     font-size: 16px;
     padding: 1em;
   }
+  .weather-container {
+    flex-wrap: wrap;
+  }
 }
 
 /* For tablet devices */
@@ -145,6 +148,9 @@ bone: #EADDC8 */
   .about-section {
     font-size: 18px;
     padding: 1em 2em;
+  }
+  .weather-container {
+    flex-wrap: wrap;
   }
 }
 
@@ -693,7 +699,7 @@ input[type="checkbox"] {
   padding: 10px;
   margin: 10px auto;
   border-radius: 8px;
-  box-sizing: border-box; /* Added this line */
+  box-sizing: border-box; 
   text-align: center;
   border: none;
 }
