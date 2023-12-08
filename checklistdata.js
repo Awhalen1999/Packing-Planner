@@ -3,7 +3,7 @@ window.onload = function() {
   const climate = localStorage.getItem('climate');
   const checklist = getChecklist(gender, climate);
   const outputDiv = document.getElementById('output');
-  let otherItems = [];
+  const otherItems = [];
 
   function getChecklist(gender, climate) {
     switch (gender + "-" + climate) {
@@ -709,29 +709,33 @@ window.onload = function() {
     outputDiv.appendChild(sectionHeader);
     outputDiv.appendChild(itemsList);
   });
-
-
-
-function displayChecklist() {
-  const outputDiv = document.getElementById('output');
-  outputDiv.innerHTML = ''; 
-
-  // Loop through the checklist array and create a section for each item
-  checklist.forEach(section => {
-    const sectionHeader = createSectionHeader(section.section);
-    const itemsList = createItemsList(section.items);
-
-    outputDiv.appendChild(sectionHeader);
-    outputDiv.appendChild(itemsList);
-  });
-
-  // Create a section for otherItems
+  
   const otherSectionHeader = createSectionHeader('Other');
-  const otherItemsList = createItemsList(otherItems);
-
   outputDiv.appendChild(otherSectionHeader);
-  outputDiv.appendChild(otherItemsList);
-}
+
+  function displayChecklist() {
+    const outputDiv = document.getElementById('output');
+    outputDiv.innerHTML = ''; 
+  
+    // Loop through the checklist array and create a section for each item
+    checklist.forEach(section => {
+      const sectionHeader = createSectionHeader(section.section);
+      const itemsList = createItemsList(section.items);
+  
+      outputDiv.appendChild(sectionHeader);
+      outputDiv.appendChild(itemsList);
+    });
+  
+    // Always create and append the "Other" section header
+    const otherSectionHeader = createSectionHeader('Other');
+    outputDiv.appendChild(otherSectionHeader);
+  
+    // Only create and append the items list for "Other" if there are any items
+    if (otherItems.length > 0) {
+      const otherItemsList = createItemsList(otherItems);
+      outputDiv.appendChild(otherItemsList);
+    }
+  }
 
 document.getElementById('add-item-button').addEventListener('click', function(event) {
   const newItem = document.getElementById('new-item').value;
