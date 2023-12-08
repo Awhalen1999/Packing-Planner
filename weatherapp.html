@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="weatherapp.js" defer></script>
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav>
@@ -20,21 +23,28 @@
     <div class="weather-container">
       <div class="weather-input">
         <h2>Enter a City Name</h2>
-        <input type="text" class="city-input" placeholder="Enter city name">
+        <input type="text" class="city-input" placeholder="Enter city name" />
         <button class="search-btn">Search</button>
         <h3>Or</h3>
         <button class="location-btn">Use Current Location</button>
         <div class="separator"></div>
-        <button id="weather-app-previous" onclick="history.back()">Return to Previous</button>
-        <button id="weather-app-home" onclick="window.location.href='./index.html'">Return to Home</button>
+        <button id="weather-app-previous" onclick="history.back()">
+          Return to Previous
+        </button>
+        <button
+          id="weather-app-home"
+          onclick="window.location.href='./index.html'"
+        >
+          Return to Home
+        </button>
       </div>
       <div class="weather-data">
         <div class="current-weather">
           <div class="details">
             <h2></h2>
-            <h6>Temperature: </h6>
-            <h6>Wind: </h6>
-            <h6>Humidity: </h6>
+            <h6>Temperature:</h6>
+            <h6>Wind:</h6>
+            <h6>Humidity:</h6>
           </div>
         </div>
         <div class="days-forecast">
@@ -42,38 +52,37 @@
           <ul class="weather-cards">
             <li class="card">
               <h3></h3>
-              <h6>Temp: </h6>
-              <h6>Wind: </h6>
-              <h6>Humidity: </h6>
+              <h6>Temp:</h6>
+              <h6>Wind:</h6>
+              <h6>Humidity:</h6>
             </li>
             <li class="card">
               <h3></h3>
-              <h6>Temp: </h6>
-              <h6>Wind: </h6>
-              <h6>Humidity: </h6>
+              <h6>Temp:</h6>
+              <h6>Wind:</h6>
+              <h6>Humidity:</h6>
             </li>
             <li class="card">
               <h3></h3>
-              <h6>Temp: </h6>
-              <h6>Wind: </h6>
-              <h6>Humidity: </h6>
+              <h6>Temp:</h6>
+              <h6>Wind:</h6>
+              <h6>Humidity:</h6>
             </li>
             <li class="card">
               <h3></h3>
-              <h6>Temp: </h6>
-              <h6>Wind: </h6>
-              <h6>Humidity: </h6>
+              <h6>Temp:</h6>
+              <h6>Wind:</h6>
+              <h6>Humidity:</h6>
             </li>
             <li class="card">
               <h3></h3>
-              <h6>Temp: </h6>
-              <h6>Wind: </h6>
-              <h6>Humidity: </h6>
+              <h6>Temp:</h6>
+              <h6>Wind:</h6>
+              <h6>Humidity:</h6>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    
   </body>
 </html>

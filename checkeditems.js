@@ -1,23 +1,23 @@
-window.onload = function() {
-  const checkedItems = JSON.parse(localStorage.getItem('checkedItems'));
-  const outputDiv = document.getElementById('output');
+window.onload = function () {
+  const checkedItems = JSON.parse(localStorage.getItem("checkedItems"));
+  const outputDiv = document.getElementById("output");
 
   if (!outputDiv) {
     console.error('No element with ID "output" found');
     return;
   }
 
-  const ul = document.createElement('ul');
+  const ul = document.createElement("ul");
   outputDiv.appendChild(ul);
 
-  checkedItems.forEach(item => {
-    const li = document.createElement('li');
+  checkedItems.forEach((item) => {
+    const li = document.createElement("li");
 
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.classList.add('check-item');
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.classList.add("check-item");
 
-    const label = document.createElement('label');
+    const label = document.createElement("label");
     label.textContent = item;
 
     li.appendChild(checkbox);
@@ -37,33 +37,37 @@ window.onload = function() {
   });
 };
 
-document.addEventListener('DOMContentLoaded', function() {
-  const doneButton = document.getElementById('donebutton');
+document.addEventListener("DOMContentLoaded", function () {
+  const doneButton = document.getElementById("donebutton");
 
   if (doneButton) {
-    doneButton.addEventListener('click', function() {
-      localStorage.setItem('checkedItems', JSON.stringify([]));
+    doneButton.addEventListener("click", function () {
+      localStorage.setItem("checkedItems", JSON.stringify([]));
       window.location.reload();
     });
   }
 });
 
-document.getElementById('uncheck-all-button').addEventListener('click', function() {
-  const checkedItems = document.querySelectorAll('.check-item');
+document
+  .getElementById("uncheck-all-button")
+  .addEventListener("click", function () {
+    const checkedItems = document.querySelectorAll(".check-item");
 
-  checkedItems.forEach(item => {
-    item.checked = false;
-    const listItem = item.parentElement;
-    listItem.classList.remove("checkeditemsselected");
+    checkedItems.forEach((item) => {
+      item.checked = false;
+      const listItem = item.parentElement;
+      listItem.classList.remove("checkeditemsselected");
+    });
   });
-});
 
-document.getElementById('check-all-button').addEventListener('click', function() {
-  const checkedItems = document.querySelectorAll('.check-item');
+document
+  .getElementById("check-all-button")
+  .addEventListener("click", function () {
+    const checkedItems = document.querySelectorAll(".check-item");
 
-  checkedItems.forEach(item => {
-    item.checked = true;
-    const listItem = item.parentElement;
-    listItem.classList.add("checkeditemsselected");
+    checkedItems.forEach((item) => {
+      item.checked = true;
+      const listItem = item.parentElement;
+      listItem.classList.add("checkeditemsselected");
+    });
   });
-});
