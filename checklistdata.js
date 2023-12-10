@@ -835,9 +835,9 @@ window.onload = function () {
       displayChecklist();
     });
 
-  function createSectionHeader(sectionTitle) {
+  function createSectionHeader(section) {
     const header = document.createElement("h2");
-    header.textContent = sectionTitle;
+    header.textContent = section;
     return header;
   }
 
