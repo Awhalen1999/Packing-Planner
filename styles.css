@@ -327,6 +327,43 @@ button {
   color: #141414;
 }
 
+.alt-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+  margin-top: 3vh;
+}
+
+.alt-nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.alt-nav li {
+  margin-right: 1vw;
+  margin-left: 1vw;
+}
+
+.alt-nav button {
+  background-color: #eaddc8;
+  color: #141414;
+  border: none;
+  font-size: 16px;
+  padding: 0.3em 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  border-radius: 15px;
+}
+
+.alt-nav button:hover {
+  background-color: #beb7ab;
+  color: #141414;
+}
+
 /*page 1*/
 
 #page-1-container {
@@ -535,38 +572,6 @@ input[type="checkbox"] {
   border-radius: 10px;
 }
 
-.about-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: transparent;
-  margin-top: 3vh;
-}
-
-.about-nav ul {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.about-nav li {
-  margin-right: 1vw;
-  margin-left: 1vw;
-}
-
-.about-nav button {
-  background-color: #eaddc8;
-  color: #141414;
-  border: none;
-  font-size: 16px;
-  padding: 0.3em 1em;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-weight: bold;
-  border-radius: 15px;
-}
-
 /* contact me page */
 
 #contactcontainer {
@@ -615,38 +620,6 @@ input[type="checkbox"] {
 
 #contactForm input[type="submit"]:hover {
   background-color: #39a53e;
-}
-
-.contact-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: transparent;
-  margin-top: 3vh;
-}
-
-.contact-nav ul {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.contact-nav li {
-  margin-right: 1vw;
-  margin-left: 1vw;
-}
-
-.contact-nav button {
-  background-color: #eaddc8;
-  color: #141414;
-  border: none;
-  font-size: 16px;
-  padding: 0.3em 1em;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-weight: bold;
-  border-radius: 15px;
 }
 
 /* weather app */
