@@ -35,9 +35,8 @@ window.onload = function () {
       }
     }
   });
-};
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("click", function () {
   const doneButton = document.getElementById("donebutton");
 
   if (doneButton) {
@@ -71,3 +70,4 @@ document
       listItem.classList.add("checkeditemsselected");
     });
   });
+};

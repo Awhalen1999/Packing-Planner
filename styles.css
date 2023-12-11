@@ -14,17 +14,17 @@ bone: #EADDC8 */
   body {
     font-size: 14px;
   }
-  nav {
+  .main-nav {
     flex-direction: column;
     padding: 1vh;
   }
 
-  nav ul {
+  .main-nav ul {
     flex-direction: column;
     align-items: center;
   }
 
-  nav li {
+  .main-nav li {
     margin-right: 2vw;
     margin-left: 2vw;
   }
@@ -46,7 +46,7 @@ bone: #EADDC8 */
     font-size: 20px;
     margin-top: 5vh;
   }
-  .options-var {
+  #options-var {
     font-size: 16px;
   }
   #options-button {
@@ -57,7 +57,7 @@ bone: #EADDC8 */
     font-size: 24px;
     margin-top: 5vh;
   }
-  .checklist-output h2 {
+  #output h2 {
     font-size: 20px;
   }
   #submit-button {
@@ -87,16 +87,16 @@ bone: #EADDC8 */
   body {
     font-size: 16px;
   }
-  nav {
+  .main-nav {
     flex-direction: row;
     padding: 1.5vh;
   }
 
-  nav ul {
+  .main-nav ul {
     flex-direction: row;
   }
 
-  nav li {
+  .main-nav li {
     margin-right: 3vw;
     margin-left: 3vw;
   }
@@ -118,7 +118,7 @@ bone: #EADDC8 */
     font-size: 25px;
     margin-top: 6vh;
   }
-  .options-var {
+  #options-var {
     font-size: 18px;
   }
   #options-button {
@@ -129,7 +129,7 @@ bone: #EADDC8 */
     font-size: 28px;
     margin-top: 6vh;
   }
-  .checklist-output h2 {
+  #output h2 {
     font-size: 25px;
   }
   #submit-button {
@@ -159,16 +159,16 @@ bone: #EADDC8 */
   body {
     font-size: 18px;
   }
-  nav {
+  .main-nav {
     flex-direction: row;
     padding: 2vh;
   }
 
-  nav ul {
+  .main-nav ul {
     flex-direction: row;
   }
 
-  nav li {
+  .main-nav li {
     margin-right: 5vw;
     margin-left: 5vw;
   }
@@ -190,7 +190,7 @@ bone: #EADDC8 */
     font-size: 30px;
     margin-top: 7vh;
   }
-  .options-var {
+  #options-var {
     font-size: 20px;
   }
   #options-button {
@@ -201,7 +201,7 @@ bone: #EADDC8 */
     font-size: 34px;
     margin-top: 7vh;
   }
-  .checklist-output h2 {
+  #output h2 {
     font-size: 30px;
   }
   #submit-button {
@@ -243,21 +243,21 @@ body {
   border-radius: 2px;
 }
 
-nav {
+.main-nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: transparent;
 }
 
-nav ul {
+.main-nav ul {
   display: flex;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-nav li a {
+.main-nav li a {
   display: block;
   color: #eaddc8;
   text-align: center;
@@ -269,12 +269,12 @@ nav li a {
   transition: background-color 0.3s ease;
 }
 
-nav li a:hover {
+.main-nav li a:hover {
   background-color: #eaddc8;
   color: #141414;
 }
 
-nav li {
+.main-nav li {
   margin-right: 5vw;
   margin-left: 5vw;
 }
@@ -371,14 +371,15 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 80vh;
 }
 
 #welcome {
   color: #feecac;
-  font-family: "Kanit", sans-serif;
+  font-family: "Karla", sans-serif;
   display: flex;
   justify-content: center;
-  font-weight: bold;
+  font-weight: bolder;
   text-align: center;
   margin-top: 10vh;
 }
@@ -415,9 +416,13 @@ button {
   color: #eaddc8;
 }
 
-.options-radio {
+#options-var {
+  color: #eaddc8;
+  text-align: center;
+}
+
+#options-radio {
   display: flex;
-  /* justify-content: center; remove if decide to display content on side */
   align-items: center;
   margin-bottom: 1vh;
   margin-top: 1vh;
@@ -428,7 +433,7 @@ button {
   padding: 1em;
 }
 
-.options-radio img {
+#options-radio img {
   width: 50px;
   height: 50px;
   padding: 0 1em;
@@ -454,11 +459,6 @@ button {
   background-color: #39a53e;
 }
 
-.options-var {
-  color: #eaddc8;
-  text-align: center;
-}
-
 input[type="radio"] {
   transform: scale(1.8);
   margin: 0 1.5em;
@@ -481,9 +481,29 @@ input[type="radio"] {
   text-align: center;
 }
 
-.checklist-output h2 {
+#output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#output h2 {
   color: #eaddc8;
   text-align: center;
+}
+
+#output li {
+  background-color: #eaddc8;
+  width: 50vw;
+  margin: 0.5vh auto;
+  border-radius: 5px;
+  align-items: center;
+  border: 1px solid #141414;
+  list-style-type: none;
+}
+
+#output li.checklistselected {
+  background-color: rgba(234, 221, 200, 0.45);
 }
 
 input[type="checkbox"] {
@@ -511,26 +531,7 @@ input[type="checkbox"] {
   background-color: #39a53e;
 }
 
-#output li.checklistselected {
-  background-color: rgba(234, 221, 200, 0.45);
-}
-
 /*page 4*/
-
-#output {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#output li {
-  background-color: #eaddc8;
-  margin: 0.5vh auto;
-  border-radius: 5px;
-  align-items: center;
-  border: 1px solid #141414;
-  list-style-type: none;
-}
 
 #output li.checkeditemsselected {
   background-color: rgba(234, 221, 200, 0.45);
@@ -629,6 +630,11 @@ input[type="checkbox"] {
   padding: 7vh 3vw;
 }
 
+.weather-input {
+  width: 500px;
+  margin-right: 3vw;
+}
+
 .weather-input h2 {
   color: #eaddc8;
   font-weight: bold;
@@ -654,20 +660,10 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-.days-forecast h2 {
-  color: #eaddc8;
-  font-weight: bold;
-}
-
-.weather-input {
-  width: 500px;
-  margin-right: 3vw;
-}
-
 .weather-input input,
 .weather-input button {
   height: 50px;
-  width: 100%; /* Changed from 90% to 100% */
+  width: 100%;
   font-size: 20px;
   padding: 10px;
   margin: 10px auto;
@@ -675,13 +671,6 @@ input[type="checkbox"] {
   box-sizing: border-box;
   text-align: center;
   border: none;
-}
-
-.separator {
-  height: 1px;
-  width: 100%;
-  margin: 25px 0;
-  background: #eaddc8;
 }
 
 .search-btn {
@@ -700,9 +689,17 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
+.separator {
+  height: 1px;
+  width: 100%;
+  margin: 25px 0;
+  background: #eaddc8;
+}
+
 .weather-data {
   width: 100%;
 }
+
 .weather-data .current-weather {
   color: #eaddc8;
   background: linear-gradient(180deg, #141414, #292929);
@@ -712,15 +709,18 @@ input[type="checkbox"] {
   display: flex;
   justify-content: space-between;
 }
+
 .current-weather h2 {
   font-weight: 700;
   font-size: 1.7rem;
 }
+
 .weather-data h6 {
   margin-top: 12px;
   font-size: 1rem;
   font-weight: 500;
 }
+
 .current-weather .icon {
   text-align: center;
   display: flex;
@@ -728,21 +728,28 @@ input[type="checkbox"] {
   justify-content: center;
   flex-direction: column;
 }
+
 .current-weather .icon img {
   max-width: 120px;
 }
+
 .current-weather .icon h6 {
-  margin-top: -10px;
+  margin-top: -5px;
   text-transform: capitalize;
 }
+
 .days-forecast h2 {
   margin: 20px 0;
   font-size: 1.5rem;
+  color: #eaddc8;
+  font-weight: bold;
 }
+
 .days-forecast .weather-cards {
   display: flex;
   gap: 15px;
 }
+
 .weather-cards .card {
   color: #eaddc8;
   padding: 16px;
@@ -752,10 +759,12 @@ input[type="checkbox"] {
   border: 1px solid #d24928;
   border-radius: 5px;
 }
+
 .weather-cards .card h3 {
   font-size: 1.3rem;
   font-weight: 600;
 }
+
 .weather-cards .card img {
   max-width: 70px;
   margin: 5px 0 -12px 0;

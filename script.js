@@ -1,4 +1,4 @@
-document.querySelector("form").addEventListener("submit", function (event) {
+document.getElementById("options-form").addEventListener("submit", function (event) {
   event.preventDefault();
 
   const genderInput = document.querySelector('input[name="gender"]:checked');
