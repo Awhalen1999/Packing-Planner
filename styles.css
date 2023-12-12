@@ -543,6 +543,33 @@ input[type="checkbox"] {
   background-color: #39a53e;
 }
 
+#input-container {
+  width: 30vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+#input-container input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #eaddc8;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#input-container button {
+  background-color: #d24928;
+  border: none;
+  color: #eaddc8;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  padding: 10px;
+}
+
 /*page 4*/
 
 #output li.checkeditemsselected {
