@@ -787,7 +787,7 @@ window.onload = function () {
     }
   }
 
-  if (!checklist) {
+  if (checklist == null) {
     outputDiv.textContent = "No checklist available";
     return;
   }
@@ -832,6 +832,7 @@ window.onload = function () {
         otherItems.push(newItem);
         document.getElementById("new-item").value = "";
       }
+      storeCheckedItems();
       displayChecklist();
     });
 

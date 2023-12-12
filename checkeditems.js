@@ -36,7 +36,6 @@ window.onload = function () {
     }
   });
 
-document.addEventListener("click", function () {
   const doneButton = document.getElementById("donebutton");
 
   if (doneButton) {
@@ -45,29 +44,27 @@ document.addEventListener("click", function () {
       window.location.reload();
     });
   }
-});
+  document
+    .getElementById("uncheck-all-button")
+    .addEventListener("click", function () {
+      const checkedItems = document.querySelectorAll(".check-item");
 
-document
-  .getElementById("uncheck-all-button")
-  .addEventListener("click", function () {
-    const checkedItems = document.querySelectorAll(".check-item");
-
-    checkedItems.forEach((item) => {
-      item.checked = false;
-      const listItem = item.parentElement;
-      listItem.classList.remove("checkeditemsselected");
+      checkedItems.forEach((item) => {
+        item.checked = false;
+        const listItem = item.parentElement;
+        listItem.classList.remove("checkeditemsselected");
+      });
     });
-  });
 
-document
-  .getElementById("check-all-button")
-  .addEventListener("click", function () {
-    const checkedItems = document.querySelectorAll(".check-item");
+  document
+    .getElementById("check-all-button")
+    .addEventListener("click", function () {
+      const checkedItems = document.querySelectorAll(".check-item");
 
-    checkedItems.forEach((item) => {
-      item.checked = true;
-      const listItem = item.parentElement;
-      listItem.classList.add("checkeditemsselected");
+      checkedItems.forEach((item) => {
+        item.checked = true;
+        const listItem = item.parentElement;
+        listItem.classList.add("checkeditemsselected");
+      });
     });
-  });
 };

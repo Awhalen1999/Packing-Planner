@@ -384,21 +384,22 @@ button {
   margin-top: 10vh;
 }
 
-#get-started-button {
+#get-started-button, #saved-checklist-button {
   background-color: #d24928;
   border: none;
   color: #eaddc8;
   text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
   font-weight: bold;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0.5em 1.5em;
   font-family: "Poppins", sans-serif;
-  border-radius: 15px;
-  margin-top: 10vh;
+  border-radius: 5px;
+  margin: 5vh 15px 0 15px;
 }
 
-#get-started-button:hover {
-  background-color: #41c147;
+#get-started-button:hover, #saved-checklist-button:hover {
+  background-color: #39a53e;
 }
 
 /*page 2*/
