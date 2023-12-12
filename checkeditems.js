@@ -43,7 +43,7 @@ window.onload = function () {
       localStorage.setItem("checkedItems", JSON.stringify([]));
       localStorage.removeItem("gender");
       localStorage.removeItem("climate");
-      window.location.reload();
+      window.location.href = './index.html';
     });
   }
 

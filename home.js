@@ -12,4 +12,16 @@ function savedChecklist() {
   }
 
 }
+
+const newChecklistButton = document.getElementById("new-checklist-button");
+
+if (newChecklistButton) {
+    newChecklistButton.addEventListener("click", function () {
+    localStorage.setItem("checkedItems", JSON.stringify([]));
+    localStorage.removeItem("gender");
+    localStorage.removeItem("climate");
+    window.location.href = './page2.html';
+  });
+}
+
 window.onload = savedChecklist;
