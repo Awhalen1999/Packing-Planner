@@ -41,9 +41,12 @@ window.onload = function () {
   if (doneButton) {
     doneButton.addEventListener("click", function () {
       localStorage.setItem("checkedItems", JSON.stringify([]));
+      localStorage.removeItem("gender");
+      localStorage.removeItem("climate");
       window.location.reload();
     });
   }
+
   document
     .getElementById("uncheck-all-button")
     .addEventListener("click", function () {
