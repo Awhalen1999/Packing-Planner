@@ -11,10 +11,5 @@ function savedChecklist() {
     button.classList.add('disabled');
   }
 
-  button.addEventListener('click', function() {
-    if (button.disabled) {
-      alert('No checklist is currently open');
-    }
-  });
 }
 window.onload = savedChecklist;
