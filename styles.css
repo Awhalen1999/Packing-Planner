@@ -384,7 +384,8 @@ button {
   margin-top: 10vh;
 }
 
-#new-checklist-button, #saved-checklist-button {
+#new-checklist-button,
+#saved-checklist-button {
   background-color: #d24928;
   border: none;
   color: #eaddc8;
@@ -398,7 +399,8 @@ button {
   margin: 5vh 15px 0 15px;
 }
 
-#new-checklist-button:hover, #saved-checklist-button:hover {
+#new-checklist-button:hover,
+#saved-checklist-button:hover {
   background-color: #39a53e;
 }
 
@@ -410,7 +412,6 @@ button {
   background-color: #cccccc;
   color: #808080;
 }
-
 
 /*page 2*/
 
