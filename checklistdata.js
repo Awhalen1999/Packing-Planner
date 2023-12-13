@@ -901,6 +901,7 @@ window.onload = function () {
   if (clearButton) {
     clearButton.addEventListener("click", function () {
       localStorage.setItem("checkedItems", JSON.stringify([]));
+      localStorage.removeItem("checkedStates");
       window.location.reload();
     });
   }

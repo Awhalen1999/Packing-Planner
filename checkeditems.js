@@ -1,31 +1,32 @@
 window.onload = function () {
-  const checkedItems = JSON.parse(localStorage.getItem("checkedItems"));
+  const checkedItems = JSON.parse(localStorage.getItem("checkedItems")) || [];
+  const checkedStates = JSON.parse(localStorage.getItem("checkedStates")) || [];
   const outputDiv = document.getElementById("output");
 
-  if (!outputDiv) {
-    console.error('No element with ID "output" found');
-    return;
-  }
-
-  const ul = document.createElement("ul");
-  outputDiv.appendChild(ul);
-
-  checkedItems.forEach((item) => {
+  checkedItems.forEach((item, index) => {
     const li = document.createElement("li");
 
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.classList.add("check-item");
 
+    const checkedState = checkedStates.find((state) => state.item === item);
+    if (checkedState) {
+      checkbox.checked = checkedState.checked;
+      if (checkbox.checked) {
+        li.classList.add("checkeditemsselected");
+      }
+    }
+
     const label = document.createElement("label");
     label.textContent = item;
 
     li.appendChild(checkbox);
     li.appendChild(label);
-    ul.appendChild(li);
+    outputDiv.appendChild(li);
   });
 
-  ul.addEventListener("click", function (event) {
+  outputDiv.addEventListener("click", function (event) {
     if (event.target.classList.contains("check-item")) {
       const listItem = event.target.parentElement;
       if (event.target.checked) {
@@ -33,6 +34,14 @@ window.onload = function () {
       } else {
         listItem.classList.remove("checkeditemsselected");
       }
+
+      const checkedStates = Array.from(
+        document.querySelectorAll(".check-item")
+      ).map((checkbox, index) => ({
+        item: checkedItems[index],
+        checked: checkbox.checked,
+      }));
+      localStorage.setItem("checkedStates", JSON.stringify(checkedStates));
     }
   });
 
@@ -43,6 +52,7 @@ window.onload = function () {
       localStorage.setItem("checkedItems", JSON.stringify([]));
       localStorage.removeItem("gender");
       localStorage.removeItem("climate");
+      localStorage.removeItem("checkedStates");
       window.location.href = "./index.html";
     });
   }
