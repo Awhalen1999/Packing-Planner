@@ -858,14 +858,14 @@ window.onload = function () {
       checkbox.value = item;
       if (checkedItems.includes(item)) {
         checkbox.checked = true;
-        li.classList.add("checklistselected");
+        li.classList.add("checklistSelected");
       }
 
       checkbox.addEventListener("change", function () {
         if (this.checked) {
-          li.classList.add("checklistselected");
+          li.classList.add("checklistSelected");
         } else {
-          li.classList.remove("checklistselected");
+          li.classList.remove("checklistSelected");
         }
       });
 
@@ -915,7 +915,7 @@ window.onload = function () {
       checkItems.forEach((item) => {
         item.checked = true;
         const listItem = item.parentElement;
-        listItem.classList.add("checklistselected");
+        listItem.classList.add("checklistSelected");
       });
     });
   }

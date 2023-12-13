@@ -69,7 +69,7 @@ bone: #EADDC8 */
     padding: 10px 20px;
     width: 80vw;
   }
-  #donebutton {
+  #doneButton {
     font-size: 14px;
     padding: 10px 20px;
   }
@@ -141,7 +141,7 @@ bone: #EADDC8 */
     padding: 12px 24px;
     width: 60vw;
   }
-  #donebutton {
+  #doneButton {
     font-size: 16px;
     padding: 12px 24px;
   }
@@ -213,7 +213,7 @@ bone: #EADDC8 */
     padding: 14px 28px;
     width: 50vw;
   }
-  #donebutton {
+  #doneButton {
     font-size: 18px;
     padding: 14px 28px;
   }
@@ -514,7 +514,7 @@ input[type="radio"] {
   list-style-type: none;
 }
 
-#output li.checklistselected {
+#output li.checklistSelected {
   background-color: rgba(234, 221, 200, 0.45);
 }
 
@@ -572,11 +572,11 @@ input[type="checkbox"] {
 
 /*page 4*/
 
-#output li.checkeditemsselected {
+#output li.checkedItemsSelected {
   background-color: rgba(234, 221, 200, 0.45);
 }
 
-#donebutton {
+#doneButton {
   background-color: #d24928;
   border: none;
   color: #eaddc8;
@@ -588,11 +588,11 @@ input[type="checkbox"] {
   text-decoration: none;
 }
 
-#donebutton:hover {
+#doneButton:hover {
   background-color: #39a53e;
 }
 
-#donebutton a {
+#doneButton a {
   text-decoration: none;
   color: #eaddc8;
 }
@@ -614,7 +614,7 @@ input[type="checkbox"] {
 
 /* contact me page */
 
-#contactcontainer {
+#contact-container {
   width: 50vw;
   margin: 0 auto;
   display: flex;
@@ -624,18 +624,18 @@ input[type="checkbox"] {
   margin-top: 7vh;
 }
 
-#contactForm {
+#contact-form {
   width: 100%;
   color: #eaddc8;
 }
 
-.contactlabel {
+.contact-label {
   font-size: 20px;
 }
 
-#contactForm input[type="text"],
-#contactForm input[type="email"],
-#contactForm textarea {
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
   width: 100%;
   padding: 10px;
   margin: 5px auto;
@@ -645,7 +645,7 @@ input[type="checkbox"] {
   font-size: 16px;
 }
 
-#contactForm input[type="submit"] {
+#contact-form input[type="submit"] {
   background-color: #d24928;
   color: #eaddc8;
   padding: 10px 20px;
@@ -658,7 +658,7 @@ input[type="checkbox"] {
   font-family: poppins;
 }
 
-#contactForm input[type="submit"]:hover {
+#contact-form input[type="submit"]:hover {
   background-color: #39a53e;
 }
 

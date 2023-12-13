@@ -14,7 +14,7 @@ window.onload = function () {
     if (checkedState) {
       checkbox.checked = checkedState.checked;
       if (checkbox.checked) {
-        li.classList.add("checkeditemsselected");
+        li.classList.add("checkedItemsSelected");
       }
     }
 
@@ -30,9 +30,9 @@ window.onload = function () {
     if (event.target.classList.contains("check-item")) {
       const listItem = event.target.parentElement;
       if (event.target.checked) {
-        listItem.classList.add("checkeditemsselected");
+        listItem.classList.add("checkedItemsSelected");
       } else {
-        listItem.classList.remove("checkeditemsselected");
+        listItem.classList.remove("checkedItemsSelected");
       }
 
       const checkedStates = Array.from(
@@ -45,7 +45,7 @@ window.onload = function () {
     }
   });
 
-  const doneButton = document.getElementById("donebutton");
+  const doneButton = document.getElementById("doneButton");
 
   if (doneButton) {
     doneButton.addEventListener("click", function () {
@@ -65,7 +65,7 @@ window.onload = function () {
       checkedItems.forEach((item) => {
         item.checked = false;
         const listItem = item.parentElement;
-        listItem.classList.remove("checkeditemsselected");
+        listItem.classList.remove("checkedItemsSelected");
       });
     });
 
@@ -77,7 +77,7 @@ window.onload = function () {
       checkedItems.forEach((item) => {
         item.checked = true;
         const listItem = item.parentElement;
-        listItem.classList.add("checkeditemsselected");
+        listItem.classList.add("checkedItemsSelected");
       });
     });
 };
