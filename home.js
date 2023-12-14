@@ -19,6 +19,8 @@ if (newChecklistButton) {
     localStorage.setItem("checkedItems", JSON.stringify([]));
     localStorage.removeItem("gender");
     localStorage.removeItem("climate");
+    localStorage.removeItem("checkedStates");
+    localStorage.removeItem("otherItems");
     window.location.href = "./page2.html";
   });
 }

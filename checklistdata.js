@@ -802,11 +802,8 @@ window.onload = function () {
 
   const otherSectionHeader = createSectionHeader("Other");
   outputDiv.appendChild(otherSectionHeader);
-
   const otherItemsList = createItemsList(otherItems);
   outputDiv.appendChild(otherItemsList);
-
-  console.log(otherItems); //remove later
 
   function displayChecklist() {
     const outputDiv = document.getElementById("output");
@@ -850,6 +847,7 @@ window.onload = function () {
 
   function createItemsList(items) {
     const ul = document.createElement("ul");
+
     let checkedItems = localStorage.getItem("checkedItems");
     if (checkedItems) {
       checkedItems = JSON.parse(checkedItems);
