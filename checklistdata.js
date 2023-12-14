@@ -3,7 +3,7 @@ window.onload = function () {
   const climate = localStorage.getItem("climate");
   const checklist = getChecklist(gender, climate);
   const outputDiv = document.getElementById("output");
-  const otherItems = [];
+  let otherItems = JSON.parse(localStorage.getItem("otherItems")) || [];
 
   function getChecklist(gender, climate) {
     switch (gender + "-" + climate) {
@@ -803,6 +803,11 @@ window.onload = function () {
   const otherSectionHeader = createSectionHeader("Other");
   outputDiv.appendChild(otherSectionHeader);
 
+  const otherItemsList = createItemsList(otherItems);
+  outputDiv.appendChild(otherItemsList);
+
+  console.log(otherItems); //remove later
+
   function displayChecklist() {
     const outputDiv = document.getElementById("output");
     outputDiv.innerHTML = "";
@@ -831,6 +836,7 @@ window.onload = function () {
       if (newItem) {
         otherItems.push(newItem);
         document.getElementById("new-item").value = "";
+        storeOtherItems();
       }
       storeCheckedItems();
       displayChecklist();
@@ -886,6 +892,10 @@ window.onload = function () {
       .map((checkbox) => checkbox.value);
 
     localStorage.setItem("checkedItems", JSON.stringify(checkedItems));
+  }
+
+  function storeOtherItems() {
+    localStorage.setItem("otherItems", JSON.stringify(otherItems));
   }
 
   const submitButton = document.getElementById("submit-button");
