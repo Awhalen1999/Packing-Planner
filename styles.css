@@ -560,6 +560,10 @@ input[type="checkbox"] {
   font-size: 16px;
 }
 
+#input-container input:focus {
+  outline-color: #d24928;
+}
+
 #input-container button {
   background-color: #d24928;
   border: none;
@@ -568,6 +572,12 @@ input[type="checkbox"] {
   font-family: "Poppins", sans-serif;
   border-radius: 5px;
   padding: 10px;
+  border: 2px solid #141414;
+  margin-left: 10px;
+}
+
+#input-container button:hover {
+  background-color: #f15b35;
 }
 
 li {
@@ -585,6 +595,8 @@ li {
   height: 30px;
   transform: translate(-50%, -50%);
   align-content: center;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 /*page 4*/
