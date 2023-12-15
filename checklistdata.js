@@ -811,7 +811,7 @@ window.onload = function () {
 
     checklist.forEach((section) => {
       const sectionHeader = createSectionHeader(section.section);
-      const itemsList = createItemsList(section.items);
+      const itemsList = createItemsList(section.items, false);
 
       outputDiv.appendChild(sectionHeader);
       outputDiv.appendChild(itemsList);
@@ -821,7 +821,7 @@ window.onload = function () {
     outputDiv.appendChild(otherSectionHeader);
 
     if (otherItems.length > 0) {
-      const otherItemsList = createItemsList(otherItems);
+      const otherItemsList = createItemsList(otherItems, true);
       outputDiv.appendChild(otherItemsList);
     }
   }
@@ -829,14 +829,14 @@ window.onload = function () {
   document
     .getElementById("add-item-button")
     .addEventListener("click", function (event) {
+      event.preventDefault();
       const newItem = document.getElementById("new-item").value;
       if (newItem) {
         otherItems.push(newItem);
         document.getElementById("new-item").value = "";
         storeOtherItems();
+        displayChecklist();
       }
-      storeCheckedItems();
-      displayChecklist();
     });
 
   function createSectionHeader(section) {
@@ -845,7 +845,7 @@ window.onload = function () {
     return header;
   }
 
-  function createItemsList(items) {
+  function createItemsList(items, isOtherItems) {
     const ul = document.createElement("ul");
 
     let checkedItems = localStorage.getItem("checkedItems");
@@ -875,6 +875,20 @@ window.onload = function () {
 
       li.appendChild(checkbox);
       li.appendChild(document.createTextNode(item));
+
+      if (isOtherItems) {
+        const removeButton = document.createElement("button");
+        removeButton.textContent = "Remove";
+        removeButton.classList.add("remove-button");
+        removeButton.addEventListener("click", function () {
+          otherItems = otherItems.filter((otherItem) => otherItem !== item);
+          storeOtherItems();
+          displayChecklist();
+        });
+
+        li.appendChild(removeButton);
+      }
+
       ul.appendChild(li);
     });
 
