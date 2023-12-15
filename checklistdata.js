@@ -821,6 +821,7 @@ window.onload = function () {
       if (newItem) {
         otherItems.push(newItem);
         document.getElementById("new-item").value = "";
+        storeCheckedItems();
         storeOtherItems();
         displayChecklist();
       }
