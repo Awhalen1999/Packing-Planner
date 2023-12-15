@@ -4,6 +4,7 @@ window.onload = function () {
   const checklist = getChecklist(gender, climate);
   const outputDiv = document.getElementById("output");
   let otherItems = JSON.parse(localStorage.getItem("otherItems")) || [];
+  displayChecklist();
 
   function getChecklist(gender, climate) {
     switch (gender + "-" + climate) {
@@ -792,19 +793,6 @@ window.onload = function () {
     return;
   }
 
-  checklist.forEach((section) => {
-    const sectionHeader = createSectionHeader(section.section);
-    const itemsList = createItemsList(section.items);
-
-    outputDiv.appendChild(sectionHeader);
-    outputDiv.appendChild(itemsList);
-  });
-
-  const otherSectionHeader = createSectionHeader("Other");
-  outputDiv.appendChild(otherSectionHeader);
-  const otherItemsList = createItemsList(otherItems);
-  outputDiv.appendChild(otherItemsList);
-
   function displayChecklist() {
     const outputDiv = document.getElementById("output");
     outputDiv.innerHTML = "";
@@ -829,7 +817,6 @@ window.onload = function () {
   document
     .getElementById("add-item-button")
     .addEventListener("click", function (event) {
-      event.preventDefault();
       const newItem = document.getElementById("new-item").value;
       if (newItem) {
         otherItems.push(newItem);
@@ -878,7 +865,7 @@ window.onload = function () {
 
       if (isOtherItems) {
         const removeButton = document.createElement("button");
-        removeButton.textContent = "Remove";
+        removeButton.textContent = "-";
         removeButton.classList.add("remove-button");
         removeButton.addEventListener("click", function () {
           otherItems = otherItems.filter((otherItem) => otherItem !== item);
