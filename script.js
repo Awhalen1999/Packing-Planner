@@ -20,3 +20,21 @@ document
 
     window.location.href = "checklist.html";
   });
+
+//radio button selection
+
+const radioButtons = document.querySelectorAll(
+  '.options-radio input[type="radio"]'
+);
+
+radioButtons.forEach((radioButton) => {
+  radioButton.addEventListener("change", function () {
+    radioButtons.forEach((button) => {
+      if (button.checked) {
+        button.parentElement.classList.add("selected");
+      } else {
+        button.parentElement.classList.remove("selected");
+      }
+    });
+  });
+});

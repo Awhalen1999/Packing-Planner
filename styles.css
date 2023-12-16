@@ -323,7 +323,7 @@ button {
 }
 
 .checklist-nav button:hover {
-  background-color: #beb7ab;
+  background-color: #dcccb0;
   color: #141414;
 }
 
@@ -360,7 +360,7 @@ button {
 }
 
 .alt-nav button:hover {
-  background-color: #beb7ab;
+  background-color: #dcccb0;
   color: #141414;
 }
 
@@ -434,7 +434,7 @@ button {
 }
 
 .options-radio {
-  display: inline-block;
+  display: flex;
   align-items: center;
   margin-bottom: 1vh;
   margin-top: 1vh;
@@ -445,10 +445,24 @@ button {
   padding: 1em;
 }
 
+.options-radio:hover {
+  background-color: #dcccb0;
+  cursor: pointer;
+}
+
 .options-radio img {
   width: 50px;
   height: 50px;
   padding: 0 1em;
+}
+
+.options-radio input[type="radio"] {
+  display: none;
+}
+
+.options-radio.selected {
+  /* border: 5px solid #d24928; */
+  background-color: #d24928;
 }
 
 #options-button {
@@ -469,12 +483,6 @@ button {
 
 #options-button:hover {
   background-color: #39a53e;
-}
-
-input[type="radio"] {
-  transform: scale(1.8);
-  margin: 0 1.5em;
-  accent-color: #d24928;
 }
 
 /*page 3*/
