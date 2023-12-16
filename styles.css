@@ -522,6 +522,7 @@ input[type="checkbox"] {
   transform: scale(1.8);
   margin: 0 1.5em;
   accent-color: #d24928;
+  cursor: pointer;
 }
 
 #submit-button {
@@ -598,6 +599,10 @@ li {
   font-weight: bold;
   font-size: 20px;
   color: #141414;
+}
+
+.remove-button:hover {
+  cursor: pointer;
 }
 
 /*page 4*/
