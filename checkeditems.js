@@ -45,18 +45,23 @@ window.onload = function () {
     }
   });
 
-  const doneButton = document.getElementById("doneButton");
-
-  if (doneButton) {
-    doneButton.addEventListener("click", function () {
-      localStorage.setItem("checkedItems", JSON.stringify([]));
-      localStorage.removeItem("gender");
-      localStorage.removeItem("climate");
-      localStorage.removeItem("checkedStates");
-      localStorage.removeItem("otherItems");
-      window.location.href = "./index.html";
+  document
+    .getElementById("doneButton")
+    .addEventListener("click", function (event) {
+      const userConfirmed = confirm(
+        "Are you sure you want to clear the list? This action cannot be undone."
+      );
+      if (userConfirmed) {
+        localStorage.setItem("checkedItems", JSON.stringify([]));
+        localStorage.removeItem("gender");
+        localStorage.removeItem("climate");
+        localStorage.removeItem("checkedStates");
+        localStorage.removeItem("otherItems");
+        window.location.href = "./index.html";
+      } else {
+        event.preventDefault();
+      }
     });
-  }
 
   document
     .getElementById("uncheck-all-button")
