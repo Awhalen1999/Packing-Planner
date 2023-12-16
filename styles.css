@@ -6,8 +6,7 @@ bone: #EADDC8 */
 
 /* to do: 
 -remove buttons from container and add footer to each page
--button class 
--remove font family from all buttons added univeral button selector*/
+-button class*/
 
 /* For mobile devices */
 @media (max-width: 600px) {
