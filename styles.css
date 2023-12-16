@@ -433,8 +433,8 @@ button {
   text-align: center;
 }
 
-#options-radio {
-  display: flex;
+.options-radio {
+  display: inline-block;
   align-items: center;
   margin-bottom: 1vh;
   margin-top: 1vh;
@@ -445,7 +445,7 @@ button {
   padding: 1em;
 }
 
-#options-radio img {
+.options-radio img {
   width: 50px;
   height: 50px;
   padding: 0 1em;
