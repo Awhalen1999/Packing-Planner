@@ -850,3 +850,43 @@ li {
   max-width: 70px;
   margin: 5px 0 -12px 0;
 }
+
+/* no checklist */
+
+#no-checklist-container {
+  width: 80vw;
+  margin-top: 7vh;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #eaddc8;
+}
+
+#no-checklist-image {
+  width: 15vw;
+  margin: 2vh;
+}
+
+#no-checklist-text {
+  font-size: 20px;
+  text-align: center;
+}
+
+#no-checklist-button {
+  background-color: #d24928;
+  border: none;
+  color: #eaddc8;
+  margin-top: 4vh;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#no-checklist-button:hover {
+  background-color: #39a53e;
+}

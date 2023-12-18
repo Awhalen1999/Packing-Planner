@@ -1,6 +1,12 @@
 window.onload = function () {
   const gender = localStorage.getItem("gender");
   const climate = localStorage.getItem("climate");
+
+  if (!gender || !climate) {
+    window.location.href = "./no-checklist.html";
+    return;
+  }
+
   const checklist = getChecklist(gender, climate);
   const outputDiv = document.getElementById("output");
   let otherItems = JSON.parse(localStorage.getItem("otherItems")) || [];
