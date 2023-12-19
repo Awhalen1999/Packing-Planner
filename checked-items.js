@@ -21,13 +21,28 @@ window.onload = function () {
     const label = document.createElement("label");
     label.textContent = item;
 
+    // Add an event listener for the click event to the li
+    li.addEventListener("click", function (event) {
+      // If the checkbox is not the target of the click event, toggle the checkbox
+      if (event.target !== checkbox) {
+        checkbox.checked = !checkbox.checked;
+        // Add or remove the checkedItemsSelected class
+        if (checkbox.checked) {
+          li.classList.add("checkedItemsSelected");
+        } else {
+          li.classList.remove("checkedItemsSelected");
+        }
+        // Trigger the change event on the checkbox
+        checkbox.dispatchEvent(new Event("change"));
+      }
+    });
+
     li.appendChild(checkbox);
     li.appendChild(label);
     outputDiv.appendChild(li);
   });
 
   outputDiv.addEventListener("click", function (event) {
-    let listItem;
     if (event.target.classList.contains("check-item")) {
       const listItem = event.target.parentElement;
       if (event.target.checked) {
@@ -36,25 +51,6 @@ window.onload = function () {
         listItem.classList.remove("checkedItemsSelected");
       }
 
-      const checkedStates = Array.from(
-        document.querySelectorAll(".check-item")
-      ).map((checkbox, index) => ({
-        item: checkedItems[index],
-        checked: checkbox.checked,
-      }));
-      localStorage.setItem("checkedStates", JSON.stringify(checkedStates));
-    }
-
-    if (event.target.tagName === "LI") {
-      const checkbox = event.target.querySelector(".check-item");
-      listItem = event.target;
-      checkbox.checked = !checkbox.checked;
-
-      if (checkbox.checked) {
-        listItem.classList.add("checkedItemsSelected");
-      } else {
-        listItem.classList.remove("checkedItemsSelected");
-      }
       const checkedStates = Array.from(
         document.querySelectorAll(".check-item")
       ).map((checkbox, index) => ({
