@@ -456,8 +456,19 @@ button {
 }
 
 .options-radio.selected {
-  /* border: 5px solid #d24928; */
   background-color: #d24928;
+  transform: scale(1.025);
+}
+
+.options-radio.selected::after {
+  content: "\2714";
+  color: #141414;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #options-button {
