@@ -521,6 +521,10 @@ button {
   list-style-type: none;
 }
 
+#output li:hover {
+  background-color: #dcccb0;
+}
+
 #output li.checklistSelected {
   background-color: rgba(234, 221, 200, 0.45);
 }
