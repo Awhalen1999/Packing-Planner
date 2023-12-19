@@ -383,6 +383,11 @@ button {
   margin-top: 10vh;
 }
 
+.page-1-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
 #new-checklist-button,
 #saved-checklist-button {
   background-color: #d24928;
@@ -401,15 +406,6 @@ button {
 #new-checklist-button:hover,
 #saved-checklist-button:hover {
   background-color: #39a53e;
-}
-
-#saved-checklist-button.disabled {
-  cursor: not-allowed;
-}
-
-#saved-checklist-button.disabled:hover {
-  background-color: #cccccc;
-  color: #808080;
 }
 
 /*page 2*/

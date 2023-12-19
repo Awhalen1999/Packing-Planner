@@ -4,11 +4,9 @@ function savedChecklist() {
   const button = document.getElementById("saved-checklist-button");
 
   if (gender && climate) {
-    button.disabled = false;
-    button.classList.remove("disabled");
+    button.style.display = "block";
   } else {
-    button.disabled = true;
-    button.classList.add("disabled");
+    button.style.display = "none";
   }
 }
 
