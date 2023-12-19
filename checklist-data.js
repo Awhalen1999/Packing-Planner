@@ -877,6 +877,7 @@ window.onload = function () {
         removeButton.addEventListener("click", function () {
           otherItems = otherItems.filter((otherItem) => otherItem !== item);
           storeOtherItems();
+          storeCheckedItems();
           displayChecklist();
         });
 
