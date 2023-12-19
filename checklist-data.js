@@ -909,7 +909,7 @@ window.onload = function () {
   submitButton.addEventListener("click", function (event) {
     event.preventDefault();
     storeCheckedItems();
-    window.location.href = "checkeditems.html";
+    window.location.href = "checked-items.html";
   });
 
   const clearButton = document.getElementById("clear-button");
