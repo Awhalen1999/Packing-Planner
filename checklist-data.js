@@ -867,6 +867,13 @@ window.onload = function () {
         }
       });
 
+      li.addEventListener("click", function (event) {
+        if (event.target !== checkbox) {
+          checkbox.checked = !checkbox.checked;
+          checkbox.dispatchEvent(new Event("change"));
+        }
+      });
+
       li.appendChild(checkbox);
       li.appendChild(document.createTextNode(item));
 

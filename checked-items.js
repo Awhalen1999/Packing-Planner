@@ -27,6 +27,7 @@ window.onload = function () {
   });
 
   outputDiv.addEventListener("click", function (event) {
+    let listItem;
     if (event.target.classList.contains("check-item")) {
       const listItem = event.target.parentElement;
       if (event.target.checked) {
@@ -35,6 +36,25 @@ window.onload = function () {
         listItem.classList.remove("checkedItemsSelected");
       }
 
+      const checkedStates = Array.from(
+        document.querySelectorAll(".check-item")
+      ).map((checkbox, index) => ({
+        item: checkedItems[index],
+        checked: checkbox.checked,
+      }));
+      localStorage.setItem("checkedStates", JSON.stringify(checkedStates));
+    }
+
+    if (event.target.tagName === "LI") {
+      const checkbox = event.target.querySelector(".check-item");
+      listItem = event.target;
+      checkbox.checked = !checkbox.checked;
+
+      if (checkbox.checked) {
+        listItem.classList.add("checkedItemsSelected");
+      } else {
+        listItem.classList.remove("checkedItemsSelected");
+      }
       const checkedStates = Array.from(
         document.querySelectorAll(".check-item")
       ).map((checkbox, index) => ({
