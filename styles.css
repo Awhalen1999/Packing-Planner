@@ -16,13 +16,13 @@ bone: #EADDC8 */
   .main-nav {
     flex-direction: column;
     padding: 1vh;
+    font-size: 14px;
   }
 
   .main-nav ul {
     flex-direction: column;
     align-items: center;
   }
-
   .main-nav li {
     margin-right: 2vw;
     margin-left: 2vw;
@@ -36,10 +36,10 @@ bone: #EADDC8 */
     padding: 10px;
     width: 80vw;
   }
-
-  #get-started-button {
+  #new-checklist-button,
+  #saved-checklist-button {
     font-size: 16px;
-    padding: 0.5em 1.5em;
+    padding: 0.55em 1.5em;
   }
   #options-header {
     font-size: 20px;
@@ -48,6 +48,13 @@ bone: #EADDC8 */
   #options-var {
     font-size: 16px;
   }
+  .options-radio {
+    width: 70vw;
+    padding: 0.5em;
+  }
+  .options-radio.selected::after {
+    font-size: 20px;
+  }
   #options-button {
     font-size: 14px;
     padding: 10px 20px;
@@ -55,6 +62,14 @@ bone: #EADDC8 */
   .checklist-header {
     font-size: 24px;
     margin-top: 5vh;
+  }
+  .checklist-nav li {
+    margin-right: 2vw;
+    margin-left: 2vw;
+  }
+  .checklist-nav button {
+    font-size: 14px;
+    padding: 0.3em 0.6em;
   }
   #output h2 {
     font-size: 20px;
@@ -66,7 +81,10 @@ bone: #EADDC8 */
   #output li {
     font-size: 14px;
     padding: 10px 20px;
-    width: 80vw;
+    width: 70vw;
+  }
+  #input-container {
+    width: 65vw;
   }
   #doneButton {
     font-size: 14px;
@@ -75,6 +93,30 @@ bone: #EADDC8 */
   .about-section {
     font-size: 16px;
     padding: 1em;
+  }
+  .alt-nav button {
+    font-size: 14px;
+    padding: 0.3em 0.6em;
+  }
+  #contact-container {
+    width: 80vw;
+  }
+  .contact-label {
+    font-size: 16px;
+  }
+  #contact-form input[type="submit"] {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  #no-checklist-image {
+    width: 30vw;
+  }
+  #no-checklist-text {
+    font-size: 14px;
+  }
+  #no-checklist-button {
+    font-size: 16px;
+    padding: 11px 22px;
   }
   .weather-container {
     flex-wrap: wrap;
@@ -89,6 +131,7 @@ bone: #EADDC8 */
   .main-nav {
     flex-direction: row;
     padding: 1.5vh;
+    font-size: 15px;
   }
 
   .main-nav ul {
@@ -96,8 +139,8 @@ bone: #EADDC8 */
   }
 
   .main-nav li {
-    margin-right: 3vw;
-    margin-left: 3vw;
+    margin-right: 2vw;
+    margin-left: 2vw;
   }
   .instructions {
     font-size: 12px;
@@ -109,9 +152,10 @@ bone: #EADDC8 */
     width: 85vw;
   }
 
-  #get-started-button {
+  #new-checklist-button,
+  #saved-checklist-button {
     font-size: 18px;
-    padding: 0.65em 2.5em;
+    padding: 0.6em 1.75em;
   }
   #options-header {
     font-size: 25px;
@@ -120,6 +164,13 @@ bone: #EADDC8 */
   #options-var {
     font-size: 18px;
   }
+  .options-radio {
+    width: 60vw;
+    padding: 0.75em;
+  }
+  .options-radio.selected::after {
+    font-size: 25px;
+  }
   #options-button {
     font-size: 18px;
     padding: 12px 24px;
@@ -127,6 +178,14 @@ bone: #EADDC8 */
   .checklist-header {
     font-size: 28px;
     margin-top: 6vh;
+  }
+  .checklist-nav li {
+    margin-right: 4vw;
+    margin-left: 4vw;
+  }
+  .checklist-nav button {
+    font-size: 16px;
+    padding: 0.4em 0.75em;
   }
   #output h2 {
     font-size: 25px;
@@ -140,6 +199,9 @@ bone: #EADDC8 */
     padding: 12px 24px;
     width: 60vw;
   }
+  #input-container {
+    width: 55vw;
+  }
   #doneButton {
     font-size: 16px;
     padding: 12px 24px;
@@ -147,6 +209,30 @@ bone: #EADDC8 */
   .about-section {
     font-size: 18px;
     padding: 1em 2em;
+  }
+  .alt-nav button {
+    font-size: 16px;
+    padding: 0.35em 0.7em;
+  }
+  #contact-container {
+    width: 70vw;
+  }
+  .contact-label {
+    font-size: 18px;
+  }
+  #contact-form input[type="submit"] {
+    font-size: 16px;
+    padding: 11px 22px;
+  }
+  #no-checklist-image {
+    width: 20vw;
+  }
+  #no-checklist-text {
+    font-size: 17px;
+  }
+  #no-checklist-button {
+    font-size: 18px;
+    padding: 12px 24px;
   }
   .weather-container {
     flex-wrap: wrap;
@@ -161,6 +247,7 @@ bone: #EADDC8 */
   .main-nav {
     flex-direction: row;
     padding: 2vh;
+    font-size: 16px;
   }
 
   .main-nav ul {
@@ -181,9 +268,10 @@ bone: #EADDC8 */
     width: 90vw;
   }
 
-  #get-started-button {
+  #new-checklist-button,
+  #saved-checklist-button {
     font-size: 20px;
-    padding: 0.75em 3em;
+    padding: 0.65em 2em;
   }
   #options-header {
     font-size: 30px;
@@ -192,6 +280,13 @@ bone: #EADDC8 */
   #options-var {
     font-size: 20px;
   }
+  .options-radio {
+    width: 50vw;
+    padding: 1em;
+  }
+  .options-radio.selected::after {
+    font-size: 30px;
+  }
   #options-button {
     font-size: 20px;
     padding: 14px 28px;
@@ -199,6 +294,14 @@ bone: #EADDC8 */
   .checklist-header {
     font-size: 34px;
     margin-top: 7vh;
+  }
+  .checklist-nav li {
+    margin-right: 5vw;
+    margin-left: 5vw;
+  }
+  .checklist-nav button {
+    font-size: 18px;
+    padding: 0.5em 1em;
   }
   #output h2 {
     font-size: 30px;
@@ -212,6 +315,9 @@ bone: #EADDC8 */
     padding: 14px 28px;
     width: 50vw;
   }
+  #input-container {
+    width: 45vw;
+  }
   #doneButton {
     font-size: 18px;
     padding: 14px 28px;
@@ -219,6 +325,30 @@ bone: #EADDC8 */
   .about-section {
     font-size: 20px;
     padding: 1em 3em;
+  }
+  .alt-nav button {
+    font-size: 16px;
+    padding: 0.4em 0.8em;
+  }
+  #contact-container {
+    width: 60vw;
+  }
+  .contact-label {
+    font-size: 20px;
+  }
+  #contact-form input[type="submit"] {
+    font-size: 18px;
+    padding: 12px 22px;
+  }
+  #no-checklist-image {
+    width: 15vw;
+  }
+  #no-checklist-text {
+    font-size: 20px;
+  }
+  #no-checklist-button {
+    font-size: 18px;
+    padding: 12px 24px;
   }
 }
 
@@ -262,7 +392,6 @@ body {
   text-align: center;
   padding: 0.25em 1em;
   text-decoration: none;
-  font-weight: bold;
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -271,11 +400,6 @@ body {
 .main-nav li a:hover {
   background-color: #eaddc8;
   color: #141414;
-}
-
-.main-nav li {
-  margin-right: 5vw;
-  margin-left: 5vw;
 }
 
 .instructions {
@@ -304,17 +428,10 @@ button {
   padding: 0;
 }
 
-.checklist-nav li {
-  margin-right: 5vw;
-  margin-left: 5vw;
-}
-
 .checklist-nav button {
   background-color: #eaddc8;
   color: #141414;
   border: none;
-  font-size: 16px;
-  padding: 0.3em 1em;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-weight: bold;
@@ -350,8 +467,6 @@ button {
   background-color: #eaddc8;
   color: #141414;
   border: none;
-  font-size: 16px;
-  padding: 0.3em 1em;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-weight: bold;
@@ -360,7 +475,6 @@ button {
 
 .alt-nav button:hover {
   background-color: #dcccb0;
-  color: #141414;
 }
 
 /*page 1*/
@@ -396,8 +510,6 @@ button {
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
-  font-size: 18px;
-  padding: 0.5em 1.5em;
   font-family: "Poppins", sans-serif;
   border-radius: 5px;
   margin: 5vh 15px 0 15px;
@@ -433,11 +545,10 @@ button {
   align-items: center;
   margin-bottom: 1vh;
   margin-top: 1vh;
-  width: 50vw;
   border: 1px solid #141414;
   background-color: #eaddc8;
   border-radius: 5px;
-  padding: 1em;
+  transition: transform 0.3s ease;
 }
 
 .options-radio:hover {
@@ -462,8 +573,7 @@ button {
 
 .options-radio.selected::after {
   content: "\2714";
-  color: #141414;
-  font-size: 30px;
+  color: rgb(12, 12, 12);
   font-weight: bold;
   position: absolute;
   right: 30px;
@@ -520,7 +630,6 @@ button {
 
 #output li {
   background-color: #eaddc8;
-  width: 50vw;
   margin: 0.5vh auto;
   border-radius: 5px;
   align-items: center;
@@ -564,7 +673,6 @@ input[type="checkbox"] {
 }
 
 #input-container {
-  width: 30vw;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -669,7 +777,6 @@ li {
 /* contact me page */
 
 #contact-container {
-  width: 50vw;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -681,10 +788,6 @@ li {
 #contact-form {
   width: 100%;
   color: #eaddc8;
-}
-
-.contact-label {
-  font-size: 20px;
 }
 
 #contact-form input[type="text"],
@@ -702,13 +805,11 @@ li {
 #contact-form input[type="submit"] {
   background-color: #d24928;
   color: #eaddc8;
-  padding: 10px 20px;
   border: none;
   cursor: pointer;
   border-radius: 10px;
   margin: 2vh auto;
   display: block;
-  font-size: 16px;
   font-family: poppins;
 }
 
@@ -877,12 +978,10 @@ li {
 }
 
 #no-checklist-image {
-  width: 15vw;
   margin: 2vh;
 }
 
 #no-checklist-text {
-  font-size: 20px;
   text-align: center;
 }
 
@@ -893,8 +992,8 @@ li {
   margin-top: 4vh;
   cursor: pointer;
   border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 18px;
+  /* padding: 10px 20px;
+  font-size: 18px; */
   font-weight: bold;
   cursor: pointer;
 }
