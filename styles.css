@@ -121,6 +121,20 @@ bone: #EADDC8 */
   .weather-container {
     flex-wrap: wrap;
   }
+  .weather-input {
+    width: 90vw;
+    margin: 0 auto;
+  }
+  .weather-data {
+    margin-top: 3vh;
+  }
+  .weather-container .weather-cards {
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+  .weather-cards .card {
+    width: 40%;
+  }
 }
 
 /* For tablet devices */
@@ -237,6 +251,16 @@ bone: #EADDC8 */
   .weather-container {
     flex-wrap: wrap;
   }
+  .weather-input {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .weather-data {
+    margin-top: 3vh;
+  }
+  .weather-cards .card {
+    width: 100%;
+  }
 }
 
 /* For desktop devices */
@@ -349,6 +373,13 @@ bone: #EADDC8 */
   #no-checklist-button {
     font-size: 18px;
     padding: 12px 24px;
+  }
+  .weather-input {
+    width: 500px;
+    margin-right: 3vw;
+  }
+  .weather-cards .card {
+    width: calc(100% / 5);
   }
 }
 
@@ -824,11 +855,6 @@ li {
   padding: 7vh 3vw;
 }
 
-.weather-input {
-  width: 500px;
-  margin-right: 3vw;
-}
-
 .weather-input h2 {
   color: #eaddc8;
   font-weight: bold;
@@ -948,7 +974,6 @@ li {
   color: #eaddc8;
   padding: 16px;
   list-style: none;
-  width: calc(100% / 5);
   background: linear-gradient(180deg, #141414, #292929);
   border: 1px solid #d24928;
   border-radius: 5px;
@@ -992,8 +1017,6 @@ li {
   margin-top: 4vh;
   cursor: pointer;
   border-radius: 5px;
-  /* padding: 10px 20px;
-  font-size: 18px; */
   font-weight: bold;
   cursor: pointer;
 }
