@@ -21,19 +21,25 @@ window.onload = function () {
     const label = document.createElement("label");
     label.textContent = item;
 
-    // Add an event listener for the click event to the li
     li.addEventListener("click", function (event) {
-      // If the checkbox is not the target of the click event, toggle the checkbox
       if (event.target !== checkbox) {
         checkbox.checked = !checkbox.checked;
-        // Add or remove the checkedItemsSelected class
+
         if (checkbox.checked) {
           li.classList.add("checkedItemsSelected");
         } else {
           li.classList.remove("checkedItemsSelected");
         }
-        // Trigger the change event on the checkbox
+
         checkbox.dispatchEvent(new Event("change"));
+
+        const checkedStates = Array.from(
+          document.querySelectorAll(".check-item")
+        ).map((checkbox, index) => ({
+          item: checkedItems[index],
+          checked: checkbox.checked,
+        }));
+        localStorage.setItem("checkedStates", JSON.stringify(checkedStates));
       }
     });
 
@@ -60,6 +66,8 @@ window.onload = function () {
       localStorage.setItem("checkedStates", JSON.stringify(checkedStates));
     }
   });
+
+  //
 
   document
     .getElementById("doneButton")
