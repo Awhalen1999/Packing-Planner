@@ -1,12 +1,12 @@
-/* jet: #2a2a2a
-cinnabar: #d24928
-vanilla: #feecac
-night: #141414
-bone: #EADDC8 */
-
-/* to do: 
--remove buttons from container and add footer to each page
--button class*/
+/* color template:
+main orange: #d24928
+title color: #feecac
+main black: #141414
+main white: #EADDC8 
+hover: #39a53e
+off orange: #f15b35
+off white: #dcccb0
+selected: rgba(234, 221, 200, 0.45)*/
 
 /* For mobile devices */
 @media (max-width: 600px) {
