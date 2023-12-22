@@ -1,4 +1,5 @@
-/* color template:
+/* 
+color template:
 main orange: #d24928
 title color: #feecac
 main black: #141414
@@ -6,7 +7,9 @@ main white: #EADDC8
 hover: #39a53e
 off orange: #f15b35
 off white: #dcccb0
-selected: rgba(234, 221, 200, 0.45)*/
+selected: rgba(234, 221, 200, 0.45)
+remove button main: #ff4f4f
+*/
 
 /* For mobile devices */
 @media (max-width: 600px) {
