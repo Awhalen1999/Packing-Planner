@@ -135,6 +135,13 @@ bone: #EADDC8 */
   .weather-cards .card {
     width: 40%;
   }
+  footer {
+    font-size: 14px;
+  }
+  .footer-image {
+    width: 22px;
+    height: 22px;
+  }
 }
 
 /* For tablet devices */
@@ -261,6 +268,13 @@ bone: #EADDC8 */
   .weather-cards .card {
     width: 100%;
   }
+  footer {
+    font-size: 16px;
+  }
+  .footer-image {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 /* For desktop devices */
@@ -380,6 +394,13 @@ bone: #EADDC8 */
   }
   .weather-cards .card {
     width: calc(100% / 5);
+  }
+  footer {
+    font-size: 16px;
+  }
+  .footer-image {
+    width: 25px;
+    height: 25px;
   }
 }
 
@@ -506,6 +527,21 @@ button {
 
 .alt-nav button:hover {
   background-color: #dcccb0;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.45);
+  color: #eaddc8;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-image {
+  margin: 0 10px;
 }
 
 /*page 1*/
