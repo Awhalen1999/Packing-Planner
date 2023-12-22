@@ -757,6 +757,7 @@ li {
   font-weight: bold;
   font-size: 20px;
   color: #141414;
+  justify-content: center;
 }
 
 .remove-button:hover {
@@ -872,6 +873,7 @@ li {
 #weather-app-previous,
 #weather-app-home {
   background-color: #eaddc8;
+  color: #141414;
 }
 
 #weather-app-previous:hover,
