@@ -8,7 +8,7 @@ hover: #39a53e
 off orange: #f15b35
 off white: #dcccb0
 selected: rgba(234, 221, 200, 0.45)
-remove button main: #ff4f4f
+remove button main: #d71212
 */
 
 /* For mobile devices */
@@ -477,6 +477,15 @@ button {
   color: #141414;
 }
 
+#restart-button {
+  background-color: #d71212;
+  cursor: pointer;
+}
+
+#restart-button:hover {
+  background-color: #b31313;
+}
+
 .alt-nav {
   display: flex;
   justify-content: space-around;
@@ -749,7 +758,7 @@ li {
 }
 
 .remove-button {
-  background-color: #ff4f4f;
+  background-color: #d71212;
   border: 1px solid #141414;
   border-radius: 5px;
   position: absolute;

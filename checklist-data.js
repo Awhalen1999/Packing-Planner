@@ -943,4 +943,22 @@ window.onload = function () {
       });
     });
   }
+
+  document
+    .getElementById("restart-button")
+    .addEventListener("click", function (event) {
+      const userConfirmed = confirm(
+        "Are you sure you want to clear the list? This action cannot be undone."
+      );
+      if (userConfirmed) {
+        localStorage.setItem("checkedItems", JSON.stringify([]));
+        localStorage.removeItem("gender");
+        localStorage.removeItem("climate");
+        localStorage.removeItem("checkedStates");
+        localStorage.removeItem("otherItems");
+        window.location.href = "./page2.html";
+      } else {
+        event.preventDefault();
+      }
+    });
 };
