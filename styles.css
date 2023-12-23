@@ -136,7 +136,7 @@ remove button main: #ff4f4f
     padding: 15px;
   }
   .weather-cards .card {
-    width: 40%;
+    width: 100%;
   }
 }
 
