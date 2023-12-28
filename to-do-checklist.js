@@ -57,4 +57,9 @@ toDoListItems.forEach((item) => {
 
     console.log(checkedItems);
   });
+  let button = document.getElementById("to-do-submit-button");
+
+  button.addEventListener("click", function () {
+    window.location.href = "./to-do-checked-items.html";
+  });
 });

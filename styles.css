@@ -1066,3 +1066,28 @@ li {
   cursor: pointer;
   padding: 1em;
 }
+
+/* to-do checked items */
+
+#to-do-checked-items-container {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#to-do-checked-items-container h1 {
+  color: #eaddc8;
+  text-align: center;
+}
+
+#to-do-checked-items-container li {
+  background-color: #eaddc8;
+  margin: 0.5vh auto;
+  border-radius: 5px;
+  border: 1px solid #141414;
+  list-style-type: none;
+  cursor: pointer;
+  padding: 1em;
+}
