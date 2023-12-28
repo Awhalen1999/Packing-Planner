@@ -1041,3 +1041,28 @@ li {
 #no-checklist-button:hover {
   background-color: #39a53e;
 }
+
+/* to-do checklist */
+
+#to-do-container {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#to-do-container h1 {
+  color: #eaddc8;
+  text-align: center;
+}
+
+#to-do-container li {
+  background-color: #eaddc8;
+  margin: 0.5vh auto;
+  border-radius: 5px;
+  border: 1px solid #141414;
+  list-style-type: none;
+  cursor: pointer;
+  padding: 1em;
+}

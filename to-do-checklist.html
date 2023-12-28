@@ -3,16 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Karla"
-      rel="stylesheet"
-    />
+    <title>To-Do Checklist</title>
     <link rel="stylesheet" href="styles.css" />
-    <title>Packing Planner</title>
   </head>
   <body>
     <nav class="main-nav">
@@ -27,18 +19,15 @@
         <li><a href="./contact.html">Contact Me</a></li>
       </ul>
     </nav>
-    <div id="page-1-container">
-      <h1 id="welcome">Hello, Welcome to my Packing Planner!</h1>
-      <div id="page-1-buttons">
-        <button id="new-checklist-button">New Checklist</button>
-        <button
-          id="saved-checklist-button"
-          onclick="location.href='./checklist.html'"
-        >
-          previous Checklist
-        </button>
+    <div id="to-do-container">
+      <h1>To-Do Checklist</h1>
+      <div class="divider"></div>
+      <ul id="to-do-checklist"></ul>
+      <div id="to-do-input-container">
+        <input type="text" id="to-do-input" placeholder="Enter new item" />
+        <button id="to-do-add-item-button">Add Item</button>
       </div>
     </div>
-    <script src="./home.js"></script>
+    <script src="to-do-checklist.js"></script>
   </body>
 </html>
