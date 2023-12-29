@@ -60,10 +60,9 @@ button.addEventListener("click", function () {
   window.location.href = "./to-do-checked-items.html";
 });
 
-window.onload = function () {
+function checkCheckboxes() {
   let toDoCheckedItems =
     JSON.parse(localStorage.getItem("to-do-checked")) || [];
-
   const toDoListItems = document.querySelectorAll("#to-do-checklist li");
 
   toDoListItems.forEach((item) => {
@@ -74,4 +73,21 @@ window.onload = function () {
       checkbox.checked = true;
     }
   });
+}
+
+window.onload = function () {
+  checkCheckboxes();
 };
+
+const addItemButton = document.getElementById("to-do-add-item-button");
+const addItemInput = document.getElementById("to-do-input");
+
+addItemButton.addEventListener("click", function () {
+  const newItem = addItemInput.value.trim();
+  if (newItem) {
+    toDoChecklist.push(newItem);
+    toDoChecklistElement.innerHTML += generateItemHTML(newItem, false);
+    addItemInput.value = "";
+    checkCheckboxes();
+  }
+});
