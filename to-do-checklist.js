@@ -18,7 +18,7 @@ let toDoChecklist = JSON.parse(localStorage.getItem("toDoChecklist")) || [
   "Double-check luggage weight",
   "Water house plants",
   "Set thermostat",
-  "Double-check travel documents",
+  "Double-check travel_documents",
   "Check lights",
   "Turn off water and gas",
   "Unplug electronics",
