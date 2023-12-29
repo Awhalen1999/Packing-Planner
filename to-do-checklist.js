@@ -1,4 +1,4 @@
-let toDoChecklist = JSON.parse(localStorage.getItem("toDoChecklist")) || [
+let toDoChecklist = [
   "Confirm rental/booking approvals",
   "Create itinerary for house/pet sitter",
   "Pause any subscription delivery plans",
@@ -18,7 +18,7 @@ let toDoChecklist = JSON.parse(localStorage.getItem("toDoChecklist")) || [
   "Double-check luggage weight",
   "Water house plants",
   "Set thermostat",
-  "Double-check travel_documents",
+  "Double-check travel documents",
   "Check lights",
   "Turn off water and gas",
   "Unplug electronics",
@@ -27,65 +27,37 @@ let toDoChecklist = JSON.parse(localStorage.getItem("toDoChecklist")) || [
   "Enjoy your trip!",
 ];
 
-const toDoList = document.getElementById("to-do-checklist");
+const toDoChecklistElement = document.getElementById("to-do-checklist");
 
 function generateItemHTML(item) {
   return `<li><input type="checkbox">${item}</li>`;
 }
 
-for (const item of toDoChecklist) {
-  toDoList.innerHTML += generateItemHTML(item);
-}
-
-const toDoListItems = document.querySelectorAll("#to-do-checklist li");
-
-toDoListItems.forEach((item) => {
-  const checkbox = item.querySelector('input[type="checkbox"]');
-  checkbox.addEventListener("change", function () {
-    let toDoCheckedItems =
-      JSON.parse(localStorage.getItem("to-do-checked")) || [];
-
-    if (this.checked) {
-      toDoCheckedItems.push(item.textContent.trim());
-    } else {
-      const index = toDoCheckedItems.indexOf(item.textContent.trim());
-      if (index !== -1) {
-        toDoCheckedItems.splice(index, 1);
-      }
-    }
-
-    localStorage.setItem("to-do-checked", JSON.stringify(toDoCheckedItems));
-
-    console.log(toDoCheckedItems);
-  });
-  const button = document.getElementById("to-do-submit-button");
-
-  button.addEventListener("click", function () {
-    window.location.href = "./to-do-checked-items.html";
-  });
+toDoChecklist.forEach((item) => {
+  toDoChecklistElement.innerHTML += generateItemHTML(item);
 });
 
-// custom input
-
-const button = document.getElementById("to-do-add-item-button");
-const input = document.getElementById("to-do-input");
-const checklist = document.getElementById("to-do-checklist");
-
-button.addEventListener("click", function () {
-  const newToDoItem = input.value.trim();
-
-  if (newToDoItem) {
-    toDoChecklist.push(newToDoItem);
-    localStorage.setItem("toDoChecklist", JSON.stringify(toDoChecklist));
-
-    const newItem = document.createElement("li");
-    newItem.innerHTML = `<input type="checkbox">${newToDoItem}`;
-    checklist.appendChild(newItem);
-
-    input.value = "";
+toDoChecklistElement.addEventListener("change", function (event) {
+  if (event.target.matches('input[type="checkbox"]')) {
+    let checkedItems = JSON.parse(localStorage.getItem("to-do-checked")) || [];
+    if (event.target.checked) {
+      checkedItems.push(event.target.parentElement.textContent.trim());
+    } else {
+      const index = checkedItems.indexOf(
+        event.target.parentElement.textContent.trim()
+      );
+      if (index !== -1) {
+        checkedItems.splice(index, 1);
+      }
+    }
+    localStorage.setItem("to-do-checked", JSON.stringify(checkedItems));
+    console.log(checkedItems);
   }
+});
 
-  console.log(toDoChecklist);
+const button = document.getElementById("to-do-submit-button");
+button.addEventListener("click", function () {
+  window.location.href = "./to-do-checked-items.html";
 });
 
 window.onload = function () {
