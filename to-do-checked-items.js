@@ -27,7 +27,7 @@ let button = document.getElementById("to-do-checked-items-done-button");
 
 button.addEventListener("click", function () {
   localStorage.removeItem("to-do-checked");
-  localStorage.removeItem("to-do-checked-states");
+  localStorage.removeItem("to-do-checklist");
 
   window.location.href = "index.html";
 });

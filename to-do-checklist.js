@@ -76,6 +76,10 @@ function checkCheckboxes() {
 }
 
 window.onload = function () {
+  toDoChecklist = JSON.parse(localStorage.getItem("to-do-checklist")) || [];
+  toDoChecklist.forEach((item) => {
+    toDoChecklistElement.innerHTML += generateItemHTML(item, false);
+  });
   checkCheckboxes();
 };
 
@@ -86,6 +90,7 @@ addItemButton.addEventListener("click", function () {
   const newItem = addItemInput.value.trim();
   if (newItem) {
     toDoChecklist.push(newItem);
+    localStorage.setItem("to-do-checklist", JSON.stringify(toDoChecklist));
     toDoChecklistElement.innerHTML += generateItemHTML(newItem, false);
     addItemInput.value = "";
     checkCheckboxes();
