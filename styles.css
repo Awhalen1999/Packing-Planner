@@ -1091,3 +1091,38 @@ li {
   cursor: pointer;
   padding: 1em;
 }
+
+/* temp */
+
+#to-do-input-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#to-do-input {
+  flex-grow: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#to-do-add-item-button,
+#to-do-submit-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#to-do-add-item-button:hover,
+#to-do-submit-button:hover {
+  background-color: #45a049;
+}
+
+#to-do-submit-button {
+  margin-bottom: 20px;
+}

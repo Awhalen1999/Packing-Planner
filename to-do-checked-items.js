@@ -13,7 +13,7 @@ for (let item of checkedItems) {
 let button = document.getElementById("to-do-checked-items-done-button");
 
 button.addEventListener("click", function () {
-  localStorage.removeItem("to-do-checked");
+  localStorage.removeItem("toDoChecklist");
 
   window.location.href = "index.html";
 });
