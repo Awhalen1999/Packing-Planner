@@ -38,9 +38,14 @@ button.addEventListener("click", function () {
   window.location.href = "./to-do-checked-items.html";
 });
 
-window.onload = function () {
+function loadItems() {
+  let toDoItems = JSON.parse(localStorage.getItem("to-do-items")) || [];
+  toDoItems.forEach((item) => {
+    const newItemHTML = `<li><input type="checkbox"><span>${item}</span></li>`;
+    toDoChecklistElement.innerHTML += newItemHTML;
+  });
   checkCheckboxes();
-};
+}
 
 const addItemButton = document.getElementById("to-do-add-item-button");
 const addItemInput = document.getElementById("to-do-input");
@@ -48,9 +53,15 @@ const addItemInput = document.getElementById("to-do-input");
 addItemButton.addEventListener("click", function () {
   const newItem = addItemInput.value.trim();
   if (newItem) {
-    const newItemHTML = `<li><input type="checkbox"><span>${newItem}</span></li>`;
-    toDoChecklistElement.innerHTML += newItemHTML;
+    let toDoItems = JSON.parse(localStorage.getItem("to-do-items")) || [];
+    toDoItems.push(newItem);
+    localStorage.setItem("to-do-items", JSON.stringify(toDoItems));
     addItemInput.value = "";
-    checkCheckboxes();
+    loadItems();
   }
 });
+
+window.onload = function () {
+  loadItems();
+  checkCheckboxes();
+};
