@@ -7,18 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li>
-          <a id="nav-checklist-button" href="./checklist.html">Checklist</a>
-        </li>
-        <li><a href="./to-do-checklist.html">To-Do Checklist</a></li>
-        <li><a href="./weather-app.html">Check the weather</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./contact.html">Contact Me</a></li>
-      </ul>
-    </nav>
+    <div id="nav-container"></div>
     <div id="to-do-checked-items-container">
       <h1>To-Do Checked Items</h1>
       <nav class="to-do-nav">
@@ -29,6 +18,8 @@
       <div class="divider"></div>
       <ul id="to-do-checked-list"></ul>
       <button id="to-do-checked-items-done-button">Done</button>
-      <script src="to-do-checked-items.js"></script>
+    </div>
+    <script src="nav.js"></script>
+    <script src="to-do-checked-items.js"></script>
   </body>
 </html>

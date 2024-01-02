@@ -15,18 +15,7 @@
     <title>Packing Planner</title>
   </head>
   <body>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li>
-          <a id="nav-checklist-button" href="./checklist.html">Checklist</a>
-        </li>
-        <li><a href="./to-do-checklist.html">To-Do Checklist</a></li>
-        <li><a href="./weather-app.html">Check the weather</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./contact.html">Contact Me</a></li>
-      </ul>
-    </nav>
+    <div id="nav-container"></div>
     <div id="page-1-container">
       <h1 id="welcome">Hello, Welcome to my Packing Planner!</h1>
       <div id="page-1-buttons">
@@ -35,10 +24,11 @@
           id="saved-checklist-button"
           onclick="location.href='./checklist.html'"
         >
-          previous Checklist
+          Previous Checklist
         </button>
       </div>
     </div>
+    <script src="./nav.js"></script>
     <script src="./home.js"></script>
   </body>
 </html>
