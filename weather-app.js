@@ -20,7 +20,7 @@ const createWeatherCard = (cityName, weatherItem, index) => {
                     <img src="https://openweathermap.org/img/wn/${
                       weatherItem.weather[0].icon
                     }@4x.png" alt="weather-icon">
-                    <h6>${weatherItem.weather[0].description}</h6>
+                    <h6>${toTitleCase(weatherItem.weather[0].description)}</h6>
                 </div>`;
   } else {
     return `<li class="card">
@@ -28,7 +28,7 @@ const createWeatherCard = (cityName, weatherItem, index) => {
                     <img src="https://openweathermap.org/img/wn/${
                       weatherItem.weather[0].icon
                     }@4x.png" alt="weather-icon">
-                    <h6>${weatherItem.weather[0].description}</h6>
+                    <h6>${toTitleCase(weatherItem.weather[0].description)}</h6>
                     <h6>Temp: ${(weatherItem.main.temp - 273.15).toFixed(
                       1
                     )}°C</h6>
@@ -120,3 +120,9 @@ cityInput.addEventListener(
   "keyup",
   (e) => e.key === "Enter" && getCityCoordinates()
 );
+
+function toTitleCase(str) {
+  return str.replace(/\w\S*/g, function (txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+}

@@ -389,6 +389,7 @@ remove button main: #d71212
 body {
   font-family: "Poppins", sans-serif;
   background-image: url("images/mainbackgroundblur.jpg");
+  background-color: #141414;
   color: #141414;
   height: 100vh;
   margin: 0;
