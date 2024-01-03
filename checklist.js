@@ -910,7 +910,7 @@ window.onload = function () {
 
       if (isOtherItems) {
         const removeButton = document.createElement("button");
-        removeButton.textContent = "−";
+        removeButton.textContent = "Remove";
         removeButton.classList.add("remove-button");
         removeButton.addEventListener("click", function () {
           otherItems = otherItems.filter((otherItem) => otherItem !== item);

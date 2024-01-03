@@ -51,6 +51,7 @@ function generateChecklist() {
     if (index >= 26) {
       const removeButton = document.createElement("button");
       removeButton.textContent = "Remove";
+      removeButton.classList.add("remove-button");
       removeButton.addEventListener("click", () => removeItem(index));
       listItem.appendChild(removeButton);
     }
@@ -106,3 +107,5 @@ submitButton.addEventListener("click", function () {
 });
 
 window.onload = generateChecklist;
+
+//

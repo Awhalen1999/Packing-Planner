@@ -521,6 +521,30 @@ button {
   background-color: #dcccb0;
 }
 
+li {
+  position: relative;
+}
+
+.remove-button {
+  background-color: white;
+  border: 1px solid #141414;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: #141414;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 5px;
+}
+
+.remove-button:hover {
+  cursor: pointer;
+}
+
 /*page 1*/
 
 #page-1-container {
@@ -752,32 +776,6 @@ input[type="checkbox"] {
 
 #input-container button:hover {
   background-color: #f15b35;
-}
-
-li {
-  position: relative;
-}
-
-.remove-button {
-  background-color: #d71212;
-  border: 1px solid #141414;
-  border-radius: 5px;
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  width: 30px;
-  height: 30px;
-  transform: translate(-50%, -50%);
-  font-weight: bold;
-  font-size: 20px;
-  color: #141414;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.remove-button:hover {
-  cursor: pointer;
 }
 
 /*page 4*/
@@ -1126,4 +1124,8 @@ li {
 
 #to-do-submit-button {
   margin-bottom: 20px;
+}
+
+.checkedItemsSelected {
+  background-color: pink; /* Change this to your preferred color */
 }
