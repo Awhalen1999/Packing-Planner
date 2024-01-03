@@ -1,67 +1,108 @@
+let toDoItems = JSON.parse(localStorage.getItem("to-do-items")) || [
+  "Confirm rental/booking approvals",
+  "Create itinerary for house/pet sitter",
+  "Pause any subscription delivery plans",
+  "Pre-pay bills",
+  "Fill prescriptions/Ensure you can refill prescriptions",
+  "Inform your bank of travel plans",
+  "Inform your cell phone company of travel plans",
+  "Dispose of perishable foods",
+  "Do laundry",
+  "Double-check flight and accommodation check-in times",
+  "Online check-in for flights",
+  "Ensure electronics are fully charged",
+  "Withdraw some cash (small bills)",
+  "Inform trusted neighbors of travel plans",
+  "Empty garbage",
+  "Hide a spare key",
+  "Double-check luggage weight",
+  "Water house plants",
+  "Set thermostat",
+  "Double-check travel documents",
+  "Check lights",
+  "Turn off water and gas",
+  "Unplug electronics",
+  "Make sure doors and windows are locked",
+  "Arrange transportation to the airport",
+  "Enjoy your trip!",
+];
+
 const toDoChecklistElement = document.getElementById("to-do-checklist");
-
-function checkCheckboxes() {
-  let toDoCheckedItems =
-    JSON.parse(localStorage.getItem("to-do-checked")) || [];
-  const toDoListItems = document.querySelectorAll("#to-do-checklist li");
-
-  toDoListItems.forEach((item) => {
-    const itemText = item.textContent.trim();
-
-    if (toDoCheckedItems.includes(itemText)) {
-      const checkbox = item.querySelector('input[type="checkbox"]');
-      checkbox.checked = true;
-    }
-  });
-}
-
-toDoChecklistElement.addEventListener("change", function (event) {
-  if (event.target.matches('input[type="checkbox"]')) {
-    let checkedItems = JSON.parse(localStorage.getItem("to-do-checked")) || [];
-    if (event.target.checked) {
-      checkedItems.push(event.target.nextElementSibling.textContent);
-    } else {
-      const index = checkedItems.indexOf(
-        event.target.nextElementSibling.textContent
-      );
-      if (index !== -1) {
-        checkedItems.splice(index, 1);
-      }
-    }
-    localStorage.setItem("to-do-checked", JSON.stringify(checkedItems));
-    console.log(checkedItems);
-  }
-});
-
-const button = document.getElementById("to-do-submit-button");
-button.addEventListener("click", function () {
-  window.location.href = "./to-do-checked-items.html";
-});
-
-function loadItems() {
-  let toDoItems = JSON.parse(localStorage.getItem("to-do-items")) || [];
-  toDoItems.forEach((item) => {
-    const newItemHTML = `<li><input type="checkbox"><span>${item}</span></li>`;
-    toDoChecklistElement.innerHTML += newItemHTML;
-  });
-  checkCheckboxes();
-}
-
 const addItemButton = document.getElementById("to-do-add-item-button");
 const addItemInput = document.getElementById("to-do-input");
+
+function generateChecklist() {
+  toDoChecklistElement.innerHTML = "";
+
+  toDoItems.forEach((item, index) => {
+    const listItem = document.createElement("li");
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.checked = isChecked(item);
+    checkbox.addEventListener("change", () => toggleCheck(item));
+
+    const taskLabel = document.createElement("span");
+    taskLabel.textContent = item;
+
+    listItem.appendChild(checkbox);
+    listItem.appendChild(taskLabel);
+
+    if (index >= 26) {
+      const removeButton = document.createElement("button");
+      removeButton.textContent = "Remove";
+      removeButton.addEventListener("click", () => removeItem(index));
+      listItem.appendChild(removeButton);
+    }
+
+    toDoChecklistElement.appendChild(listItem);
+  });
+}
+
+function isChecked(item) {
+  const checkedItems = JSON.parse(localStorage.getItem("to-do-checked")) || [];
+  return checkedItems.includes(item);
+}
+
+function toggleCheck(item) {
+  const checkedItems = JSON.parse(localStorage.getItem("to-do-checked")) || [];
+  const itemIndex = checkedItems.indexOf(item);
+
+  if (itemIndex !== -1) {
+    checkedItems.splice(itemIndex, 1);
+  } else {
+    checkedItems.push(item);
+  }
+
+  localStorage.setItem("to-do-checked", JSON.stringify(checkedItems));
+}
+
+function removeItem(index) {
+  const item = toDoItems[index];
+  toDoItems.splice(index, 1);
+  localStorage.setItem("to-do-items", JSON.stringify(toDoItems));
+
+  if (isChecked(item)) {
+    toggleCheck(item);
+  }
+
+  generateChecklist();
+}
 
 addItemButton.addEventListener("click", function () {
   const newItem = addItemInput.value.trim();
   if (newItem) {
-    let toDoItems = JSON.parse(localStorage.getItem("to-do-items")) || [];
     toDoItems.push(newItem);
     localStorage.setItem("to-do-items", JSON.stringify(toDoItems));
     addItemInput.value = "";
-    loadItems();
+    generateChecklist();
   }
 });
 
-window.onload = function () {
-  loadItems();
-  checkCheckboxes();
-};
+const submitButton = document.getElementById("to-do-submit-button");
+
+submitButton.addEventListener("click", function () {
+  window.location.href = "to-do-checked-items.html";
+});
+
+window.onload = generateChecklist;

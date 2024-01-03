@@ -30,6 +30,7 @@ let button = document.getElementById("to-do-checked-items-done-button");
 button.addEventListener("click", function () {
   localStorage.removeItem("to-do-checked");
   localStorage.removeItem("to-do-items");
+  localStorage.removeItem("to-do-checked-states");
 
   window.location.href = "index.html";
 });
