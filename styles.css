@@ -478,6 +478,42 @@ button {
   color: #141414;
 }
 
+.to-do-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+  margin-top: 1vh;
+  margin-bottom: 0.75vh;
+}
+
+.to-do-nav li {
+  margin-right: 4vw;
+  margin-left: 4vw;
+}
+
+.to-do-nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.to-do-nav button {
+  background-color: #eaddc8;
+  color: #141414;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  border-radius: 15px;
+}
+
+.to-do-nav button:hover {
+  background-color: #dcccb0;
+  color: #141414;
+}
+
 #restart-button {
   background-color: #d71212;
   cursor: pointer;
@@ -1126,6 +1162,6 @@ input[type="checkbox"] {
   margin-bottom: 20px;
 }
 
-.checkedItemsSelected {
-  background-color: pink; /* Change this to your preferred color */
+.checked-item {
+  background-color: #f0f0f0; /* Change this to your preferred color */
 }
