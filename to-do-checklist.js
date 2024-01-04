@@ -65,7 +65,7 @@ function generateChecklist() {
         (!removeButton || event.target !== removeButton)
       ) {
         checkbox.checked = !checkbox.checked;
-        toggleCheck(item);
+        toggleCheck(item, checkbox.checked);
       }
     });
 
@@ -113,10 +113,59 @@ addItemButton.addEventListener("click", function () {
   }
 });
 
+window.onload = generateChecklist;
+
+//
+
 const submitButton = document.getElementById("to-do-submit-button");
 
 submitButton.addEventListener("click", function () {
   window.location.href = "to-do-checked-items.html";
 });
 
-window.onload = generateChecklist;
+function toggleCheck(item, shouldCheck) {
+  const checkedItems = JSON.parse(localStorage.getItem("to-do-checked")) || [];
+  const itemIndex = checkedItems.indexOf(item);
+
+  if (shouldCheck && itemIndex === -1) {
+    checkedItems.push(item);
+  } else if (!shouldCheck && itemIndex !== -1) {
+    checkedItems.splice(itemIndex, 1);
+  }
+
+  localStorage.setItem("to-do-checked", JSON.stringify(checkedItems));
+}
+
+const checkAllButton = document.getElementById("to-do-check-all-button");
+
+if (checkAllButton) {
+  checkAllButton.addEventListener("click", function () {
+    const checkItems = document.querySelectorAll("input[type=checkbox]");
+
+    checkItems.forEach((item) => {
+      if (!item.checked) {
+        item.checked = true;
+        // Get the text content of the label element associated with the checkbox
+        const itemText = item.nextElementSibling.textContent.trim();
+        toggleCheck(itemText, true);
+      }
+    });
+  });
+}
+
+const clearButton = document.getElementById("to-do-clear-button");
+
+if (clearButton) {
+  clearButton.addEventListener("click", function () {
+    const checkItems = document.querySelectorAll("input[type=checkbox]");
+
+    checkItems.forEach((item) => {
+      if (item.checked) {
+        item.checked = false;
+        // Get the text content of the label element associated with the checkbox
+        const itemText = item.nextElementSibling.textContent.trim();
+        toggleCheck(itemText, false);
+      }
+    });
+  });
+}
