@@ -15,15 +15,18 @@ for (let item of checkedItems) {
   checkedListElement.innerHTML += generateItemHTML(item, isChecked);
 }
 
-checkedListElement.addEventListener("change", function (event) {
-  if (event.target.matches('input[type="checkbox"]')) {
-    const itemText = event.target.parentElement.textContent.trim();
-    checkedStates[itemText] = event.target.checked;
+checkedListElement.addEventListener("click", function (event) {
+  if (event.target.matches("li") || event.target.matches("li > span")) {
+    const listItem = event.target.matches("li")
+      ? event.target
+      : event.target.parentElement;
+    const checkbox = listItem.querySelector('input[type="checkbox"]');
+    checkbox.checked = !checkbox.checked;
+    const itemText = listItem.textContent.trim();
+    checkedStates[itemText] = checkbox.checked;
     localStorage.setItem("to-do-checked-states", JSON.stringify(checkedStates));
   }
 });
-
-//
 
 let button = document.getElementById("to-do-checked-items-done-button");
 
