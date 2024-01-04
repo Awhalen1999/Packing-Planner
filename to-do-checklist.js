@@ -40,7 +40,6 @@ function generateChecklist() {
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.checked = isChecked(item);
-    checkbox.addEventListener("change", () => toggleCheck(item));
 
     const taskLabel = document.createElement("span");
     taskLabel.textContent = item;
@@ -48,13 +47,27 @@ function generateChecklist() {
     listItem.appendChild(checkbox);
     listItem.appendChild(taskLabel);
 
+    let removeButton;
     if (index >= 26) {
-      const removeButton = document.createElement("button");
+      removeButton = document.createElement("button");
       removeButton.textContent = "Remove";
       removeButton.classList.add("remove-button");
-      removeButton.addEventListener("click", () => removeItem(index));
+      removeButton.addEventListener("click", (event) => {
+        event.stopPropagation();
+        removeItem(index);
+      });
       listItem.appendChild(removeButton);
     }
+
+    listItem.addEventListener("click", function (event) {
+      if (
+        event.target !== checkbox &&
+        (!removeButton || event.target !== removeButton)
+      ) {
+        checkbox.checked = !checkbox.checked;
+        toggleCheck(item);
+      }
+    });
 
     toDoChecklistElement.appendChild(listItem);
   });
@@ -107,5 +120,3 @@ submitButton.addEventListener("click", function () {
 });
 
 window.onload = generateChecklist;
-
-//

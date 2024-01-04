@@ -1162,6 +1162,6 @@ input[type="checkbox"] {
   margin-bottom: 20px;
 }
 
-.checked-item {
-  background-color: #f0f0f0; /* Change this to your preferred color */
+.checkedItemsSelected {
+  background-color: #f0f0f0;
 }
