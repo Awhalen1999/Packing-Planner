@@ -478,42 +478,6 @@ button {
   color: #141414;
 }
 
-.to-do-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: transparent;
-  margin-top: 1vh;
-  margin-bottom: 0.75vh;
-}
-
-.to-do-nav li {
-  margin-right: 4vw;
-  margin-left: 4vw;
-}
-
-.to-do-nav ul {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.to-do-nav button {
-  background-color: #eaddc8;
-  color: #141414;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-weight: bold;
-  border-radius: 15px;
-}
-
-.to-do-nav button:hover {
-  background-color: #dcccb0;
-  color: #141414;
-}
-
 #restart-button {
   background-color: #d71212;
   cursor: pointer;
@@ -1079,7 +1043,7 @@ input[type="checkbox"] {
 
 /* to-do checklist */
 
-#to-do-container {
+#to-do-checklist-container {
   width: 80vw;
   margin: auto;
   display: flex;
@@ -1087,12 +1051,12 @@ input[type="checkbox"] {
   flex-direction: column;
 }
 
-#to-do-container h1 {
+#to-do-checklist-container h1 {
   color: #eaddc8;
   text-align: center;
 }
 
-#to-do-container li {
+#to-do-checklist li {
   background-color: #eaddc8;
   margin: 0.5vh auto;
   border-radius: 5px;
@@ -1117,7 +1081,7 @@ input[type="checkbox"] {
   text-align: center;
 }
 
-#to-do-checked-items-container li {
+#to-do-checked-items-list li {
   background-color: #eaddc8;
   margin: 0.5vh auto;
   border-radius: 5px;
@@ -1130,42 +1094,68 @@ input[type="checkbox"] {
 /* temp */
 
 #to-do-input-container {
+  margin: auto;
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 #to-do-input {
   flex-grow: 1;
+  width: 100%;
   padding: 10px;
-  margin-right: 10px;
+  box-sizing: border-box;
+  background-color: #eaddc8;
+  border-radius: 5px;
+  font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  margin-right: 10px;
+}
+
+#to-do-input:focus {
+  outline-color: #d24928;
 }
 
 #to-do-add-item-button,
 #to-do-submit-button {
   padding: 10px 20px;
-  background-color: #4caf50;
-  color: white;
+  background-color: #d24928;
   border: none;
-  border-radius: 4px;
+  color: #eaddc8;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  border: 2px solid #141414;
 }
 
 #to-do-add-item-button:hover,
 #to-do-submit-button:hover {
-  background-color: #45a049;
+  background-color: #f15b35;
 }
 
 #to-do-submit-button {
-  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vh;
+  margin-bottom: 5vh;
 }
 
-.checkedItemsSelected {
-  background-color: #f0f0f0;
+#to-do-checked-items-done-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #d24928;
+  border: none;
+  color: #eaddc8;
+  text-decoration: none;
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
 }
 
-.checked {
-  background-color: pink;
+#to-do-checked-items-done-button:hover {
+  cursor: pointer;
 }

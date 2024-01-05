@@ -2,7 +2,7 @@ let checkedItems = JSON.parse(localStorage.getItem("to-do-checked")) || [];
 let checkedStates =
   JSON.parse(localStorage.getItem("to-do-checked-states")) || {};
 
-let checkedListElement = document.getElementById("to-do-checked-list");
+let checkedListElement = document.getElementById("to-do-checked-items-list");
 
 function generateItemHTML(item, isChecked) {
   return `<li><input type="checkbox" ${
