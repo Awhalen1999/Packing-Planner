@@ -145,7 +145,6 @@ if (checkAllButton) {
     checkItems.forEach((item) => {
       if (!item.checked) {
         item.checked = true;
-        // Get the text content of the label element associated with the checkbox
         const itemText = item.nextElementSibling.textContent.trim();
         toggleCheck(itemText, true);
       }
@@ -153,16 +152,15 @@ if (checkAllButton) {
   });
 }
 
-const clearButton = document.getElementById("to-do-clear-button");
+const uncheckAllButton = document.getElementById("to-do-uncheck-all-button");
 
-if (clearButton) {
-  clearButton.addEventListener("click", function () {
+if (uncheckAllButton) {
+  uncheckAllButton.addEventListener("click", function () {
     const checkItems = document.querySelectorAll("input[type=checkbox]");
 
     checkItems.forEach((item) => {
       if (item.checked) {
         item.checked = false;
-        // Get the text content of the label element associated with the checkbox
         const itemText = item.nextElementSibling.textContent.trim();
         toggleCheck(itemText, false);
       }

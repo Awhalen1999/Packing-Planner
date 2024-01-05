@@ -28,6 +28,8 @@ checkedListElement.addEventListener("click", function (event) {
   }
 });
 
+//
+
 let button = document.getElementById("to-do-checked-items-done-button");
 
 button.addEventListener("click", function () {
@@ -36,4 +38,24 @@ button.addEventListener("click", function () {
   localStorage.removeItem("to-do-checked-states");
 
   window.location.href = "index.html";
+});
+
+let checkAllButton = document.getElementById("to-do-check-all-button");
+
+checkAllButton.addEventListener("click", function () {
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = true;
+  });
+});
+
+let uncheckAllButton = document.getElementById("to-do-uncheck-all-button");
+
+uncheckAllButton.addEventListener("click", function () {
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = false;
+  });
 });
