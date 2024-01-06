@@ -120,7 +120,7 @@ window.onload = generateChecklist;
 const submitButton = document.getElementById("to-do-submit-button");
 
 submitButton.addEventListener("click", function () {
-  window.location.href = "to-do-checked-items.html";
+  window.location.href = "to-do-checked-tasks.html";
 });
 
 function toggleCheck(item, shouldCheck) {

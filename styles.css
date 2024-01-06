@@ -152,14 +152,17 @@ remove button main: #d71212
     font-size: 14px;
     padding: 6px 15px;
   }
-  #to-do-checked-items-list li {
+  #to-do-checked-tasks-list li {
     font-size: 14px;
     padding: 10px 20px;
     width: 70vw;
   }
-  #to-do-checked-items-done-button {
+  #to-do-checked-tasks-done-button {
     font-size: 14px;
     padding: 10px 20px;
+  }
+  #to-do-input-container input {
+    font-size: 14px;
   }
 }
 
@@ -301,14 +304,17 @@ remove button main: #d71212
     font-size: 16px;
     padding: 6px 15px;
   }
-  #to-do-checked-items-list li {
+  #to-do-checked-tasks-list li {
     font-size: 16px;
     padding: 12px 24px;
     width: 60vw;
   }
-  #to-do-checked-items-done-button {
+  #to-do-checked-tasks-done-button {
     font-size: 16px;
     padding: 12px 24px;
+  }
+  #to-do-input-container input {
+    font-size: 16px;
   }
 }
 
@@ -444,14 +450,17 @@ remove button main: #d71212
     font-size: 18px;
     padding: 6px 15px;
   }
-  #to-do-checked-items-list li {
+  #to-do-checked-tasks-list li {
     font-size: 18px;
     padding: 14px 28px;
     width: 50vw;
   }
-  #to-do-checked-items-done-button {
+  #to-do-checked-tasks-done-button {
     font-size: 18px;
     padding: 14px 28px;
+  }
+  #to-do-input-container input {
+    font-size: 18px;
   }
 }
 
@@ -465,6 +474,14 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
+
+button {
+  font-family: "poppins", sans-serif;
+}
+
+input {
+  font-family: "Poppins", sans-serif;
 }
 
 .divider {
@@ -510,10 +527,6 @@ body {
   color: #eaddc8;
   margin-top: 10px;
   text-align: center;
-}
-
-button {
-  font-family: poppins;
 }
 
 .checklist-nav {
@@ -647,7 +660,6 @@ li {
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
   border-radius: 5px;
   margin: 5vh 15px 0 15px;
 }
@@ -730,7 +742,6 @@ li {
   margin-bottom: 5vh;
   margin-top: 1vh;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
   border-radius: 5px;
 }
 
@@ -803,7 +814,6 @@ input[type="checkbox"] {
   margin-top: 2vh;
   margin-bottom: 5vh;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
   border-radius: 5px;
 }
 
@@ -836,7 +846,6 @@ input[type="checkbox"] {
   border: none;
   color: #eaddc8;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
   border-radius: 5px;
   padding: 10px;
   border: 2px solid #141414;
@@ -860,7 +869,6 @@ input[type="checkbox"] {
   margin-top: 2vh;
   margin-bottom: 5vh;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
   border-radius: 5px;
   text-decoration: none;
 }
@@ -925,7 +933,6 @@ input[type="checkbox"] {
   border-radius: 10px;
   margin: 2vh auto;
   display: block;
-  font-family: poppins;
 }
 
 #contact-form input[type="submit"]:hover {
@@ -1123,7 +1130,6 @@ input[type="checkbox"] {
 #to-do-checklist-container h1 {
   color: #eaddc8;
   text-align: center;
-  margin-bottom: 5vh;
 }
 
 #to-do-checklist {
@@ -1140,9 +1146,9 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-/* to-do checked items */
+/* to-do checked tasks */
 
-#to-do-checked-items-container {
+#to-do-checked-tasks-container {
   width: 80vw;
   margin: auto;
   display: flex;
@@ -1150,17 +1156,17 @@ input[type="checkbox"] {
   flex-direction: column;
 }
 
-#to-do-checked-items-container h1 {
+#to-do-checked-tasks-container h1 {
   color: #eaddc8;
   text-align: center;
 }
 
-#to-do-checked-items-list {
+#to-do-checked-tasks-list {
   margin: 0 auto;
   padding: 0;
 }
 
-#to-do-checked-items-list li {
+#to-do-checked-tasks-list li {
   background-color: #eaddc8;
   margin: 0.5vh auto;
   border-radius: 5px;
@@ -1173,19 +1179,26 @@ input[type="checkbox"] {
 
 #to-do-input-container {
   margin: auto;
+  width: 50vw;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
 }
 
-#to-do-input {
-  flex-grow: 1;
+#to-do-input-container input {
   width: 100%;
   padding: 0 10px;
   box-sizing: border-box;
   background-color: #eaddc8;
   border-radius: 5px;
-  font-size: 16px;
+}
+
+#to-do-input {
+  flex-grow: 1;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background-color: #eaddc8;
+  border-radius: 5px;
   border: 1px solid #ccc;
   margin-right: 10px;
 }
@@ -1200,7 +1213,6 @@ input[type="checkbox"] {
   border: none;
   color: #eaddc8;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
   border-radius: 5px;
   border: 2px solid #141414;
 }
@@ -1221,7 +1233,7 @@ input[type="checkbox"] {
   margin-bottom: 5vh;
 }
 
-#to-do-checked-items-done-button {
+#to-do-checked-tasks-done-button {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -1232,11 +1244,10 @@ input[type="checkbox"] {
   margin-top: 2vh;
   margin-bottom: 5vh;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
   border-radius: 5px;
 }
 
-#to-do-checked-items-done-button:hover {
+#to-do-checked-tasks-done-button:hover {
   cursor: pointer;
   background-color: #39a53e;
 }

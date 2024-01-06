@@ -2,7 +2,7 @@ let checkedItems = JSON.parse(localStorage.getItem("to-do-checked")) || [];
 let checkedStates =
   JSON.parse(localStorage.getItem("to-do-checked-states")) || {};
 
-let checkedListElement = document.getElementById("to-do-checked-items-list");
+let checkedListElement = document.getElementById("to-do-checked-tasks-list");
 
 function generateItemHTML(item, isChecked) {
   return `<li><input type="checkbox" ${
@@ -30,7 +30,7 @@ checkedListElement.addEventListener("click", function (event) {
 
 //
 
-let button = document.getElementById("to-do-checked-items-done-button");
+let button = document.getElementById("to-do-checked-tasks-done-button");
 
 button.addEventListener("click", function () {
   localStorage.removeItem("to-do-checked");
