@@ -138,6 +138,29 @@ remove button main: #d71212
   .weather-cards .card {
     width: 100%;
   }
+  #to-do-checklist-container h1 {
+    font-size: 24px;
+    margin-top: 5vh;
+  }
+  #to-do-checklist li {
+    font-size: 14px;
+    padding: 10px 20px;
+    width: 70vw;
+  }
+  #to-do-add-item-button,
+  #to-do-submit-button {
+    font-size: 14px;
+    padding: 6px 15px;
+  }
+  #to-do-checked-items-list li {
+    font-size: 14px;
+    padding: 10px 20px;
+    width: 70vw;
+  }
+  #to-do-checked-items-done-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
 }
 
 /* For tablet devices */
@@ -148,7 +171,7 @@ remove button main: #d71212
   .main-nav {
     flex-direction: row;
     padding: 1.5vh;
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .main-nav ul {
@@ -156,8 +179,8 @@ remove button main: #d71212
   }
 
   .main-nav li {
-    margin-right: 2vw;
-    margin-left: 2vw;
+    margin-right: 1.1vw;
+    margin-left: 1.1vw;
   }
   .instructions {
     font-size: 12px;
@@ -264,6 +287,29 @@ remove button main: #d71212
   .weather-cards .card {
     width: 100%;
   }
+  #to-do-checklist-container h1 {
+    font-size: 25px;
+    margin-top: 6vh;
+  }
+  #to-do-checklist li {
+    font-size: 16px;
+    padding: 12px 24px;
+    width: 60vw;
+  }
+  #to-do-add-item-button,
+  #to-do-submit-button {
+    font-size: 16px;
+    padding: 6px 15px;
+  }
+  #to-do-checked-items-list li {
+    font-size: 16px;
+    padding: 12px 24px;
+    width: 60vw;
+  }
+  #to-do-checked-items-done-button {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
 }
 
 /* For desktop devices */
@@ -282,8 +328,8 @@ remove button main: #d71212
   }
 
   .main-nav li {
-    margin-right: 5vw;
-    margin-left: 5vw;
+    margin-right: 3vw;
+    margin-left: 3vw;
   }
   .instructions {
     font-size: 14px;
@@ -383,6 +429,29 @@ remove button main: #d71212
   }
   .weather-cards .card {
     width: calc(100% / 5);
+  }
+  #to-do-checklist-container h1 {
+    font-size: 30px;
+    margin-top: 7vh;
+  }
+  #to-do-checklist li {
+    font-size: 18px;
+    padding: 14px 28px;
+    width: 50vw;
+  }
+  #to-do-add-item-button,
+  #to-do-submit-button {
+    font-size: 18px;
+    padding: 6px 15px;
+  }
+  #to-do-checked-items-list li {
+    font-size: 18px;
+    padding: 14px 28px;
+    width: 50vw;
+  }
+  #to-do-checked-items-done-button {
+    font-size: 18px;
+    padding: 14px 28px;
   }
 }
 
@@ -751,7 +820,7 @@ input[type="checkbox"] {
 
 #input-container input {
   width: 100%;
-  padding: 10px;
+  padding: 0 10px;
   box-sizing: border-box;
   background-color: #eaddc8;
   border-radius: 5px;
@@ -1054,6 +1123,12 @@ input[type="checkbox"] {
 #to-do-checklist-container h1 {
   color: #eaddc8;
   text-align: center;
+  margin-bottom: 5vh;
+}
+
+#to-do-checklist {
+  margin: 0 auto;
+  padding: 0;
 }
 
 #to-do-checklist li {
@@ -1063,7 +1138,6 @@ input[type="checkbox"] {
   border: 1px solid #141414;
   list-style-type: none;
   cursor: pointer;
-  padding: 1em;
 }
 
 /* to-do checked items */
@@ -1081,6 +1155,11 @@ input[type="checkbox"] {
   text-align: center;
 }
 
+#to-do-checked-items-list {
+  margin: 0 auto;
+  padding: 0;
+}
+
 #to-do-checked-items-list li {
   background-color: #eaddc8;
   margin: 0.5vh auto;
@@ -1088,7 +1167,6 @@ input[type="checkbox"] {
   border: 1px solid #141414;
   list-style-type: none;
   cursor: pointer;
-  padding: 1em;
 }
 
 /* temp */
@@ -1103,7 +1181,7 @@ input[type="checkbox"] {
 #to-do-input {
   flex-grow: 1;
   width: 100%;
-  padding: 10px;
+  padding: 0 10px;
   box-sizing: border-box;
   background-color: #eaddc8;
   border-radius: 5px;
@@ -1118,7 +1196,6 @@ input[type="checkbox"] {
 
 #to-do-add-item-button,
 #to-do-submit-button {
-  padding: 10px 20px;
   background-color: #d24928;
   border: none;
   color: #eaddc8;
@@ -1128,9 +1205,12 @@ input[type="checkbox"] {
   border: 2px solid #141414;
 }
 
-#to-do-add-item-button:hover,
-#to-do-submit-button:hover {
+#to-do-add-item-button:hover {
   background-color: #f15b35;
+}
+
+#to-do-submit-button:hover {
+  background-color: #39a53e;
 }
 
 #to-do-submit-button {
@@ -1158,4 +1238,5 @@ input[type="checkbox"] {
 
 #to-do-checked-items-done-button:hover {
   cursor: pointer;
+  background-color: #39a53e;
 }
