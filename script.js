@@ -21,7 +21,7 @@ document
     window.location.href = "checklist.html";
   });
 
-//radio button selection
+//
 
 const radioButtons = document.querySelectorAll(
   '.options-radio input[type="radio"]'

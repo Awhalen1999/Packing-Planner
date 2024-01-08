@@ -147,10 +147,13 @@ remove button main: #d71212
     padding: 10px 20px;
     width: 70vw;
   }
-  #to-do-add-item-button,
-  #to-do-submit-button {
+  #to-do-add-item-button {
     font-size: 14px;
     padding: 6px 15px;
+  }
+  #to-do-submit-button {
+    font-size: 14px;
+    padding: 1em;
   }
   #to-do-checked-tasks-list li {
     font-size: 14px;
@@ -186,7 +189,7 @@ remove button main: #d71212
     margin-left: 1.1vw;
   }
   .instructions {
-    font-size: 12px;
+    font-size: 13px;
     padding: 5px;
   }
   #welcome {
@@ -299,10 +302,13 @@ remove button main: #d71212
     padding: 12px 24px;
     width: 60vw;
   }
-  #to-do-add-item-button,
-  #to-do-submit-button {
+  #to-do-add-item-button {
     font-size: 16px;
     padding: 6px 15px;
+  }
+  #to-do-submit-button {
+    font-size: 16px;
+    padding: 1em;
   }
   #to-do-checked-tasks-list li {
     font-size: 16px;
@@ -445,10 +451,13 @@ remove button main: #d71212
     padding: 14px 28px;
     width: 50vw;
   }
-  #to-do-add-item-button,
-  #to-do-submit-button {
+  #to-do-add-item-button {
     font-size: 18px;
     padding: 6px 15px;
+  }
+  #to-do-submit-button {
+    font-size: 18px;
+    padding: 1em;
   }
   #to-do-checked-tasks-list li {
     font-size: 18px;
@@ -895,6 +904,8 @@ input[type="checkbox"] {
   background-color: #eaddc8;
   border: 1px solid #141414;
   border-radius: 10px;
+  padding: 1.2em;
+  text-align: center;
 }
 
 /* contact me page */
