@@ -47,7 +47,11 @@ checkAllButton.addEventListener("click", function () {
 
   checkboxes.forEach((checkbox) => {
     checkbox.checked = true;
+    const itemText = checkbox.parentElement.textContent.trim();
+    checkedStates[itemText] = true;
   });
+
+  localStorage.setItem("to-do-checked-states", JSON.stringify(checkedStates));
 });
 
 let uncheckAllButton = document.getElementById("to-do-uncheck-all-button");
@@ -57,5 +61,9 @@ uncheckAllButton.addEventListener("click", function () {
 
   checkboxes.forEach((checkbox) => {
     checkbox.checked = false;
+    const itemText = checkbox.parentElement.textContent.trim();
+    checkedStates[itemText] = false;
   });
+
+  localStorage.setItem("to-do-checked-states", JSON.stringify(checkedStates));
 });
