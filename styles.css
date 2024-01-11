@@ -635,6 +635,7 @@ li {
 
 .remove-button:hover {
   cursor: pointer;
+  background-color: #d71212;
 }
 
 /*page 1*/
