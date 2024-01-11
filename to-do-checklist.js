@@ -3,7 +3,7 @@ let toDoItems = JSON.parse(localStorage.getItem("to-do-items")) || [
   "Create itinerary for house/pet sitter",
   "Pause any subscription delivery plans",
   "Pre-pay bills",
-  "Fill prescriptions/Ensure prescriptions can be refilled",
+  "Fill prescriptions/ensure prescriptions can be refilled",
   "Inform bank of travel plans",
   "Inform cell phone company of travel plans",
   "Dispose of perishable foods",

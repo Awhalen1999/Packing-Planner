@@ -11,7 +11,7 @@ const navHTML = `
           <li><a href="./index.html">Home</a></li>
           <li><a href="${checklistLink}">Checklist</a></li>
           <li><a href="./to-do-checklist.html">To-Do Checklist</a></li>
-          <li><a href="./weather-app.html">Check the weather</a></li>
+          <li><a href="./weather-app.html">Check the Weather</a></li>
           <li><a href="./about.html">About</a></li>
           <li><a href="./contact.html">Contact Me</a></li>
         </ul>
