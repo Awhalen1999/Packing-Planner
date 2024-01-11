@@ -294,7 +294,6 @@ window.onload = function () {
               "Pajamas",
               "Sweaters",
               "Jacket",
-              "Gloves/mittens",
               "Glasses",
               "Sun glasses",
             ],
