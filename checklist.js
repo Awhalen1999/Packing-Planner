@@ -912,7 +912,10 @@ window.onload = function () {
       checkedItems.push(item);
       this.parentElement.classList.add("checklistSelected");
     } else {
-      checkedItems = checkedItems.filter((checkedItem) => checkedItem !== item);
+      const index = checkedItems.indexOf(item);
+      if (index !== -1) {
+        checkedItems.splice(index, 1);
+      }
       this.parentElement.classList.remove("checklistSelected");
     }
 
@@ -921,14 +924,18 @@ window.onload = function () {
 
   function removeItem(item) {
     let checkedItems = JSON.parse(localStorage.getItem("checkedItems")) || [];
-    if (checkedItems.includes(item)) {
-      checkedItems = checkedItems.filter((checkedItem) => checkedItem !== item);
+    let index = checkedItems.indexOf(item);
+    if (index !== -1) {
+      checkedItems.splice(index, 1);
       localStorage.setItem("checkedItems", JSON.stringify(checkedItems));
     }
 
-    otherItems = otherItems.filter((otherItem) => otherItem !== item);
-    storeOtherItems();
-    displayChecklist();
+    index = otherItems.indexOf(item);
+    if (index !== -1) {
+      otherItems.splice(index, 1);
+      storeOtherItems();
+      displayChecklist();
+    }
   }
 
   function storeOtherItems() {
