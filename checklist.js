@@ -824,44 +824,38 @@ window.onload = function () {
     }
   }
 
-  if (checklist == null) {
+  if (!checklist) {
     outputDiv.textContent = "No checklist available";
     return;
   }
 
+  document
+    .getElementById("add-item-button")
+    .addEventListener("click", addNewItem);
+
   function displayChecklist() {
-    const outputDiv = document.getElementById("output");
     outputDiv.innerHTML = "";
 
     checklist.forEach((section) => {
-      const sectionHeader = createSectionHeader(section.section);
-      const itemsList = createItemsList(section.items, false);
-
-      outputDiv.appendChild(sectionHeader);
-      outputDiv.appendChild(itemsList);
+      outputDiv.appendChild(createSectionHeader(section.section));
+      outputDiv.appendChild(createItemsList(section.items, false));
     });
 
-    const otherSectionHeader = createSectionHeader("Other");
-    outputDiv.appendChild(otherSectionHeader);
-
     if (otherItems.length > 0) {
-      const otherItemsList = createItemsList(otherItems, true);
-      outputDiv.appendChild(otherItemsList);
+      outputDiv.appendChild(createSectionHeader("Other"));
+      outputDiv.appendChild(createItemsList(otherItems, true));
     }
   }
 
-  document
-    .getElementById("add-item-button")
-    .addEventListener("click", function (event) {
-      const newItem = document.getElementById("new-item").value;
-      if (newItem) {
-        otherItems.push(newItem);
-        document.getElementById("new-item").value = "";
-        storeCheckedItems();
-        storeOtherItems();
-        displayChecklist();
-      }
-    });
+  function addNewItem(event) {
+    const newItem = document.getElementById("new-item").value;
+    if (newItem) {
+      otherItems.push(newItem);
+      document.getElementById("new-item").value = "";
+      storeOtherItems();
+      displayChecklist();
+    }
+  }
 
   function createSectionHeader(section) {
     const header = document.createElement("h2");
@@ -871,38 +865,19 @@ window.onload = function () {
 
   function createItemsList(items, isOtherItems) {
     const ul = document.createElement("ul");
+    let checkedItems = JSON.parse(localStorage.getItem("checkedItems")) || [];
 
-    let checkedItems = localStorage.getItem("checkedItems");
-    if (checkedItems) {
-      checkedItems = JSON.parse(checkedItems);
-    } else {
-      checkedItems = [];
-    }
-
-    items.forEach((item, index) => {
+    items.forEach((item) => {
       const li = document.createElement("li");
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
       checkbox.value = item;
-      if (checkedItems.includes(item)) {
-        checkbox.checked = true;
+      checkbox.checked = checkedItems.includes(item);
+      checkbox.addEventListener("change", toggleCheck);
+
+      if (checkbox.checked) {
         li.classList.add("checklistSelected");
       }
-
-      checkbox.addEventListener("change", function () {
-        if (this.checked) {
-          li.classList.add("checklistSelected");
-        } else {
-          li.classList.remove("checklistSelected");
-        }
-      });
-
-      li.addEventListener("click", function (event) {
-        if (event.target !== checkbox) {
-          checkbox.checked = !checkbox.checked;
-          checkbox.dispatchEvent(new Event("change"));
-        }
-      });
 
       li.appendChild(checkbox);
       li.appendChild(document.createTextNode(item));
@@ -911,15 +886,17 @@ window.onload = function () {
         const removeButton = document.createElement("button");
         removeButton.textContent = "Remove";
         removeButton.classList.add("remove-button");
-        removeButton.addEventListener("click", function () {
-          otherItems = otherItems.filter((otherItem) => otherItem !== item);
-          storeOtherItems();
-          storeCheckedItems();
-          displayChecklist();
+        removeButton.addEventListener("click", (event) => {
+          event.stopPropagation();
+          removeItem(item);
         });
-
         li.appendChild(removeButton);
       }
+
+      li.addEventListener("click", () => {
+        checkbox.checked = !checkbox.checked;
+        toggleCheck.call(checkbox);
+      });
 
       ul.appendChild(li);
     });
@@ -927,68 +904,82 @@ window.onload = function () {
     return ul;
   }
 
-  //
+  function toggleCheck() {
+    const item = this.value;
+    let checkedItems = JSON.parse(localStorage.getItem("checkedItems")) || [];
 
-  function storeCheckedItems() {
-    const checkboxes = document.querySelectorAll("input[type=checkbox]");
-    const checkedItems = Array.from(checkboxes)
-      .filter((checkbox) => checkbox.checked)
-      .map((checkbox) => checkbox.value);
+    if (this.checked) {
+      checkedItems.push(item);
+      this.parentElement.classList.add("checklistSelected");
+    } else {
+      checkedItems = checkedItems.filter((checkedItem) => checkedItem !== item);
+      this.parentElement.classList.remove("checklistSelected");
+    }
 
     localStorage.setItem("checkedItems", JSON.stringify(checkedItems));
+  }
+
+  function removeItem(item) {
+    otherItems = otherItems.filter((otherItem) => otherItem !== item);
+    storeOtherItems();
+    displayChecklist();
   }
 
   function storeOtherItems() {
     localStorage.setItem("otherItems", JSON.stringify(otherItems));
   }
 
-  const submitButton = document.getElementById("submit-button");
-
-  submitButton.addEventListener("click", function (event) {
-    event.preventDefault();
-    storeCheckedItems();
-    window.location.href = "checked-items.html";
-  });
-
-  const clearButton = document.getElementById("clear-button");
-
-  if (clearButton) {
-    clearButton.addEventListener("click", function () {
-      localStorage.setItem("checkedItems", JSON.stringify([]));
-      localStorage.removeItem("checkedStates");
-      window.location.reload();
-    });
-  }
-
-  const checkAllButton = document.getElementById("check-all-button");
-
-  if (checkAllButton) {
-    checkAllButton.addEventListener("click", function () {
-      const checkItems = document.querySelectorAll("input[type=checkbox]");
-
-      checkItems.forEach((item) => {
-        item.checked = true;
-        const listItem = item.parentElement;
-        listItem.classList.add("checklistSelected");
-      });
-    });
-  }
+  //
 
   document
-    .getElementById("restart-button")
-    .addEventListener("click", function (event) {
-      const userConfirmed = confirm(
-        "Are you sure you want to clear the list? This action cannot be undone."
-      );
-      if (userConfirmed) {
-        localStorage.setItem("checkedItems", JSON.stringify([]));
-        localStorage.removeItem("gender");
-        localStorage.removeItem("climate");
-        localStorage.removeItem("checkedStates");
-        localStorage.removeItem("otherItems");
-        window.location.href = "./page2.html";
-      } else {
-        event.preventDefault();
-      }
+    .getElementById("check-all-button")
+    .addEventListener("click", checkAll);
+
+  document
+    .getElementById("uncheck-all-button")
+    .addEventListener("click", uncheckAll);
+
+  document.getElementById("restart-button").addEventListener("click", restart);
+
+  function checkAll() {
+    const checkboxes = document.querySelectorAll("input[type='checkbox']");
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = true;
+      toggleCheck.call(checkbox);
+    });
+  }
+
+  function uncheckAll() {
+    const checkboxes = document.querySelectorAll("input[type='checkbox']");
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = false;
+      toggleCheck.call(checkbox);
+    });
+  }
+
+  function restart() {
+    if (
+      confirm(
+        "Are you sure you want to restart? This will clear all your current progress."
+      )
+    ) {
+      localStorage.removeItem("gender");
+      localStorage.removeItem("climate");
+      window.location.href = "./page2.html";
+    }
+  }
+
+  //
+
+  document
+    .getElementById("checked-items-button")
+    .addEventListener("click", function () {
+      window.location.href = "checked-items.html";
+    });
+
+  document
+    .getElementById("submit-button")
+    .addEventListener("click", function () {
+      window.location.href = "checked-items.html";
     });
 };
