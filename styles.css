@@ -167,6 +167,17 @@ remove button main: #d71212
   #to-do-input-container input {
     font-size: 14px;
   }
+  #about-links ul li {
+    margin: 0 15px;
+  }
+  #about-links ul li img {
+    width: 90px;
+    height: 90px;
+  }
+  #about-text {
+    font-size: 14px;
+    padding: 0.25vh;
+  }
 }
 
 /* For tablet devices */
@@ -322,6 +333,17 @@ remove button main: #d71212
   #to-do-input-container input {
     font-size: 16px;
   }
+  #about-links ul li {
+    margin: 0 25px;
+  }
+  #about-links ul li img {
+    width: 105px;
+    height: 105px;
+  }
+  #about-text {
+    font-size: 16px;
+    padding: 0.75vh;
+  }
 }
 
 /* For desktop devices */
@@ -471,6 +493,17 @@ remove button main: #d71212
   #to-do-input-container input {
     font-size: 18px;
   }
+  #about-links ul li {
+    margin: 0 32px;
+  }
+  #about-links ul li img {
+    width: 120px;
+    height: 120px;
+  }
+  #about-text {
+    font-size: 18px;
+    padding: 1vh;
+  }
 }
 
 body {
@@ -498,7 +531,7 @@ input {
   width: 75vw;
   height: 2px;
   background-color: #d24928;
-  margin: 2vh 10vw;
+  margin: 2vh auto;
   border: none;
   border-radius: 2px;
 }
@@ -585,6 +618,7 @@ input {
   align-items: center;
   background-color: transparent;
   margin-top: 3vh;
+  padding-bottom: 3vh;
 }
 
 .alt-nav ul {
@@ -896,18 +930,30 @@ input[type="checkbox"] {
 /* about page */
 
 #about-container {
-  width: 80vw;
-  margin: auto;
-  margin: 7vh auto;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#about-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#about-links ul li img {
+  border-radius: 50%;
+}
+
+#about-text {
+  text-align: justify;
 }
 
 .about-section {
-  margin: 1.5em;
+  margin-bottom: 10px;
   background-color: #eaddc8;
-  border: 1px solid #141414;
   border-radius: 10px;
-  padding: 1.2em;
-  text-align: center;
+  border: 2px solid #141414;
 }
 
 /* contact me page */
