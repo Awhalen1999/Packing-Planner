@@ -920,6 +920,12 @@ window.onload = function () {
   }
 
   function removeItem(item) {
+    let checkedItems = JSON.parse(localStorage.getItem("checkedItems")) || [];
+    if (checkedItems.includes(item)) {
+      checkedItems = checkedItems.filter((checkedItem) => checkedItem !== item);
+      localStorage.setItem("checkedItems", JSON.stringify(checkedItems));
+    }
+
     otherItems = otherItems.filter((otherItem) => otherItem !== item);
     storeOtherItems();
     displayChecklist();
@@ -963,8 +969,12 @@ window.onload = function () {
         "Are you sure you want to restart? This will clear all your current progress."
       )
     ) {
+      localStorage.setItem("checkedItems", JSON.stringify([]));
       localStorage.removeItem("gender");
       localStorage.removeItem("climate");
+      localStorage.removeItem("checkedStates");
+      localStorage.removeItem("otherItems");
+
       window.location.href = "./page2.html";
     }
   }
