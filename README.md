@@ -1,5 +1,7 @@
 # :airplane: Packing Planner
 
+## Live Demo: [Packing Planner](https://awhalen1999.github.io/Packing-Planner/)
+
 This Project was created for module 1 of the [Get Coding](https://www.getcoding.ca/) curriculum. I created this project for people like myself who **LOVE** traveling but **HATE** the stressful and frustrating process of packing. This simple packing planner allows the user to select their specific packing requirements and then select the items that they would like to pack from a list tailored to their needs, as well as having the option to add custom items if needed. The user is then given a final list that they can then check off while packing, making the process as stress free as possible!
 
 <img src="images/readme1.png" width="400" height="800"> <img src="images/readme2.png" width="400" height="800">
