@@ -893,9 +893,11 @@ window.onload = function () {
         li.appendChild(removeButton);
       }
 
-      li.addEventListener("click", () => {
-        checkbox.checked = !checkbox.checked;
-        toggleCheck.call(checkbox);
+      li.addEventListener("click", (event) => {
+        if (event.target !== checkbox) {
+          checkbox.checked = !checkbox.checked;
+          toggleCheck.call(checkbox);
+        }
       });
 
       ul.appendChild(li);
